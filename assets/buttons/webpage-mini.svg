@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="77" height="20" aria-label="webpage" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg">
- <title>webpage</title>
+<svg width="121" height="20" aria-label="page: mod index" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <title>PAGE</title>
  <linearGradient id="s" x2="0" y2="100%">
   <stop stop-color="#bbb" stop-opacity=".1" offset="0"/>
   <stop stop-opacity=".1" offset="1"/>
  </linearGradient>
  <clipPath id="r">
-  <rect width="77" height="20" rx="3" fill="#fff"/>
+  <rect width="121" height="20" rx="3" fill="#fff"/>
  </clipPath>
  <g clip-path="url(#r)">
-  <rect width="0" height="20" fill="#555"/>
-  <rect width="77" height="20" fill="#92403a"/>
-  <rect width="77" height="20" fill="url(#s)"/>
+  <rect width="54" height="20" fill="#555"/>
+  <rect x="54" width="67" height="20" fill="#92403a"/>
+  <rect width="121" height="20" fill="url(#s)"/>
  </g>
  <g font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="110" text-anchor="middle" text-rendering="geometricPrecision">
-  <path d="m11.259 11.697a0.6335 0.6335 0 0 0 0-0.89598 1.7799 1.7799 0 0 1 0-2.5172l2.1334-2.1328a1.7799 1.7799 0 1 1 2.5172 2.5172l-0.65945 0.65885a0.63356 0.63356 0 0 0 0.89598 0.89598l0.65945-0.65885a3.047 3.047 0 0 0-4.309-4.3091l-2.1334 2.1328a3.0469 3.0469 0 0 0 0 4.309c0.24737 0.24738 0.6486 0.24738 0.89598 0zm1.2368-3.0288a0.6335 0.6335 0 0 0 0 0.89598 1.7799 1.7799 0 0 1 0 2.5172l-2.1117 2.1117a1.7799 1.7799 0 1 1-2.5165-2.5172l0.61845-0.61845a0.63356 0.63356 0 0 0-0.89598-0.89598l-0.61785 0.61845a3.047 3.047 0 0 0 4.3091 4.309l2.1117-2.1117a3.0469 3.0469 0 0 0 0-4.3091 0.6335 0.6335 0 0 0-0.89598 0z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd" stroke-width=".60335"/>
-  <text transform="scale(.1)" x="475" y="150" fill="#010101" fill-opacity=".3" aria-hidden="true" textLength="490">webpage</text>
-  <text transform="scale(.1)" x="475" y="140" fill="#fff" textLength="490">webpage</text>
+  <text transform="scale(.1)" x="365" y="150" fill="#010101" fill-opacity=".3" aria-hidden="true" textLength="270">page</text>
+  <text transform="scale(.1)" x="365" y="140" fill="#fff" textLength="270">page</text>
+  <text transform="scale(.1)" x="865" y="150" fill="#010101" fill-opacity=".3" aria-hidden="true" textLength="570">mod index</text>
+  <text transform="scale(.1)" x="865" y="140" fill="#fff" textLength="570">mod index</text>
  </g>
+ <path d="m11.327 12.203a0.6335 0.6335 0 0 0 0-0.89598 1.7799 1.7799 0 0 1 0-2.5172l2.1334-2.1328a1.7799 1.7799 0 1 1 2.5172 2.5172l-0.65945 0.65885a0.63356 0.63356 0 0 0 0.89598 0.89598l0.65945-0.65885a3.047 3.047 0 0 0-4.309-4.3091l-2.1334 2.1328a3.0469 3.0469 0 0 0 0 4.309c0.24737 0.24738 0.6486 0.24738 0.89598 0zm1.2368-3.0288a0.6335 0.6335 0 0 0 0 0.89598 1.7799 1.7799 0 0 1 0 2.5172l-2.1117 2.1117a1.7799 1.7799 0 1 1-2.5165-2.5172l0.61845-0.61845a0.63356 0.63356 0 0 0-0.89598-0.89598l-0.61785 0.61845a3.047 3.047 0 0 0 4.3091 4.309l2.1117-2.1117a3.0469 3.0469 0 0 0 0-4.3091 0.6335 0.6335 0 0 0-0.89598 0z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd" stroke-width=".60335"/>
 </svg>
