@@ -121,7 +121,7 @@
         color: #781808;
         background-color: transparent;
       }
-      #maindiv p, table {
+      #maindiv p {
         font-size: 110%;
         font-style: normal;
         line-height: 150%;
@@ -131,10 +131,11 @@
         display: block;
         border: none;
       }
-      #maindiv td {
-        padding: 5px;
-        border: none;
-        text-align: left;
+      #maindiv p.category-desc {
+        margin-bottom: 22px;
+      }
+      #maindiv ul.readme-list a {
+        margin-right: 12px;
       }
       #maindiv address a:link {
         font-weight: bold;
@@ -198,7 +199,11 @@
       }
       #maindiv ul {
         margin: -10px 0 0 30px;
-        margin-left: 35px;
+        width: 90%;
+        font-size: 110%;
+        font-style: normal;
+        padding: 0px;
+        margin: auto;
       }
       #maindiv ol {
         margin: -10px 0 0 35px;
@@ -213,9 +218,16 @@
       #maindiv ul li {
         list-style-type: square;
         line-height: 150%;
+        padding: 0px;
+        margin: 10px auto;
+      }
+      #maindiv ul li::marker {
+        color: #a9a9a9;
       }
       #maindiv ol li {
         line-height: 150%;
+        padding: 0px;
+        margin: 10px auto;
       }
       .t1 {
         font-weight: bold;
@@ -331,6 +343,7 @@
         <a id="joinable-npcs"></a>
         <div class="content">
           <h2>Joinable NPC Mods</h2>
+          <p class="category-desc">All joinable NPC mods hosted by SHS.</p>
 
           <address>
             <span class="footer">Index of Readmes &gt; Joinable NPCs</span> &#8226;<a href="#top">Back to Top</a>
@@ -340,6 +353,7 @@
         <a id="content-expansion"></a>
         <div class="content">
           <h2>Content Expansion and Non-Joinable Character Mods</h2>
+          <p class="category-desc">All expansion mods and projects that add new individual characters (non-joinable followers, traders, etc.) hosted by SHS.</p>
  
           <address>
             <span class="footer">Index of Readmes &gt; Content Expansion</span> &#8226;<a href="#top">Back to Top</a>
@@ -349,6 +363,7 @@
         <a id="quests-encounters"></a>
         <div class="content">
           <h2>Quest and Encounter Mods</h2>
+          <p class="category-desc">All mods which add new quests or encounters hosted by SHS.</p>
 
           <address>
             <span class="footer">Index of Readmes &gt; Quests and Encounters</span> &#8226;<a href="#top">Back to Top</a>
@@ -358,6 +373,7 @@
         <a id="conversions"></a>
         <div class="content">
           <h2>Total and Partial Conversions</h2>
+          <p class="category-desc">All conversion projects (extensive replacement of the original game content) hosted by SHS.</p>
 
           <address>
             <span class="footer">Index of Readmes &gt; Conversions</span> &#8226;<a href="#top">Back to Top</a>
@@ -367,10 +383,13 @@
         <a id="mega-modifications"></a>
         <div class="content">
           <h2>Mega Modifications</h2>
-          <p>
-            <a href="https://github.com/Spellhold-Studios/Infinity-Animations">Infinity Animations</a> &nbsp;
-            <a href="readmes/infinity-animations/infinityanimations.html">[English]</a>
-          </p>
+          <p class="category-desc">All mods that are part of the definition of mega-modification, i.e. BGT, TDD, SoS, TS, NeJ, RoT, CtB, BP and related projects hosted by SHS.</p>
+          <ul class="readme-list">
+            <li>
+              <a href="https://github.com/Spellhold-Studios/Infinity-Animations">Infinity Animations</a>
+              <a href="readmes/infinity-animations/infinityanimations.html">[English]</a>
+            </li>
+          </ul>
           <address>
             <span class="footer">Index of Readmes &gt; Mega Modifications</span> &#8226;<a href="#top">Back to Top</a>
           </address>
@@ -379,6 +398,8 @@
         <a id="tweaks"></a>
         <div class="content">
           <h2>Tweaks, Rule Changes and Additions</h2>
+          <p class="category-desc">All tweaks and mods that affect rules, classes, scripts or other game mechanics hosted by SHS.</p>
+
 
           <address>
             <span class="footer">Index of Readmes &gt; Tweaks and Rule Changes</span> &#8226;<a href="#top">Back to Top</a>
@@ -388,6 +409,7 @@
         <a id="visual-audio"></a>
         <div class="content">
           <h2>Visual and Audio Mods</h2>
+          <p class="category-desc">All visual and audio mods (including portraits) hosted by SHS.</p>
 
           <address>
             <span class="footer">Index of Readmes &gt; Visual and Audio</span> &#8226;<a href="#top">Back to Top</a>
@@ -397,6 +419,7 @@
         <a id="iwd"></a>
         <div class="content">
           <h2>Icewind Dale I & II Mods</h2>
+          <p class="category-desc">All IWD I & II modding projects hosted by SHS.</p>
 
           <address>
             <span class="footer">Index of Readmes &gt; IWD I &amp; II</span> &#8226;<a href="#top">Back to Top</a>
@@ -406,6 +429,7 @@
         <a id="pst"></a>
         <div class="content">
           <h2>Planescape: Torment Mods</h2>
+          <p class="category-desc">All PS:T mods hosted by SHS.</p>
 
           <address>
             <span class="footer">Index of Readmes &gt; PS:T</span> &#8226;<a href="#top">Back to Top</a>
@@ -415,6 +439,7 @@
         <a id="modding-tools"></a>
         <div class="content">
           <h2>Modding Tools</h2>
+          <p class="category-desc">All IE modding tools hosted by SHS.</p>
 
           <address>
             <span class="footer">Index of Readmes &gt; Modding Tools</span> &#8226;<a href="#top">Back to Top</a>
@@ -424,6 +449,7 @@
         <a id="misc"></a>
         <div class="content">
           <h2>Miscellaneous Mods</h2>
+          <p class="category-desc">Other mods without an official category hosted by SHS.</p>
 
           <address>
             <span class="footer">Index of Readmes &gt; Miscellaneous</span> &#8226;<a href="#top">Back to Top</a>
@@ -434,8 +460,11 @@
         <a id="templates"></a>
         <div class="content">
           <h2>Templates</h2>
-          <p><a href="https://sampsca.github.io/SHS_Readme.html">SHS Readme #1</a> by khayman, updated by Sam.</p>
-          <p><a href="readmes/template-gwendolyne/mymod-readme-english.html">SHS Readme #2</a> by Gwendolyne</p>
+          <p class="category-desc">Useful readme templates for SHS modders.</p>
+          <ul>
+            <li><a href="https://sampsca.github.io/SHS_Readme.html">SHS Readme #1</a> by khayman, updated by Sam.</li>
+            <li><a href="readmes/template-gwendolyne/mymod-readme-english.html">SHS Readme #2</a> by Gwendolyne</li>
+          </ul>
           <address>
             <span class="footer">Index of Readmes &gt; Readme Templates</span> <a href="#top">Back to Top</a>
           </address>
