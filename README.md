@@ -1,4 +1,4 @@
-# About Spellhold-Studios.github.io
+# SHS GitHub Pages
 This repository hosts our [GitHub Pages](https://spellhold-studios.github.io/) (currently with the index of mods as the homepage) and HTML readmes of SHS mods, which can be linked to, e.g. from a mod repository.
 
 > GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website. It can be used to create websites for project documentation, online blogs or landing pages.
