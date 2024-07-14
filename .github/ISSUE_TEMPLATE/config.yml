@@ -1,5 +1,11 @@
 blank_issues_enabled: true
 contact_links:
+  - name: Linking to readmes
+    url: https://github.com/Spellhold-Studios/Spellhold-Studios.github.io/blob/main/README.md#thinking-how-to-link-to-a-readme
+    about: A quick guide how to link to an existing mod readme.
+  - name: Adding mod readmes
+    url: https://github.com/Spellhold-Studios/Spellhold-Studios.github.io/blob/main/README.md#inbox_tray-how-to-add-a-readme
+    about: Instructions how to add a mod readme to SHS Pages repository.
   - name: Discussions
     url: https://github.com/Spellhold-Studios/Spellhold-Studios.github.io/discussions
     about: Ask a question, give a suggestion or share your opinion in discussions.
