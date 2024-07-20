@@ -134,7 +134,7 @@
         margin-bottom: 22px;
       }
       #maindiv ul.mod-list a {
-        margin-right: 4px;
+        margin-right: 3px;
       }
       #maindiv address a:link {
         font-weight: bold;
@@ -231,6 +231,10 @@
         font-weight: bold;
         font-size: 105%;
       }
+     #maindiv ul.template-list li {
+        line-height: 150%;
+        margin: 12px auto;
+      }
       .t1 {
         font-weight: bold;
         width: 26%;
@@ -307,7 +311,7 @@
         color: #222;
         border-bottom: 1px solid black;
       }
-      @media screen and (max-width: 719px) {
+      @media screen and (max-width: 1279px) {
         #wrap {
           width: 100%;
         }
@@ -320,6 +324,11 @@
         #maindiv p,
         #maindiv ul {
           padding: 0 25px;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        #maindiv ul li .mod-desc {
+          display: block;
         }
       }
       @media screen and (max-width: 479px) {
@@ -655,7 +664,7 @@
         <div class="content">
           <h2>Templates</h2>
           <p class="category-desc">Useful readme templates for SHS modders.</p>
-          <ul>
+          <ul class="template-list">
             <li><a href="https://sampsca.github.io/SHS_Readme.html">SHS Readme #1</a> by khayman, updated by Sam.</li>
             <li><a href="readmes/template-gwendolyne/mymod-readme-english.html">SHS Readme #2</a> by Gwendolyne</li>
           </ul>
