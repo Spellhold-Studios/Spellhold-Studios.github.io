@@ -74,7 +74,8 @@
       #header .menu a:hover {
         color: #781808;
         text-decoration: none;
-        border-bottom: 1px solid #781808;
+        border: none;
+        transition-duration: .1s;
       }
       #maindiv {
         margin: 0 auto;
@@ -133,9 +134,6 @@
       #maindiv p.category-desc {
         margin-bottom: 22px;
       }
-      #maindiv ul.mod-list a {
-        margin-right: 3px;
-      }
       #maindiv address a:link {
         font-weight: bold;
         text-decoration: underline;
@@ -151,7 +149,7 @@
       #maindiv address a:focus,
       #maindiv address a:hover {
         text-decoration: none;
-        color: #F1F1F1;
+        color: #f1f1f1;
         border: 0;
       }
       #maindiv address a:active {
@@ -178,7 +176,7 @@
         font-size: 95%;
         font-family: Verdana, Tahoma, Arial, sans-serif;
         text-align: left;
-        background-color: #F1F1F1;
+        background-color: #f1f1f1;
         border-top: solid 1px #aaa;
         border-bottom: solid 1px #aaa;
         border-left: solid 6px #aaa;
@@ -214,24 +212,63 @@
         margin: -10px 0 0 20px;
       }
       #maindiv ul li {
-        list-style-type: square;
+        list-style-type: none;
         line-height: 200%;
         padding: 0px;
-        margin: 20px auto;
+        margin: 20px 0 27px 0;
       }
       #maindiv ul li::marker {
-        color: #a9a9a9;
+        color: #b9b9b9;
       }
       #maindiv ol li {
         line-height: 150%;
         padding: 0px;
         margin: 10px auto;
       }
-      #maindiv ul li .mod-title {
+      #maindiv ul li .mod-name {
         font-weight: bold;
-        font-size: 105%;
+        font-size: 110%;
       }
-     #maindiv ul.template-list li {
+      #maindiv ul li .mod-desc {
+        margin: 2px 0 6px 12px;
+      }
+      #maindiv ul li .mod-badges {
+        margin: 6px 0 6px 12px;
+      }
+      #maindiv ul li .game-sup {
+        margin: 6px 0 6px 0;
+      }
+      #maindiv ul li .mod-links {
+        margin-right: 5px;
+      }
+      #maindiv ul.mod-list a,
+      #maindiv ul li .game-sup {
+        width: fit-content;
+        border: 1px solid #d2d2d2;
+        border-radius: 4px;
+        background-color: #e5e6e7;
+        box-shadow: 1px 1px rgba(25, 24, 23, 0.2);
+      }
+      #maindiv ul li .game-sup {
+        padding: 5px 8px 5px;
+        color: #63555d;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 200%;
+        margin-left: -5px;
+      }
+      #maindiv ul.mod-list a {
+        margin-right: 5px;
+        padding: 4px 8px 5px;
+        font-variant: small-caps;
+        line-height: 300%;
+      }
+      #maindiv ul.mod-list a:hover {
+        color: #952915;
+        background-color: #eeeef1;
+        transition-duration: .1s;
+      }
+      #maindiv ul.template-list li {
         line-height: 150%;
         margin: 12px auto;
       }
@@ -308,8 +345,8 @@
       }
       a:hover,
       a:active {
-        color: #222;
-        border-bottom: 1px solid black;
+        color: #952915;
+        border-bottom: 1px solid #952915;
       }
       @media screen and (max-width: 1279px) {
         #wrap {
@@ -326,9 +363,17 @@
           padding: 0 25px;
         }
       }
-      @media screen and (max-width: 767px) {
-        #maindiv ul li .mod-desc {
+      @media screen and (max-width: 639px) {
+        #maindiv ul li .game-sup {
           display: block;
+          padding: 1px 8px 0;
+          margin-left: 0;
+        }
+        #maindiv ul li .mod-links {
+          display: block;
+        }
+        #maindiv ul.mod-list a {
+        padding: 3px 8px 6px;
         }
       }
       @media screen and (max-width: 479px) {
@@ -375,144 +420,280 @@
           <p class="category-desc">All joinable NPC mods hosted by SHS.</p>
           <ul class="mod-list">
             <li>
-              <span class="mod-title">Adrian</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">A renegade Zhentarim sorcerer with a taste for decadence.</span>
+              <div class="mod-name">Adrian</div>
+              <div class="mod-desc">A renegade Zhentarim sorcerer with a taste for decadence.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Arath</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">A quick-witted and sarcastic human druid.</span>
+              <div class="mod-name">Arath</div>
+              <div class="mod-desc">A quick-witted and sarcastic human druid.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Beyond the Law</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">Half-elves Kova (mage/thief) and Kiyone (archer) on their quest.</span>
+              <div class="mod-name">Ariena</div>
+              <div class="mod-desc">A ferocious and agressive aasimar-blooded half-orc pitfighter.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Chloe</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">A female-romanceable kensai with a competitive disposition.</span>
+              <div class="mod-name">Aurora</div>
+              <div class="mod-desc">The fabulous storekeeper of Aurora's Shoes and Boots can now join you on your quest in ToB.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Dace</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">A wry and sarcastic female bounty hunter.</span>
+              <div class="mod-name">Beyond the Law</div>
+              <div class="mod-desc">Half-elves Kova (mage/thief) and Kiyone (archer) on their quest.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Darian</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">An aloof warrior from the enigmatic Avariel elves.</span>
+              <div class="mod-name">Chloe</div>
+              <div class="mod-desc">A female-romanceable kensai with a competitive disposition.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Fade</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">A fiery tiefling thief with a fantastic sense of humour.</span>
+              <div class="mod-name">Dace</div>
+              <div class="mod-desc">A wry and sarcastic female bounty hunter.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Faren</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">An easy-going fighter/thief with a taste for adventure.</span>
+              <div class="mod-name">Darian</div>
+              <div class="mod-desc">An aloof warrior from the enigmatic Avariel elves.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Hubelpot</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">An eccentric human druid for when you're in need of a good cook.</span>
+              <div class="mod-name">Fade</div>
+              <div class="mod-desc">A fiery tiefling thief with a fantastic sense of humour.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Isra</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">An earnest and engaging female paladin of Sune.</span>
+              <div class="mod-name">Faren</div>
+              <div class="mod-desc">An easy-going fighter/thief with a taste for adventure.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Iylos</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">An arrogant and sarcastic human monk with a dislike for Bhaalspawn.</span>
+              <div class="mod-name">Hubelpot</div>
+              <div class="mod-desc">An eccentric human druid for when you're in need of a good cook.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Luxley Family</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">Human cousins Sebastian (playwright) and Andrei (monk).</span>
+              <div class="mod-name">Isra</div>
+              <div class="mod-desc">An earnest and engaging female paladin of Sune.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Nathaniel</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">A serious, male-romanceable human kensai from Baldur's Gate.</span>
+              <div class="mod-name">Iylos</div>
+              <div class="mod-desc">An arrogant and sarcastic human monk with a dislike for Bhaalspawn.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Nephele</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">A cheerful and motherly halfling Cleric of Yondalla.</span>
+              <div class="mod-name">Kido</div>
+              <div class="mod-desc">A witty though "slightly" mad jester, who is all he needs to be.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Ninde</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">A scathingly witty female necromancer.</span>
+              <div class="mod-name">Luxley Family</div>
+              <div class="mod-desc">Human cousins Sebastian (playwright) and Andrei (monk).</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Tashia</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">An elven sorceress with a penchant for puzzles.</span>
+              <div class="mod-name">Nathaniel</div>
+              <div class="mod-desc">A serious, male-romanceable human kensai from Baldur's Gate.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Valerie</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">A studious and dedicated sorceress from the Cowled Wizards of Amn.</span>
+              <div class="mod-name">Nephele</div>
+              <div class="mod-desc">A cheerful and motherly halfling Cleric of Yondalla.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Xulaye</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">An evil and malicious drow assassin/mage.</span>
+              <div class="mod-name">Ninde</div>
+              <div class="mod-desc">A scathingly witty female necromancer.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Yeslick</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">Bring Yeslick, the BG1 dwarven cleric, into BG2.</span>
+              <div class="mod-name">Tashia</div>
+              <div class="mod-desc">An elven sorceress with a penchant for puzzles.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Yikari</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">An honorable, steadfast and loyal human monk.</span>
+              <div class="mod-name">Valerie</div>
+              <div class="mod-desc">A studious and dedicated sorceress from the Cowled Wizards of Amn.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Xulaye</div>
+              <div class="mod-desc">An evil and malicious drow assassin/mage.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Yeslick</div>
+              <div class="mod-desc">Bring Yeslick, the BG1 dwarven cleric, into BG2.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Yikari</div>
+              <div class="mod-desc">An honorable, steadfast and loyal human monk.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
           </ul>
           <address>
@@ -524,7 +705,308 @@
         <div class="content">
           <h2>Content Expansion and Non-Joinable Character Mods</h2>
           <p class="category-desc">All expansion mods and projects that add new individual characters (non-joinable followers, traders, etc.) hosted by SHS.</p>
- 
+          <ul class="mod-list">
+            <li>
+              <div class="mod-name">Almateria's Restoration Project</div>
+              <div class="mod-desc">Restores things that were in the game but for some reason didn't make the final cut.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Aurora's Shoes and Boots</div>
+              <div class="mod-desc">Visit a unique store and meet its friendly proprietor in Athkatla.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">BG1 NPCs for SoA &amp; ToB</div>
+              <div class="mod-desc">Adds a new district in Athkatla and brings back your old companions from BG1.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Cernd Friendship</div>
+              <div class="mod-desc">Adds a friendship with the calm and collected druid, Cernd.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Dorn Friendship</div>
+              <div class="mod-desc">Adds a friendship with the half-orc blackguard, Dorn.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Edwin Romance</div>
+              <div class="mod-desc">Everyone's favourite Red Wizard is now romanceable!</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Extended Banters</div>
+              <div class="mod-desc">Adds numerous inter-party banters between the Bioware NPCs.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Haer'Dalis Friendship</div>
+              <div class="mod-desc">Adds a friendship with the tiefling blade, playwright, and actor, Haer'Dalis.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Haer'Dalis Romance</div>
+              <div class="mod-desc">Can you find love and companionship in this sparrow's embrace?</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Hexxat Friendship</div>
+              <div class="mod-desc">Adds a friendship with the mysterious thief, Hexxat.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Imoen Friendship</div>
+              <div class="mod-desc">Adds a friendship with the PC's troubled sister, Imoen.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Jerry Zinger Show</div>
+              <div class="mod-desc">The newest talk show craze with rave reviews!</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Korgan Friendship</div>
+              <div class="mod-desc">Adds a friendship with a bloodthirsty dwarven fighter, Korgan.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Mazzy Friendship</div>
+              <div class="mod-desc">Adds a friendship with the valiant, steadfast halfling, Mazzy.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Minsc Friendship</div>
+              <div class="mod-desc">Adds a friendship with the Rashemi ranger, Minsc. Right, Boo?</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Neera Expansion</div>
+              <div class="mod-desc">Extra content for BG:EE's wildest mage, Neera.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Neera Expansion</div>
+              <div class="mod-desc">Extra content for BG:EE's wildest mage, Neera.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Redemption</div>
+              <div class="mod-desc">Redeem Irenicus at the end of ToB.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Sarevok Friendship</div>
+              <div class="mod-desc">Murderer, manipulator, enemy... potential lover?</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Sarevok Romance</div>
+              <div class="mod-desc">Adds a friendship with the ex-Bhaalspawn fighter, Sarevok.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Smiling Imp's Cross Banter Mod</div>
+              <div class="mod-desc">Adds a lot of new dialogue between NPCs from various mods.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Spellhold Gauntlet</div>
+              <div class="mod-desc">An alternative, shorter route through Spellhold.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Valygar Friendship</div>
+              <div class="mod-desc">Adds a friendship with the ranger with an obsessive hatred of magic, Valygar.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Viconia Friendship</div>
+              <div class="mod-desc">Adds a friendship with the irascible and seductive drow cleric, Viconia.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+            <li>
+              <div class="mod-name">Yoshimo Friendship</div>
+              <div class="mod-desc">Adds a friendship the (in)famous, charming rogue, Yoshimo.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
+            </li>
+          </ul>
           <address>
             <span class="footer">Index of Mods &gt; Content Expansion &#8226;</span><a href="#top">Back to Top</a>
           </address>
@@ -546,25 +1028,40 @@
           <p class="category-desc">All conversion projects (extensive replacement of the original game content) hosted by SHS.</p>
           <ul class="mod-list">
             <li>
-              <span class="mod-title">Classic Adventures</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">A compilation of old pen and paper modules from the 70s and 80s.</span>
+              <div class="mod-name">Classic Adventures</div>
+              <div class="mod-desc">A compilation of old pen and paper modules from the 70s and 80s.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Epic Endeavours</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">A whole new adventure without any links to the original game.</span>
+              <div class="mod-name">Epic Endeavours</div>
+              <div class="mod-desc">A whole new adventure without any links to the original game.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
             <li>
-              <span class="mod-title">Return to Trademeet</span><br>
-              <a href="">[Download]</a>
-              <a href="">[Readme]</a>
-              <a href="">[GitHub]</a>
-              <span class="mod-desc">Travel back to Candlekeep after finishing Throne of Bhaal.</span>
+              <div class="mod-name">Return to Trademeet</div>
+              <div class="mod-desc">Travel back to Candlekeep after finishing Throne of Bhaal.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="">download</a>
+                  <a href="">readme</a>
+                  <a href="">github</a>
+                </span>
+                <span class="game-sup">SoA &nbsp; ToB &nbsp; BGT &nbsp; BG2:EE &nbsp; EET</span>
+              </div>
             </li>
           </ul>
           <address>
@@ -578,11 +1075,16 @@
           <p class="category-desc">All mods that are part of the definition of mega-modification, i.e. BGT, TDD, SoS, TS, NeJ, RoT, CtB, BP and related projects hosted by SHS.</p>
           <ul class="mod-list">
             <li>
-              <span class="mod-title">Infinity Animations</span><br>
-              <a href="https://github.com/Spellhold-Studios/Infinity-Animations/releases/latest">[Download]</a>
-              <a href="readmes/infinity-animations/infinityanimations.html">[Readme]</a>
-              <a href="https://github.com/Spellhold-Studios/Infinity-Animations">[GitHub]</a>
-              <span class="mod-desc">Support for additional animation slots with compatibility in mind.</span>
+              <div class="mod-name">Infinity Animations</div>
+              <div class="mod-desc">Support for additional animation slots with compatibility in mind.</div>
+              <div class="mod-badges">
+                <span class="mod-links">
+                  <a href="https://github.com/Spellhold-Studios/Infinity-Animations/releases/latest">download</a>
+                  <a href="readmes/infinity-animations/infinityanimations.html">readme</a>
+                  <a href="https://github.com/Spellhold-Studios/Infinity-Animations">github</a>
+                </span>
+                <span class="game-sup">ToB &nbsp; BGT</span>
+              </div>
             </li>
           </ul>
           <address>
