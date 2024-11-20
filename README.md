@@ -66,6 +66,8 @@ While it would be logical to make your readme filename lowercase for consistency
    
 We allow this because the HTML file is stored in its dedicated lowercase subfolder, so it will not affect the alphabetical order of our readme directory.
 
+It might take a while for GitHub Pages to register the uploaded readme before it can be displayed in a browser.
+
 :three: **Check the previous section on [linking to readmes](#thinking-how-to-link-to-a-readme)**. Following our example, the working link would then be:
 
 ```
