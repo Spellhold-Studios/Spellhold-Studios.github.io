@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="118" height="28" aria-label="DOWNLOAD" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="117.9" height="28" version="1.1" viewBox="0 0 31.193 7.4083" xmlns="http://www.w3.org/2000/svg">
  <title>DOWNLOAD</title>
- <g transform="scale(.97521 1)" fill="#f2f4f6" shape-rendering="crispEdges">
-  <rect width="121" height="28" fill="#f2f4f6"/>
+ <g transform="matrix(.26458 0 0 .26458 -8.203 -6.8071)">
+  <rect x="31.004" y="25.728" width="117.9" height="28" fill="#f2f4f6" shape-rendering="crispEdges" stroke-width=".9871"/>
+  <text transform="matrix(.1 0 0 .1 30.577 25.863)" x="705" y="175" fill="#333333" font-family="Verdana, Geneva, 'DejaVu Sans', sans-serif" font-size="100px" font-weight="bold" text-anchor="middle" text-rendering="geometricPrecision" textLength="770">DOWNLOAD</text>
+  <path d="m47.613 33.229v9.9401m0 0-4.4945-3.6622m4.4945 3.6622 4.4945-3.6622" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5836"/>
+  <path d="m42.301 46.227h10.623" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5836"/>
  </g>
- <g transform="translate(-1.1005)" fill="#333" font-family="Verdana, Geneva, 'DejaVu Sans', sans-serif" font-size="100px" text-anchor="middle" text-rendering="geometricPrecision">
-  <text transform="scale(.1)" x="705" y="175" fill="#333333" font-weight="bold" textLength="770">DOWNLOAD</text>
- </g>
- <path d="m15.869 6.9298v9.9401m0 0-4.4945-3.6622m4.4945 3.6622 4.4945-3.6622" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5836"/>
- <path d="m10.557 19.928h10.623" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5836"/>
 </svg>

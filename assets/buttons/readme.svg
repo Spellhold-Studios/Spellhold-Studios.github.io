@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="94" height="28" aria-label="README" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="97.843" height="28" version="1.1" viewBox="0 0 25.888 7.4083" xmlns="http://www.w3.org/2000/svg">
  <title>README</title>
- <g transform="scale(.95431 1)" fill="#f2f4f6" shape-rendering="crispEdges">
-  <rect width="98.5" height="28" fill="#f2f4f6"/>
- </g>
- <g fill="#333" font-family="Verdana, Geneva, 'DejaVu Sans', sans-serif" font-size="100px" text-anchor="middle" text-rendering="geometricPrecision">
-  <text transform="scale(.1)" x="592.5" y="175" fill="#333333" font-weight="bold" textLength="545">README</text>
- </g>
- <g transform="matrix(.5569 0 0 .5569 .88407 -1.1641)" fill="#f2f4f6" stroke="#333" stroke-linecap="round">
-  <path d="m38.869 33.717v-14.376c0-1.4293-1.0914-2.4893-2.4166-2.3702h-0.06688c-2.3386 0.21439-5.891 1.4888-7.8733 2.8228l-0.18925 0.13088c-0.32294 0.21438-0.8575 0.21438-1.1804 0l-0.27847-0.17852c-1.9823-1.3221-5.5236-2.5846-7.8622-2.7871-1.3252-0.1191-2.4054 0.95284-2.4054 2.3702v14.388c0 1.1434 0.86864 2.2154 1.9377 2.3583l0.32294 0.04752c2.4166 0.34539 6.1472 1.6556 8.2854 2.9062l0.04448 0.02383c0.30067 0.17866 0.77954 0.17866 1.0691 0 2.1382-1.2625 5.8799-2.5846 8.3076-2.93l0.36749-0.04752c1.0691-0.14288 1.9377-1.2149 1.9377-2.3583z" stroke-width="2.8611"/>
-  <path d="m27.733 20.318v17.866" stroke-width="2.8611"/>
-  <path d="m23 23.891h-2.5057" stroke-width="2.1052"/>
-  <path d="m23.835 27.464h-3.3409" stroke-width="2.1052"/>
+ <g transform="matrix(.26774 0 0 .26458 -59.361 -77.258)">
+  <rect x="221.71" y="292" width="96.69" height="28" fill="#f2f4f6" shape-rendering="crispEdges" stroke-width=".99076"/>
+  <text transform="matrix(.1 0 0 .1 222.94 292.11)" x="592.5" y="175" fill="#333333" font-family="Verdana, Geneva, 'DejaVu Sans', sans-serif" font-size="99.409px" font-weight="bold" text-anchor="middle" text-rendering="geometricPrecision" textLength="545">README</text>
+  <g transform="matrix(.5569 0 0 .5569 223.65 290.22)" fill="#f2f4f6" stroke="#333" stroke-linecap="round">
+   <path d="m38.869 33.717v-14.376c0-1.4293-1.0914-2.4893-2.4166-2.3702h-0.06688c-2.3386 0.21439-5.891 1.4888-7.8733 2.8228l-0.18925 0.13088c-0.32294 0.21438-0.8575 0.21438-1.1804 0l-0.27847-0.17852c-1.9823-1.3221-5.5236-2.5846-7.8622-2.7871-1.3252-0.1191-2.4054 0.95284-2.4054 2.3702v14.388c0 1.1434 0.86864 2.2154 1.9377 2.3583l0.32294 0.04752c2.4166 0.34539 6.1472 1.6556 8.2854 2.9062l0.04448 0.02383c0.30067 0.17866 0.77954 0.17866 1.0691 0 2.1382-1.2625 5.8799-2.5846 8.3076-2.93l0.36749-0.04752c1.0691-0.14288 1.9377-1.2149 1.9377-2.3583z" stroke-width="2.8611"/>
+   <path d="m27.733 20.318v17.866" stroke-width="2.8611"/>
+   <path d="m23 23.891h-2.5057" stroke-width="2.1052"/>
+   <path d="m23.835 27.464h-3.3409" stroke-width="2.1052"/>
+  </g>
  </g>
 </svg>
