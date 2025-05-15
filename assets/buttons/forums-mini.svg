@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74.082" height="20" version="1.1" viewBox="0 0 19.6 5.2916" xmlns="http://www.w3.org/2000/svg">
+ <title>forums</title>
+ <defs>
+  <clipPath id="a">
+   <rect width="85" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <linearGradient id="b" x2="0" y2="41.231" gradientTransform="matrix(1.7968 0 0 .48507 10.917 0)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#bbb" stop-opacity=".1" offset="0"/>
+   <stop stop-opacity=".1" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="matrix(.26458 0 0 .26458 -2.889 -.00299)" clip-path="url(#a)">
+  <path d="m14.21 1e-4h17.685c1.8248 0 3.2938 1.4586 3.2938 3.2704v13.459c0 1.8118-1.4691 3.2704-3.2938 3.2704h-17.685c-1.8248 0-3.2938-1.4586-3.2938-3.2704v-13.459c0-1.8118 1.4691-3.2704 3.2938-3.2704zm17.729 0h3.2497v5.2031h-3.2497zm0 14.797h3.2497v5.2031h-3.2497z" fill="#626262" stroke-width="0"/>
+  <path d="m22.453 12.437a0.64545 0.64545 0 0 0 0-0.91288 1.8135 1.8135 0 0 1 0-2.5647l2.1736-2.173a1.8135 1.8135 0 1 1 2.5647 2.5647l-0.67189 0.67128a0.64551 0.64551 0 0 0 0.91288 0.91288l0.67189-0.67128a3.1045 3.1045 0 0 0-4.3903-4.3904l-2.1736 2.173a3.1044 3.1044 0 0 0 0 4.3903c0.25204 0.25205 0.66084 0.25205 0.91288 0zm1.2601-3.0859a0.64545 0.64545 0 0 0 0 0.91288 1.8135 1.8135 0 0 1 0 2.5647l-2.1515 2.1515a1.8135 1.8135 0 1 1-2.564-2.5647l0.63012-0.63012a0.64551 0.64551 0 0 0-0.91288-0.91288l-0.6295 0.63012a3.1045 3.1045 0 0 0 4.3904 4.3903l2.1515-2.1515a3.1044 3.1044 0 0 0 0-4.3904 0.64545 0.64545 0 0 0-0.91288 0z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd" stroke-width=".61473"/>
+  <rect x="34.795" width="50.205" height="20" fill="#92403a" stroke-width=".97112"/>
+  <rect x="10.917" width="74.084" height="20" ry="3.1831" fill="url(#b)" stroke-width=".93358"/>
+ </g>
+ <g transform="matrix(.26458 0 0 .26458 11.566 3.6196)" font-family="Verdana, Geneva, 'DejaVu Sans', sans-serif" font-size="110px" text-anchor="middle" text-rendering="geometricPrecision">
+  <text transform="matrix(.1 0 0 .1 1.9091 2.5221)" x="33.61504" y="-10.809398" fill="#010101" fill-opacity=".3" aria-hidden="true" textLength="390">forums</text>
+  <text transform="matrix(.1 0 0 .1 1.9091 1.6221)" x="33.61504" y="-11.809398" fill="#ffffff" letter-spacing="0px" word-spacing="0px" textLength="390">forums</text>
+ </g>
+</svg>
