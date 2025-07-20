@@ -1,0 +1,619 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<script type="text/javascript">
+<!--
+function mail(text)
+    {
+    bits=text.split("###");
+    document.write("<a href=\"mailto:"+bits[0]+"@"+bits[2]+"\">"+bits[4]+"</a>");
+    }
+-->
+</script>
+
+<style type="text/css">
+/*<![CDATA[*/
+<!-- 
+  body {
+    cursor: default;
+    text-align: center;
+    color: #000;
+    background-color: #A1A1A1;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    xwidth: 98%;
+  }
+  
+  #headerdiv-top {
+    text-align: center;
+    font-family: Verdana, Trebuchet MS, Arial, serif;
+    font-size: 200%;
+    font-weight: bold;
+    line-height: 73%;
+    color #020F1D;
+    background-color: #fff;
+    padding: 15px 0px 15px 0px;
+    margin: 0px auto;
+    border-left: solid 1px #532529;
+    border-right: solid 1px #532529;
+    border-bottom: solid 1px #532529;
+    border-top: solid 3px #532529;
+    width: 90%;
+    position: relative;
+    display: block;
+  }
+  
+  #headerdiv-middle {
+    text-align: center;
+    font: italic 75% Verdana, Trebuchet MS, Arial, serif;
+    color: #bbb;
+    font-weight: normal;
+    background-color: #F1F1F1;
+    width: 90%;
+    border-left: solid 1px #532529;
+    border-right: solid 1px #532529;
+    margin: 0px auto;
+    padding: 10px 0px 10px 0px;
+    position: relative;
+    display: block;
+  }
+  
+  .headerdiv-line {
+    color: #532529;
+  }
+  
+  #headerdiv-middle a:link, #headerdiv-middle a:visited {
+    text-decoration: underline;
+    background-color: transparent;
+    color: #000;
+  }
+  
+  #headerdiv-middle a:focus, #headerdiv-middle a:hover {
+    text-decoration: underline;
+    color: #532539;
+  }
+  
+  #headerdiv-middle a:active {
+    color: #000;
+    text-decoration: line-through;
+    border: none;
+  }
+
+  #headerdiv-bottom {
+    text-align: center;
+    font: 83% Verdana, Trebuchet MS, Arial, serif;
+    color: #aaa;
+    padding: 8px 0px 8px 0px;
+    margin: 0px auto;
+    border-left: solid 1px #532529;
+    border-right: solid 1px #532529;
+    border-bottom: solid 3px #532529;
+    border-top: solid 1px #bbb;
+    width: 90%;
+    background-color: #F1F1F1;
+    position: relative;
+    display: block;
+  }
+
+  #maindiv {
+    text-align: center;
+    font-family: Verdana, Trebuchet MS, Arial, serif;
+  }
+  
+  #maindiv div {
+    background-color: #F1F1F1;
+    color: #020F1D;
+    padding: 11px 0px 25px 0px;
+    margin: 50px auto;
+    border-width: 1px 1px 4px 10px;
+    border-style: solid;
+    border-color: #532529;
+    width: 80%;
+    position: relative;
+    display: block;
+  }
+  
+  #maindiv div::before {
+    content: counter(kman, lower-roman);
+    counter-increment: kman;
+    font-size: 100%;
+    font-weight: bold;
+    color: #fff;
+    background-color: #532529;
+    width: 42px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+  }
+  
+  #maindiv p {
+    font-size: 83%;
+    font-style: normal;
+    text-align: justify;
+    line-height: 160%;
+    padding: 0px;
+    margin: 10px auto;
+    width: 90%;
+    display: block;
+  }
+  
+  #headerdiv-bottom a:link, #headerdiv-bottom a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    background-color: transparent;
+    color: #000;
+  }
+  
+  #headerdiv-bottom a:focus, #headerdiv-bottom a:hover {
+    text-decoration: none;
+    color: #532539;
+  }
+  
+  #headerdiv-bottom a:active {
+    color: #000;
+    text-decoration: line-through;
+    border: none;
+  }
+  
+  #maindiv address a:link, #maindiv address a:visited {
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  #maindiv address a:focus, #maindiv address a:hover {
+    text-decoration: underline;
+    color: #532539;
+  }
+  
+  #maindiv address a:active {
+    color: #fff;
+    text-decoration: line-through;
+    border: none;
+  }
+  
+  #maindiv address {
+    font-size: 70%;
+    font-style: normal;
+    text-decoration: none;
+    color: #959FAA;
+    background-color: #532529;
+    padding: 3px 0px 0px;
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    display: block;
+    text-align: right;
+  }
+
+  .address-footer-1 {
+    letter-spacing: 0.2em;
+  }
+  
+  h4 {
+    font-family: Verdana, Trebuchet MS, Arial, serif;
+    font-size: 150%;
+    text-align: left;
+    text-indent: 30px;
+    padding: 0px 0px 0px 0px;
+    border-bottom: dotted 2px #ddd;
+  }
+
+  h5 {
+    font-family: Verdana, Trebuchet MS, Arial, serif;
+    font-size: 120%;
+    text-align: left;
+    text-indent: 30px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  h4::first-letter {
+    color: #532529;
+    background-color: transparent;
+  }
+  
+  body h1, body #maindiv h3, h1+h2, body #maindiv h4 {
+  font-weight: bold;
+  display: block;
+  }
+  
+  #maindiv .divimp {
+    font-size: 80%;
+    font-family: Verdana;
+    text-align: left;
+    background-color: #E1E1E1;
+    border-top: solid 1px #bbb;
+    border-bottom: solid 1px #bbb;
+    border-left: solid 6px #bbb;
+    border-right: solid 6px #bbb;
+    padding: 10px;
+    margin: 20px auto;
+    line-height: 150%;
+  }
+  
+  #maindiv .divimp::before {
+    display: none;
+  }
+  
+  #maindiv .divimp p {
+    font-size: 100%;
+    text-indent: 0px;
+  } 
+  
+  .list-numbered {
+    list-style-type: decimal;
+    margin-top: 0px;
+  }
+  
+  #headerdiv-top-fw {
+    font-size: 40%;
+    color: #532529;
+    margin: 0px;
+		padding-top: 9px;
+		display: block;
+  }
+  
+  .faq-q {
+    font-weight: bold;
+    font-style: italic;
+    text-align: justify;
+  }
+    
+  .faq-a {
+    text-align: justify;  
+  }
+  
+  #maindiv .version {
+    display: block;
+    width: 100%;
+    background-color: #F1F1F1;
+    text-align: left;
+    text-indent: 30px;
+    font-style: italic;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-bottom: solid 1px #bbb;
+    border-top: solid 1px #bbb;
+  }
+  
+  .version-list {
+    line-height: 150%;
+    font-size: 80%;
+    text-align: left;
+    list-style-type: square;
+  }
+-->
+/*]]>*/
+</style><title>The Mod for the Wicked Readme</title>
+
+
+
+			<!--<script language="javascript" src="SPELLHOLD%20STUDIOS%20-%20readme_files/js.js"></script>--></head>
+
+
+  <body>
+    <a name="top" id="top"></a>
+    <div id="headerdiv-top">
+      The Mod for the Wicked<br>
+      <span id="headerdiv-top-fw">A Spellhold Studios mod</span>
+    </div>
+    <div id="headerdiv-middle">
+      	<span class="headerdiv-line">Author: <a href="mailto:deathsangel@spellholdstudios.net">Deathsangel</a></span> |
+	<span class="headerdiv-line"><a href="http://forums.spellholdstudios.net/index.php?s=f0e4572809fc416c034f908089da9cb9&showforum=149" target="_blank">Forum</a> (opens new window)</span> |
+	<span class="headerdiv-line"><a href="http://www.geocities.com/fanaticfantasyfan/index.html" target="_blank">The Mod's homepage</a></span>
+ <span class="headerdiv-line">Version: 2.2</span>
+    </div>
+    <div id="headerdiv-bottom">
+      <a href="#intro">Introduction</a> | <a href="#compatibility">Compatibility notes</a> | <a href="#installation">Installation</a> | <a href="#components">Components</a> | <a href="#faq">FAQ</a> | <a href="#version">Version history
+</a> | <a href="#credits">Credits</a> | <a href="#contact">Contact info</a>
+    </div><a name="intro" id="intro"></a>
+    <div id="maindiv">
+
+      <!-- ================== I n t r o d u c t i o n ================== -->
+      <div>
+        <h4>
+          Introduction
+        </h4>
+        <p>
+          This is actually the read me of the stand alone Ariena, but she is part of the bigger mod I'm working on: The Mod for the Wicked. This mod was made, for one part, to increase roleplay. I am against any evil act in real life and none of the things presented in the Kido mod, Ariena mod or the entire Mod for the Wicked should in any way be copied in to deeds preformed in real life!<br>
+<br>
+Version 2.2 aims to delete the bugs that were reported of version 1.0 (including the nasty walking away bug) and extends heavily on her aasimar past, along side other new content, which includes ToB.<br>
+<br>
+Though Ariena has been bug-tested already for quite a bit, she might still contain bugs. I should put more times in to tests, but I'm quite impatient. So that is why it is already out. Please report any bugs to his forum called The Mod for the Wicked at Spellhold Studios (which is the bigger mod he is part of)<br>
+<br>
+Ariena requires ToB to work.
+		</p>
+        <address>
+          <span class="address-footer-1">The Mod for the Wicked; Introduction</span>
+            <a href="#top">BACK TO TOP</a>
+        </address>
+      </div>
+
+      <!-- ================== C o m p a t i b i l i t y ================== -->
+      <a name="compatibility" id="compatibility"></a>
+      <div>
+        <h4>
+          Compatibility notes
+        </h4>
+        <p>
+          There is a specific install order, even though Ariena version 2.0 <u>no</u> longer requires the Kido NPC to work. If you want Ariena installed together with Kido, it is required that you first install Kido, then secondly Ariena. <br>
+ As far as known there are no compatibility problems.
+		<address>
+          <span class="address-footer-1">The Mod for the Wicked; Compatibility Notes</span>
+            <a href="#top">BACK TO TOP</a>
+        </address>
+      </div>
+
+      <!-- ================== I n s t a l l a t i o n ================== -->
+      <a name="installation" id="installation"></a>
+      <div>
+        <h4>
+          Installation
+        </h4>
+        <h5>
+        	Windows
+        </h5>
+        <p>
+Ariena, is packed as a rar file. The files can be extracted from the archive using WinRar. If properly extracted (that is extracted into your Bg2 folder), you should have a Ariena folder, and Setup-Ariena.exe in your BG2 folder. To install, simply double-click Setup-Ariena.exe and follow the instructions on screen.
+		  <br>
+		  <br>Please re-run Setup-Ariena.exe in your BG2 folder to reinstall, uninstall or otherwise change components.
+		</p>
+        <address>
+          <span class="address-footer-1">The Mod for the Wicked; Installation</span>
+            <a href="#top">BACK TO TOP</a>
+        </address>
+      </div>
+
+			<!-- ================== C o m p o n e n t s ================== -->
+      <a name="components" id="components"></a>
+      <div>
+        <h4>
+          Components
+        </h4>
+        <p>
+          List of currently available components (though it is not really worth mentioning):
+        </p>
+        <div class="divimp">
+          <ul class="list-numbered">
+            <li><a href="#c0">Ariena, the Pitfighter</a><br>
+            </li>
+            <li><a href="#c1">Ariena's portraits (2 seperate possibilities)</a><br>
+            </li>
+            <li><a href="#c1">Grand Mastery Fix</a><br>
+            </li>
+        </div>
+        </p>
+
+				<a name="c0" id="Ariena, The Pitfighter"></a>
+        <h5>
+					Ariena, The Pitfighter
+				</h5>
+        <p>
+        <div class="divimp">
+          The main component and of course necessary to install. Installs Ariena with all his agressiveness and bashing power!
+        </div>
+        </p>
+
+        <a name="c1" id="Ariena's portraits (2 seperate possibilities)"></a>
+        <h5>
+					Ariena's portraits
+				</h5>
+        <p>
+        <div class="divimp">
+		There are three portraits set you can choose from. The default portrait is created by Immortality/Khayman/Deathsangel/Celestine, a brighter version of the default portait by Celestine, and the alternative by HERD.<br>
+My tip is to take a look at the portraits first before installing them. You can view them by going to the Ariena folder and then look in the portraits folder.
+		</div>
+        </p>
+        <a name="c1" id="Grand Mastery Fix"></a>
+        <h5>
+					Grand Mastery Fix
+				</h5>
+        <p>
+        <div class="divimp">
+		The files Wspatck.2da and Wspecial.2da fix the Grand Mastery problem with Baldur's Gate 2. When a character uses five proficiency slots in a weapon (the true thing that seperates fighter fromt the other warrior-classes or multi-classers) moving from four to five reduced in the pen and paper version the THAC0 with that weapon by one, increase attacks per round from 3/2 to 5/2, and increase damage by 1.<br>
+In the game this doesn't happen, it only increases the damage by one, so isn't that "Grand" and is rather a waste of a proficiency point. This is changed with this fix, making fighters once again the true weapon masters.<br>
+This fix is also presented in other mods, but for the convience of Ariena it is added to this mod again ;) Over-writing the other fix should not cause any problems.<br>
+Grand Mastery was correctly implemented in Baldur's Gate 1 and Icewind Dale, but was changed in Baldur's Gate 2 for "game balance", which I think actually gets upset by it. To use this fix you have to restart BG2 (if it's already running.)
+		</div>
+        </p>
+        <address>
+          <span class="address-footer-1">The Mod for the Wicked; Components</span>
+          <a href="#top">BACK TO TOP</a>
+        </address>
+      </div>
+
+			<!-- ================== F A Q ================== -->
+      <a name="faq" id="faq"></a>
+      <div>
+        <h4>
+          Frequently Asked Questions
+        </h4>
+        <p>
+          <span class="faq-q">Q: Where can I find Ariena?</span><br>
+          <span class="faq-a">A: In the Docks district, near Cromwell.</span><br><br>
+
+          <span class="faq-q">Q: Hey, it takes forever for her quest to start what gives?</span><br>
+          <span class="faq-a">A: You need to win her trust, before she is going to admit to you of... well you know. ;) Not too many spoilers in here.</span><br><br>
+
+          <span class="faq-q">Q: Hey, last time I played around I got her quest, but this time I couldn't get the right answer. Why?</span><br>
+          <span class="faq-a">A: Though I stay very true to the original game I did add a lot of stat checks. To make sure Ariena's personal quest start you must either a high enough intelligence; failing that, some NPC's can help to fill the gap of your knowledge. If you have neither the Intelligence or one of the NPC's Ariena's personal quest will not start.</span><br><br>
+
+          <span class="faq-q">Q: Wha! Ariena is talking all weird and stuff. What must I do or is that part of the game?</span><br>
+          <span class="faq-a">A: If she is saying all strange lines that are obviously not hers, then you strings got mixed up. Hover over Ariena with the pointer and hit the T key. After a few seconds you should have control again and she should be her usual agressive self again.</span><br><br>
+
+          <span class="faq-q">Q: Ariena sometimes seems unsure of herself and sometimes tend to chaotic ways. Is this on purpose?</span><br>
+          <span class="faq-a">A: Yes, Ariena can shift in her alignment (towards two others), this is possible due to her immaturity when considering her views on the world.</span><br><br>
+
+          <span class="faq-q">Q: I want spoilers! I want to know every possibility in which Ariena talks.</span><br>
+          <span class="faq-a">A: Go to <a href="http://forums.spellholdstudios.net/index.php?s=f0e4572809fc416c034f908089da9cb9&showforum=149" target="_blank">the forum</a>. It is your best option for these kind of things.</span><br><br>
+
+          <span class="faq-q">Q: I've found a bug / incompatibility / have a suggestion!</span><br>
+          <span class="faq-a">A: <a href="#contact">Contact me</a> and I'll deal with it as soon as possible.</span><br><br>
+
+          <span class="faq-q">Q: I've found a grammar error!</span><br>
+          <span class="faq-a">A: Again, <a href="#contact">contact me</a> and I'll change it. <u>Unless</u> this involves the words tournament, distinction and her grammar build-up of sentences. These mistakes have been done on purpose, because of her low Intelligence.</span><br><br>
+
+          <span class="faq-q">Q: I want to translate the mod!</span><br>
+          <span class="faq-a">A: Great, really great! I love to have it in multiple languages. <a href="#contact">Contact me</a> or go to <a href="http://forums.spellholdstudios.net/index.php?s=f0e4572809fc416c034f908089da9cb9&showforum=149" target="_blank">the forum</a> and will talk. Oh, of course you will get all the credit for translating.</span><br>
+
+        </p>
+        <address>
+          <span class="address-footer-1">The Mod for the Wicked; Frequently Asked Questions</span>       <a href="#top">BACK TO TOP</a>  
+        </address>
+      </div>
+
+			<!-- ================== Version History ================== -->
+      <a name="version" id="version"></a>
+      <div>
+        <h4>
+          Version History
+        </h4>
+
+        <p class="version">
+					Version 2.2:
+        </p>
+        <ul class="version-list">
+	       	<li>Typo removed</li>
+	       	<li>Ariena's mother now does not repeat herself</li>
+	       	<li>Possible loophole that would not cause Ariena to corrupt corrected</li>
+	       	<li>Ariena's mother now goes inside at night, if village ins't saved yet.</li>
+	       	<li>Better transitions of two interjections</li>
+	       	<li>Removed a double rest in the "Ariena's night out" dialogue</li>
+        </ul>
+
+        <p class="version">
+        <p class="version">
+					Version 2.1:
+        </p>
+        <ul class="version-list">
+	       	<li>Typos removed</li>
+	       	<li>Epilogue portaits added correctly</li>
+        </ul>
+
+        <p class="version">
+					Version 2.0:
+        </p>
+        <ul class="version-list">
+	       	<li>Bugs removed</li>
+        	<li>Refinements and extensions made</li>
+        	<li>Interjections added</li>
+        	<li>Personal quest added</li>
+        	<li>Stringfixer (hit the T key)</li>
+        	<li>ToB summonable</li>
+        	<li>Kit slightly changed to be more credible</li>
+        	<li>Mod for the Wicked prefix incorporated</li>
+        </ul>
+
+
+        <p class="version">
+					Version 1.0:
+				</p>
+        <ul class="version-list">
+				  <li>SoA Banters and Interjections</li>
+				  <li>Unique voiceset</li>
+				  <li>Unique items (armor)</li>
+				  <li>Unique kit (Thanks to Ghreyfain)</li>
+				  <li>Ariena joinable NPC</li>
+
+        </ul>
+        <address>
+          <span class="address-footer-1">The Mod for the Wicked; Version History</span>
+                <a href="#top">BACK TO TOP</a>
+        </address>
+      </div>
+
+			<!-- ================== Credits ================== -->
+      <a name="credits" id="credits"></a>
+      <div>
+        <h4>
+          Credits
+        </h4>
+        <p>
+          This mod was made by the Deathsangel (on the forums) or better known as Guido Voets (when it comes to real life)
+        </p>
+
+				<h5>I want to thank:</h5>
+
+        <p class="faq-q">
+          The people who made this possible, by creating amazing modding tools. The ones I used:
+        </p>
+        <ul class="version-list">
+					<li>WeiDu</li>
+					<li>DLTCEP</li>
+					<li>NearInfinity</li>
+					<li>InfinityExplorer</li>
+					<li>Creative Recorder</li>
+					<li>AudaCity</li>
+					<li>NotePad :p</li>
+        </ul>
+        
+        <p class="faq-q">
+          People I really need to mention:
+        </p>
+        <ul class="version-list">
+		<li>Diana (Debugging team and scripts)</li>
+		<li>Tassadar (for making it possible I am can work on this mod at all ;))</li>
+		<li>Cuv (Debugging team & making it possible I am can work on this mod at all ;))</li>
+		<li>Brad (Debugging team)</li>
+		<li>Pain Elemental (Debugging team)</li>
+		<li>Ghreyfain (his basis for Ariena's Pit Fighter kit (his own is in the AoE mod))</li>
+        </ul>
+
+        <p class="faq-q">
+          People that I also want to mention:
+        </p>
+        <ul class="version-list">
+					<li>Keryvian (for testing and debugging of version 1)</li>
+					<li>Khayman (portaits)</li>
+					<li>Immortality (portaits)</li>
+					<li>Celestine (portaits)</li>
+					<li>HERD (portaits)</li>
+					<li>The Wizard (mirrors)</li>
+					<li>Ghreyfain (again) (his Rudimentary NPC Guide got me started with all of this)</li>
+					<li>Ppl at all the forums (mainly SHS, G3 and PocketPlane) (technical help)</li>
+					<li>Fans at Spellholdstudios (keeping my spirit up)</li>
+        </ul>
+
+
+        <address>
+          <span class="address-footer-1">The Mod for the Wicked; Credits</span>
+          <a href="#top">BACK TO TOP</a>
+        </address>
+      </div>
+
+      <!-- ================== C O N T A C T   I N F O ================== -->
+      <a name="contact" id="contact"></a>
+      <div>
+        <h4>
+          Contact Info:
+        </h4>
+        <p>
+        	I welcome any kind of bug report, incompatibility issue report, suggestion and constructive
+        	criticism, and I'll take it in highest consideration - please, keep the trolling to yourself.
+          <br>The method of contacting me I prefer is via <a href="http://forums.spellholdstudios.net/index.php?s=f0e4572809fc416c034f908089da9cb9&showforum=149" target="_blank">the forum</a>,
+					since this way all the interested players will be able to contribute their ideas.
+					<br>However, if you prefer to contact only me, this is the e-mail address: </p>
+        	<script type="text/javascript">
+						<!--
+								document.write("<p>");
+								mail("deathsangel### no@way.spammers ###spellholdstudios.net### you.wont.get@it ###The Deathsangel");
+								document.write("</p>");
+						-->
+					</script>
+        <p>If you turned off JavaScript and didn't see a link above, you'll have to
+				work out the real address by hand (sorry, protecting against spammers is a 
+				necessity right now):</p>
+          <p>spellholdstudios.net after the usual symbol, deathsangel before.</p>
+        </ul>
+        <address>
+          <span class="address-footer-1">The Mod for the Wicked; Contact Info</span>
+					<a href="#top">BACK TO TOP</a>
+        </address>
+      </div>
+
+    </div>
+  <!--<script language="javascript">postamble();</script>-->
+</body></html>
