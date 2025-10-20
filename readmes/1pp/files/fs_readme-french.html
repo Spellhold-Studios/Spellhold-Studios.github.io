@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+/*<![CDATA[*/
+<!-- 
+	body {
+		margin: 0;
+		padding: 0;
+		cursor: default;
+		text-align: center;
+		color: #000;
+		background: #e3e3db url('images/shsbkgd.jpg');
+	}
+
+	#wrap {
+		text-align: left;
+		margin: 0 auto;
+		margin-top: 20px;
+		width: 88%;
+		font-family: Verdana, Tahoma, Arial, sans-serif;
+		font-size: 12px;
+		color: #333;
+	}
+
+	#header {
+		text-align: center;
+		background: #e5e5e5;
+		border: 1px solid #781808;
+		border-top: 5px solid #781808;
+		border-bottom: 5px solid #781808;
+		padding: 5px 0 13px 0;
+		box-shadow: 6px 6px 9px rgba(0,0,0,.3);
+	}
+	#header .about {
+		margin: 7px 0 0 0;
+		padding: 0;
+		font-style: italic;
+		color: #555;
+	}
+	#header .menu {
+		font-weight: bold;
+		margin: 0;
+		color: #999;
+	}
+	#header .menu a:link,
+	#header .menu a:visited {
+		color: #333;
+	}
+
+	#footer {
+		text-align: center;
+		background: #e5e5e5;
+		border: 1px solid #781808;
+		border-top: 5px solid #781808;
+		border-bottom: 5px solid #781808;
+		font-size: 75%;
+		padding: 5px 0 13px 0;
+	}
+
+	#maindiv {
+		margin: 0 auto;
+		margin-top: -20px;
+	}
+
+	#maindiv .content {
+		counter-increment: kman;
+		counter-reset: h2;
+		background-color: #e8e8e6;
+		padding: 0 0 25px 0;
+		margin: 50px auto;
+		border-width: 1px 1px 4px 10px;
+		border-style: solid;
+		border-color: #781808;
+		width: 90%;
+		position: relative;
+		display: block;
+		box-shadow: 6px 6px 9px rgba(0,0,0,.3);
+	}
+	#maindiv .content::before {
+		content: counter(kman, lower-roman);
+		font-size: 100%;
+		font-weight: bold;
+		text-align: center;
+		color: #eee;
+		background-color: #781808;
+		width: 50px;
+		top: 0px;
+		left: 0px;
+		display: block;
+	}
+
+	#maindiv .important {
+		font-size: 95%;
+		font-family: Verdana;
+		text-align: left;
+		background-color: #deded9;
+		border-width: 1px 4px 1px 4px;
+		border-style: solid;
+		border-color: #781808;
+		padding: 10px;
+		margin: 10px auto;
+		width: 80%;
+		line-height: 160%;
+	}
+	#maindiv .important::before {
+		display: none;
+	}
+	#maindiv .important p {
+		width: 100%;
+		font-size: 100%;
+		text-indent: 0px;
+		margin: 5px 0 10px 0;
+	}
+	#maindiv .important ol {
+		margin: -10px 0 0 20px;
+	}
+	#maindiv .important ul {
+		margin: -10px 0 0 15px;
+	}
+
+	#maindiv p {
+		font-size: 100%;
+		font-style: normal;
+		text-align: justify;
+		line-height: 150%;
+		padding: 0px;
+		margin: 10px auto;
+		width: 90%;
+		display: block;
+	}
+
+	#maindiv address {
+		font-size: 95%;
+		font-style: normal;
+		font-weight: bold;
+		text-decoration: none;
+		color: #BBB;
+		background-color: #781808;
+		padding: 3px 0px 0px;
+		margin: 0px;
+		width: 100%;
+		position: absolute;
+		bottom: -1px;
+		left: 0px;
+		display: block;
+		text-align: right;
+	}
+	#maindiv address a:active {
+		color: #fff;
+		text-decoration: line-through;
+		border: none;
+	}
+	#maindiv address a:focus,
+	#maindiv address a:hover {
+		text-decoration: none;
+		color: #F1F1F1;
+		border: 0;
+	}
+	#maindiv address a:link,
+	#maindiv address a:visited {
+		font-weight: bold;
+		text-decoration: underline;
+		background-color: transparent;
+		color: #eaeaea !important;
+		padding-right: 5px;
+		padding-left: 6px;
+	}
+/*
+	body {
+		counter-reset:kman;
+		color: #000;
+		margin-top: 20px;
+		margin-bottom: -20px;
+	}
+	.tocplus{
+		counter-increment:hman;
+	}
+	.toc::before {
+		content: counter(hman, lower-roman) '.';
+		counter-increment:hman;
+		font-size: 100%;
+		color: #781808;
+		font-style:italic;
+		position:absolute
+	}*/
+
+	/*	Lists  */
+	#maindiv ol {
+		margin: -10px 0 0 35px;
+		*margin-left: 70px;
+	}
+	#maindiv ol li {
+		line-height: 150%;
+	}
+	#maindiv ul {
+		line-height: 170%;
+		margin-left: 4%;
+		width: 87%;
+	}
+	#maindiv ul li {
+		line-height: 150%;
+	}
+	#maindiv ul li ul {
+		margin: 0px;
+		width: 96%;
+	}
+	#maindiv ul li ul li {
+	}
+	#maindiv ul li a:link,
+	#maindiv ul li a:visited,
+	#maindiv ul li ul li a:link,
+	#maindiv ul li ul li a:visited {
+		color: #781808;
+		text-decoration: none;
+		font-weight: normal;
+	}
+
+	/*	Lists
+	#maindiv ul li ul li ul {
+		margin-left: -1%;
+		width: 98%;
+	}
+	#maindiv ul li ul li ul li {
+	}
+	ul.c1 {margin-left: 32px;}  */
+
+
+	/*	Liens internet  */
+	a:hover,
+	a:active {
+		color: #222;
+		border-bottom: 1px solid black;
+	}
+	a:link,
+	a:visited {
+		color: #781808;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+
+	/*	Sections  */
+	h1 {
+		font-size: 250%; /* 225 */
+		color: #444;
+		padding: 10px 0 15px 0; /* 5 0 5 0 */
+		margin: 0;
+		width: 100%;
+	}
+
+	h2 {
+		display: block;
+		font-family: Verdana, Trebuchet MS, Arial, serif;
+		text-align: left;
+		text-indent: 30px;
+		padding: 0px;
+		margin: 20px 0 0 0;
+		border-bottom: dotted 2px #d0d0d0;
+		border-top: dotted 2px #d0d0d0;
+		background: #deded9;
+		font-size: 160%;
+	}
+	h2::first-letter {
+		color: #781808;
+		background-color: transparent;
+	}
+/*	h2 .com {
+		color: #781808;
+		background-color: transparent;
+		margin-right:30px;
+	}*/
+	h3,
+	h4,
+	h5 {
+		margin: 10px 40px 10px 40px;
+		padding: 0;
+	}
+
+	h3 {
+		font-size: 125%;
+		font-style: italic;
+	}
+	h4 {
+		font-size: 125%;
+	}
+	h5 {
+		font-size: 100%;
+	}
+/*
+	h3 {
+		font-size: 125%;
+		font-style: italic;
+		margin: 10px 40px 10px 40px;
+		padding: 0;
+	}*/
+
+/*	h5 {
+		margin: 10px 40px 10px 40px;
+		padding: 0;
+		font-size: 100%;
+	}*/
+
+	h6 {
+		width: 100%;
+		margin: 10px 0 15px 0;
+		background-color: #ECECEC;
+		text-align: left;
+		text-indent: 30px;
+		font-size: 100%;
+		font-style: italic;
+		padding-top: 1px;
+		padding-bottom: 1px;
+		border-bottom: solid 1px #bbb;
+		border-top: solid 1px #bbb;
+	}
+/*
+	.com {
+		color: #781808;
+		background-color: transparent;
+	}*/
+
+
+	/* Additional stuff */
+
+	.t1 {
+		font-weight: bold;
+		width: 26%;
+		text-align: right;
+		clear: right;
+		float: left;
+		line-height: 22px;
+	}
+	.t2 {
+		text-align: left;
+		width: 73%;
+		float: right;
+		line-height: 22px;
+	}
+
+	.screen {background-size:contain;background-repeat:no-repeat}
+	.screen img{max-width:100%; opacity:1;transition: opacity 1.25s ease-in-out;
+		-moz-transition: opacity 1.25s ease-in-out;
+		-webkit-transition: opacity 1.25s ease-in-out;
+	}
+	.screen img:hover{max-width:100%; opacity:0}
+
+-->
+/*]]>*/
+</style>
+	<title>
+		Spellhold Studios - One Pixel Productions: Flaming Swords
+	</title>
+	<link href="images/shsweb.ico" rel="icon" type="bmp" />
+  </head>
+
+  <body>
+	<div id="wrap">
+	  <a name="top" id="top"></a>
+	  <div id="header">
+
+		<h1 style="color: #781808;text-shadow: 0.1rem 0.1rem 0.25rem #807559;">One Pixel Productions : Épées enflammées</h1>
+
+		<span style="font-style: italic;"><strong>Un mod de Spellhold Studios pour Baldur's Gate II: SoA/<acronym title="Throne de Bhaal">ToB</acronym>.</strong></span>
+		<hr style="margin: 10px 0 10px 0; padding: 0; height: 1px; border: 0; color: #aaa; background-color: #aaa;" />
+
+		<p class="about">
+			Contributeurs : Erephine, Nythrun, Kaeloree
+		</p>
+		<p class="about">
+			<a href="http://www.spellholdstudios.net/ie/1pp">Site internet du mod</a> &#8226; <a href="http://www.shsforums.net/forum/159-1pp/">Forum du mod</a> &#8226; <a href="http://www.shsforums.net/files/file/1006-1ppv410/">Téléchargement</a> &#8226; <a href="https://github.com/SpellholdStudios/1pp">GitHub</a> &#8226; Version : 4.0
+		</p>
+		<hr style="margin: 10px 0 10px 0; padding: 0; height: 1px; border: 0; color: #aaa; background-color: #aaa;" />
+
+		<p class="menu">
+			<a href="#intro">Présentation</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; <a href="#details">Contenu</a> &#x2B25; <a href="#credits">Remerciements</a> &#x2B25; <a href="#version">Historique des versions</a>
+		</p>
+	  </div>
+
+	<div id="maindiv">
+<!-- ================== I n t r o d u c t i o n ================== -->
+	  <a name="intro" id="intro"></a>
+	  <div class="content">
+
+		<h2>Présentation</h2><br>
+
+		<p>
+			La vocation de ce mod est très simple : il s'agit de s'assurer que toutes les épées enflammées du jeu aient l'apparence de véritables épées enflammées !
+		</p>
+
+		<p>
+			Consultez le <a href="http://www.spellholdstudios.net/ie/1pp">site du mod</a> ou son <a href="http://www.shsforums.net/forum/159-1pp/">forum</a> pour obtenir les dernières mises à jour.
+		</p><br>
+
+		<address>
+			<span class="footer">1PP : Épées enflammées &gt; Présentation</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ================== I n s t a l l a t i o n ================== -->
+	  <a name="installation" id="installation"></a>
+	  <div class="content">
+
+		<h2>Installation</h2><br>
+
+		<p>
+			Il est désormais intégré dans le mod 1ppv4.
+		</p><br>
+
+		<address>
+			<span class="footer">1PP : Épées enflammées &gt; Installation</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ================== D e t a i l s ================== -->
+	  <a name="details" id="details"></a>
+	  <div class="content">
+
+		<h2>Contenu</h2><br>
+
+		<p>
+			En bref, ce mod transforme toutes les épées enflammées du jeu <i>en</i> véritables épées enflammées. Il remplace les animations FS (flaming sword) par des animations d'épée enflammée.
+		</p><br>
+
+		<div class="important">
+		<p>
+			« Il s'agit d'un contenu labellisé 1ppv3, ce qui signifie qu'il est défintivement achevé (pour n'importe quelle combinaison de race/sexe). Mais ce n'est pas tout, j'ai complètement redessiné les fichiers par souci de cohérence. J'avais remarqué des erreurs plutôt embarrassantes qui ne me convenaient pas dans la version précédente. Pour l'essentiel, vous avez sans doute remarqué que la catégorie des animations M (elfes ?) semblait bien moins moins vive que la série des animations N (humaines).
+		</p>
+		<p>
+			Je l’aurais publié il y a quelques jours déjà, si un bug de dernière minute assez inattendu ne s'était pas manifesté à mon attention. J'ai essayé de le corriger, mais pas correctement, ce qui signifie que je ne suis pas - encore - totalement satisfaite. Vous remarquerez peut-être ce que je veux dire.
+		</p>
+		<p>
+			Espérons qu'il n'y aura pas de problèmes, mais n'hésitez pas à les signaler si vous en trouvez. »
+		</p>
+		<p>
+			- Erephine.
+		</p>
+		</div><br><br>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p>
+			<strong>1ppv Épées courtes enflammées</strong></br></br>
+		</p>
+
+		<p>
+			<em>Contenu :</em></br>
+		</p>
+		<ul>
+			<li>Les animations d'épées courtes enflammées et les images des paperdolls.</li>
+			<li>La modification des objets, à la fois du jeu et de certains mods.</li>
+			<li>Correction de quelques épées enflammées « classiques » qui n'étaient pas modifiées par le code de Nythrun.</li>
+		</ul><br>
+
+		<p>
+			<em>Notes :</em></br>
+		</p>
+		<p>
+			Il s'agit d'une version mise à jour du mod original qui patche les objets et ne les écrase plus, dans un souci de compatibilité avec les autres mods.
+		</p></br></br>
+
+		<p>
+			<em>Comment l'utiliser ?</em></br>
+		</p>
+		<p>
+			Si vous voulez créer un mod qui utilise une épée courte enflamméee, la procésure est assez simple : créez ou modifiez une épée courte normale. Si vous souhaitez que l'épée brille dans l'obscurité (la plupart des épées enflammées le font), n'oubliez-pas d'attribuer à la lame un effet « colourglow_solid » [<em>NdT : opcode #8</em>] à l'emplacement 21 [<em>NdT : la lame</em>] dans NI.
+		</p>
+		<p>
+			Modifiez l'animation de l'objet en remplaçant le code de base « SS » par « F2 ».
+		</p>
+		<p>
+			Tout fonctionnera bien si ce composant est installé, cependant, si ce n'est pas le cas, le jeu se bloquera lorsqu'un personnage essaiera de s'équiper de votre épée. Alors, assurez-vous que les joueurs potentiels de votre mod l'auront bien installé (par exemple en le fournissant avec votre mod et en l'installant d'office s'il ne l'est pas déjà).
+		</p><br>
+
+		<address>
+			<span class="footer">1PP : Épées enflammées &gt; Contenu</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ================== C r e d i t s ================== -->
+	  <a name="credits" id="credits"></a>
+	  <div class="content">
+
+		<h2>Crédits et Remerciements</h2><br>
+
+		<p style="clear: both; padding-top: 10px;">
+			Pour toute question ou demande d'assistance, veuillez consulter le <a href="http://www.shsforums.net/forum/159-1pp/">forum du mod</a>. Toutes les questions concernant l'aspect graphique doivent être adressées à Erephine, et toutes les questions techniques à Kaeloree.
+		</p>
+
+		<span class="t1">Graphisme :</span> <span class="t2"><a href="http://www.shsforums.net/user/2954-erephine/">Erephine</a></span><br />
+		<span class="t1">Codage :</span> <span class="t2"><a href="http://www.shsforums.net/user/6665-nythrun/">Nythrun</a>, Erephine</span><br />
+		<span class="t1">Packaging :</span> <span class="t2"><a href="http://www.shsforums.net/user/3481-kaeloree/">Kaeloree</a>, Erephine</span><br />
+
+		<hr style="clear: both; width: 90%; color: transparent; background-color: transparent; " /><br>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<h5>Special Acknowledgements to:</h5>
+
+ 		  <ul class="version-list c1">
+			<li>L'équipe de <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> pour l'hébergement de ce mod.</li>
+			<li>Merci d'avance à Nythrun pour nous avoir laissés utiliser son code ! Enfin, nous l'espérons !</li>
+			<li>Merci à toutes les personnes des forums de <a href="https://www.baldursgateworld.fr">La Couronne de Cuivre</a>, <a href="https://www.gibberlings3.net/forums/">The Gibberlings Three</a>, <a href="http://www.shsforums.net/">Spellhold Studios</a> forums, et des autres communautés de joueurs et de moddeurs IE qui ont offert leur aide.</li>
+		  </ul><br>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<h5>Logiciels et outils utilisés pour la création de ce mod</h5>
+
+		<ul class="c1">
+			<li><a href="https://github.com/WeiDUorg/weidu/releases"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> de Wes Weimer, the bigg et Wisp.</li>
+			<li><a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintenu par igi et lynx.</li>
+			<li><a href="https://www.gibberlings3.net/mods/tools/dltcep/"><acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym></a> de Avenger.</li>
+			<li><a href="http://www.context.cx/">ConTEXT Text Editor</a> de Eden Kirin.</li>
+			<li><a href="https://www.adobe.com/products/photoshop.html">Adobe Photoshop</a>.</li>
+		</ul><br>
+
+		<address>
+			<span class="footer">1PP : Épées enflammées &gt; Crédits et Remerciements</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ================== V e r s i o n   H i s t o r y ================== -->
+	  <a name="version" id="version"></a>
+	  <div class="content">
+
+		<h2>Historique des versions</h2><br>
+
+		<h6>1pp v4.0.0 : Rétablissement des animations d'épées enflammées</h6>
+
+		  <ul>
+			<li>Fusionné avec les Épées courtes enflammées & simplifié.</li>
+		  </ul><br>
+
+		<h6>1pp : Épées enflammées v1.0</h6>
+
+		  <ul>
+			<li>Sortie initiale : à peu près tout.</li>
+		  </ul><br>
+
+		<address>
+			<span class="footer">1PP : Épées enflammées &gt; Historique des versions</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+	</div>
+
+  </div>
+</body>
+</html>
