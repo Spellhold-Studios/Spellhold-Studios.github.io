@@ -1,0 +1,331 @@
+<html>
+<head>
+<title>Enkida's Portrait Pack for BG2/BGT</title>
+
+<style type="text/css">
+
+body
+{ 
+font-family: Trebuchet MS, Trebuchet MS, sans-serif; 
+font-size:0.8em;
+
+background-image:url('pearl.png');
+background-repeat:no-repeat;
+background-position:right bottom; 
+}
+
+
+img.center {   display: block;   margin-left: auto;   margin-right: auto; }
+</style>
+
+</head>
+
+<body>
+
+<div align="center">
+	<h1 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif; font-size: 3em;">Enkida's Portrait Pack for BG2 / BGT</h1>
+	<h3 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">Version 2.0</h3>
+</div>
+
+
+<ol style="list-style-type: upper-roman;">
+<li><a href="#1">Installation</a></li>
+<li><a href="#2">BioWare NPCs</a></li>
+<li><a href="#3">Mod NPCs</a></li>
+<li><a href="#4">Credits</a></li>
+<li><a href="#5">History</a></li>
+<li><a href="#6">Links</a></li>
+</ol>
+
+
+
+
+<a name="1"></a>
+<h2 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">I.  Installation</h2>
+
+<p>This will upgrade various BioWare and player-made NPCs so they have a
+somewhat "standardized" look - similar head sizes, color range, and an
+attempt to be semi-faithful to the original BioWare artwork style. 
+It also fixes a bug with Illasera's race, allows you to restore Sarevok's 
+original portrait if playing "Tortured Souls" and patches certain .cre files 
+so that avatar and paperdoll skin and hair colours more closely match their new portraits. 
+<span style="font-weight: bold;">It is strongly recommended that you install any other portrait 
+or tweak mods before using this pack. You do NOT need to start a new game to use 
+this mod.</span>  You can see all included portrait upgrades in this document; mods that have been adjusted in this pack 
+are listed visually in <a href="#3">section III</a> and alphabetically in <a href="#6">section VI</a>.</p>
+
+<p><span style="font-weight: bold; color: red;">Known Issues:</span>The installer will not work properly with the Mac version 
+of BG2 (it will work, though, if you use the Windows version through Wine)! You should still be able to manually install this 
+pack if you are comfortable with your machine, by editing eportraits/lib/patch_exe.tpa; you'll find instructions for that inside 
+that file.</p>
+
+<p>To install the portraits, unzip this pack to your Baldur's Gate II directory and
+run the file <span style="font-weight: bold;">setup-eportraits.exe</span>.  Customize your installation by 
+selecting to <span style="font-weight: bold;">[A]sk about each component</span>. Whether selecting individual 
+portraits or batch installing many, you have the option to copy all unused portraits from this pack to the portraits 
+folder (allowing you to choose them for your PC if you wish).  Be aware that batch-installing NPCs
+will present my arbitary portrait selections as defaults. Some BG1 (BGT) characters will only receive a modified 
+portrait if the relevant component from the BG1NPC mod is installed. This applies to Edwin, Imoen, Jaheira, Viconia, 
+Kivan and Minsc. You will always be able to choose which version of Xan you want to use.</p>
+
+<p>If you only want to update your saved games, you can do it in the following ways:<br />
+<ol>
+<li>(easy) Run setup-eportrait.exe again and re-install everything; you'll be offered to 
+update your saved games again after that.</li>
+<li>From the command line, after CDing to the game folder, run weidu or weinstall with eportraits/setup-eportraits_saves.tp2 
+and the other appropriate arguments. For example, on Windows, you can use:<br /><span style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">setup-eportraits.exe --no-auto-tp2 --autolog eportraits\setup-eportraits_saves.tp2</span>
+</ol>
+<span style="font-weight: bold; color: red;">Warning:</span> You will not be offered to update your saved games, and you'll have 
+to do it manually (method 2 is suggested), if you (un)install eportraits (or any underlying mods) using command line arguments 
+such as: <span style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">--force-(un)install, --re/uninstall</span></p>
+</p>
+
+
+<a name="2"></a>
+<h2 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">II.  BioWare NPCs</h2>
+
+<p>Not all BioWare NPCs were replaced; I felt some artwork was good enough as is. 
+Replacing a default BioWare portrait will also automatically use the new portrait with any mod 
+that utilizes that default NPC.  Please note that the 
+default choices in a batch install are not always lore-correct (Edwin, Jaheira). If an NPC portrait 
+has changed drastically, the default BioWare image will be backed up to your portrait directory 
+automatically.</p>
+
+<p><em>The Special Case of Minsc:</em> depending on what you decide to do with Minsc's portrait, you will be 
+presented with differing selections for Minsc's "image" during PC character creation.  This is for the 
+eventual case that you want to use Minsc's portrait for your PC. The biggest change 
+you will notice is that using Minsc's face will result in a hamster-less portrait for 
+your PC. This will NOT affect in-game Minsc at all - whether you choose to install Minsc's alternative portrait 
+or not, the NPC Minsc will always be holding Boo.</p>
+
+<p>Future versions of this mod will include alternatives to more vanilla BG1 NPCs as well.</p> 
+
+<img src="BioWare.jpg" alt="BioWare NPCs" class="center" />
+
+
+<a name="3"></a>
+<h2 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">III.  Mod NPCs</h2>
+
+<p>Mod NPCs include alternative portraits for several joinable companions 
+created by player mods. Most original mod portraits will be backed up to your portrait directory 
+automatically. Note that some minor NPC mods require the use of their 
+default BioWare NPC alternates as well (Anomen, Edwin, Minsc, etc). Mod NPCs also include 
+portraits for several minor NPCs which are not playable (at least, not permanently), 
+however they do still receive small portraits in the game. If you are using, for example, 
+the "Unfinished Business" pack and you embark on Minsc's sidequest, installing these portraits will 
+keep you from wondering why Minsc suddenly turns white, hairless and tattooed 
+for the duration of the quest.  Many of these images were created on request. If you 
+have a request for an NPC not covered in this pack, post in the <a href="http://www.shsforums.net/topic/54227-enkidas-portrait-pack-v2/">forum</a> 
+and I may append your request to the next version of this pack (if I have the time).</p>
+
+<p><em>The Anti-Multiples Initiative:</em> If a request is made for a mod which contains 
+a portrait using Jude Law as the default image, it will automatically be included in the 
+next version. The same holds for mod NPCs that recycle popular artwork, including minor 
+NPC portraits!</p>
+
+
+
+
+
+<p>These are the original NPCs included in the pack. See <a href="#6">section VI</a> to download 
+any of these NPC mods.</p>
+
+<div align="center">Major:<br />
+<img src="mod.jpg" alt="Mod NPCs" class="center" />
+
+Minor:<br />
+<img src="minor.jpg" alt="Minor NPCs" class="center" />
+</div>
+
+
+<a name="4"></a>
+<h2 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">IV.  Credits</h2>
+
+<p>This project would not have been possible without the hard work of many other
+artists besides myself, some of whose identities have been lost to obscurity. 
+If you spot an uncredited artwork in this portrait pack, please e-mail me and 
+let me know so the original artist can be given his or her full due.</p>
+
+<p>The Baldur's Gate I portrait artist is Mike Sass; the Baldur's Gate II portrait
+artists are Matthew Goldman, Todd Grenier, Marc Holmes and Dean Anderson. Their
+work is the base for many edits in this pack.</p>
+
+<p>All works were cropped, edited, photomanipulated, retouched, painted or 
+otherwise played with by myself unless listed below. Starred (*) credits are
+images of well-known individuals taken from search engine trawling.</p>
+
+<table border="0" width="60%" align="center" style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">
+<tr><td>Aerie</td><td>JPS (chest)</td></tr>
+<tr><td>Angelo</td><td><em>* Takashei Kaneshiro / * Andy Lau</em></td></tr>
+<tr><td>Anomen</td><td>Miloch</td></tr>
+<tr><td>Anomen (beardless)</td><td>Miloch + Cliffette</td></tr>
+<tr><td>Balthazar</td><td>Katanaz-Stock</td></tr>
+<tr><td>Barvon</td><td>unknown</td></tr>
+<tr><td>Bodhi</td><td>collaboration with MiLeah</td></tr>
+<tr><td>Cernd</td><td>Miloch</td></tr>
+<tr><td>Chloe</td><td><em>* Anna Lynne McCord</em> /  <a href="http://lagueuse.deviantart.com/art/female-leather-armor-265709413">Lagueuse</a> (armor)</td></tr>
+<tr><td>Colours of Infinity</td><td><a href="http://michaelo.deviantart.com">MichaelO</a>, NWN artwork, Portrait Portal</td></tr>
+<tr><td>Dekkie</td><td>unknown</td></tr>
+<tr><td>Edwina</td><td><a href="http://la-esmeralda-stock.deviantart.com/art/141-261529644">La-Esmeralda-Stock</a></td></tr>
+<tr><td>Ellesime</td><td><em>* Michelle Pfeiffer</em>, <a href="http://www.ranum.com">Marcus Ranum</a> (clothing), <a href="http://www.mythicalmasks.com/oddiments_files/main.html">Mythical Masks</a></td></tr>
+<tr><td>Elvira</td><td>unknown</td></tr>
+<tr><td>Fade</td><td><em>* Bianka Beauchamp</em></td></tr>
+<tr><td>Gavin</td><td>MiLeah</td></tr>
+<tr><td>Hubelpot</td><td><em>* Bruce Willis</em> /  <a href="http://lagueuse.deviantart.com/art/Leather-armor-Berserk-chest-267807990">Lagueuse</a> (armor)</td></tr>
+<tr><td>Illasera</td><td><em>* Olivia Wilde</em></td></tr>
+<tr><td>Jaheira (lore)</td><td> <a href="http://lagueuse.deviantart.com/art/Shaman-leather-necklace-281268363">Lagueuse</a> (armor)</td></tr>
+<tr><td>Jan</td><td>Miloch</td></tr>
+<tr><td>Kari</td><td><a href="http://seductive-stock.deviantart.com/art/Fox-1-113765714">Seductive-Stock</a> / <a href="http://voivodess-stock.deviantart.com/art/draper-III-97093224">Voivodess-Stock</a></td></tr>
+<tr><td>Kachiko</td><td><em>* Ebihari Yuri</em></td></tr>
+<tr><td>Keldorn</td><td>Miloch</td></tr>
+<tr><td>Kelsey</td><td>Katanaz-Stock</td></tr>
+<tr><td>Keto</td><td><a href="http://mizzd-stock.deviantart.com/art/Red-Hood-Portrait-2-61843009">mizzd-stock</a></td></tr>
+<tr><td>Kivan</td><td><em>* Jonathan Rhys-Meyers</em> / <a href="http://gin7gin8.deviantart.com/art/Medieval-Archer-Pack-194906089">GIN7GIN8</a> (bow)</td></tr>
+<tr><td>Black-Haired Kivan</td><td><a href="http://avengingexile.deviantart.com/#/d4o6py7">AvengingExile</a> (edits)</td></tr>
+<tr><td>Kiyone</td><td><em>* Björk</em></td></tr>
+<tr><td>Kova</td><td><em>* Ren Quan</em></td></tr>
+<tr><td>Mazzy (platemail)</td><td>Amaurea (platemail)</td></tr>
+<tr><td>Minsc (no Boo/fake Boo)</td><td>Cliffette (Boo edits)</td></tr>
+<tr><td>Miriam</td><td><em>* Michelle Monaghan</em></td></tr>
+<tr><td>Nathaniel</td><td><a href="http://sifra-stock.deviantart.com/art/Male-stock-013-187291035">Sifra-stock</a></td></tr>
+<tr><td>Neilos</td><td><em>* Kevin Sorbo</em></td></tr>
+<tr><td>Nikita</td><td><em>* Petra Wilson</em></td></tr>
+<tr><td>Ninafer</td><td><a href="http://bugidifino.deviantart.com/art/Ice-Queen-181965142">Bugidifino</a></td></tr>
+<tr><td>Otako</td><td>unknown</td></tr>
+<tr><td>Red Lich</td><td>unknown</td></tr>
+<tr><td>Red Wizard 1 (male)</td><td><a href="http://xtwizx-stock.deviantart.com/art/xtwizx-Throw-your-hood-up-lol-46196690">xtwizx-Stock</a> </td></tr>
+<tr><td>Red Wizard 2 (male)</td><td><em>* Edward Norton</em>, Portrait Portal</td></tr>
+<tr><td>Red Wizard 3 (female)</td><td><a href="http://glamourousacid-stock.deviantart.com/art/glamourgirl-stock-51394077">GlamourousAcid-Stock</a> / <a href="http://browse.deviantart.com/?qh=&section=&q=faestock+gypsy#/d33c1vm">faestock</a> </td></tr>
+<tr><td>Reject Kelsey</td><td>Silverdawn (face and armour)</td></tr>
+<tr><td>Rhilato</td><td>Katanaz-stock, <a href="http://ashensorrow.deviantart.com/art/AshenSorrowStock-NeonGrCheetah-33977658">AshenSorrow</a> (texture)</td></tr>
+<tr><td>Sarah</td><td><a href="http://fairiegoodmother.deviantart.com/art/Cima-in-Flower-Dress-104-209181529">Fairiegoodmother</a>,  <a href="http://lagueuse.deviantart.com/art/leather-armor-corset-282146845">Lagueuse</a> (armor)</td></tr>
+<tr><td>Sarevok</td><td>MiLeah</td></tr>
+<tr><td>Sawara</td><td><em>* Hiroyuki Sanada</em></td></tr>
+<tr><td>Seasnake</td><td><a href="http://darkladystock.deviantart.com/art/Misc-stock-female-5-51093730">DarkladyStock</a> </td></tr>
+<tr><td>Sendai</td><td><a href="http://madqueenstock.deviantart.com/art/Hands-Bound-215727037">madqueenstock</a> / <a href="http://la-esmeralda-stock.deviantart.com/art/138-259996826">La-Esmeralda-Stock</a> / <a href="http://mizzd-stock.deviantart.com/art/Pirates-Barbarian-Queen-Portrait-8-277235639">mizzd-stock</a> </td></tr>
+<tr><td>Sime</td><td><a href="http://faestock.deviantart.com/art/Darla5-109250426?q=gallery%3Afaestock%2F7428&qo=547">faestock</a> </td></tr>
+<tr><td>Skullen Crossbones</td><td>Cover art, "The Savage Knight" by Paul Lewis</td></tr>
+<tr><td>Solaufein</td><td><em>* Keanu Reeves</em></td></tr>
+<tr><td>Suna Seni</td><td><em>* Elisha Cuthbert</em></td></tr>
+<tr><td>Suu</td><td><em>* Aoi Miyazaki</em></td></tr>
+<tr><td>Tashia</td><td><a href="http://isostock.deviantart.com/art/People-026-118963004">ISOStock</a></td></tr>
+<tr><td>Tenft</td><td><em>* Ambrose Burnside</em></td></tr>
+<tr><td>Tsujatha</td><td><em>* Robert Patterson</em></td></tr>
+<tr><td>Valen</td><td><em>* Charlize Theron</em></td></tr>
+<tr><td>Valygar</td><td>Miloch</td></tr>
+<tr><td>Valygar (short hair)</td><td>Sanctifer</td></tr>
+<tr><td>Viconia</td><td>Miloch</td></tr>
+<tr><td>Xan</td><td><em>* Jude Law</em></td></tr>
+<tr><td>Xulaye</td><td><a href="http://isostock.deviantart.com/art/People-033-118980544">ISOStock</a></td></tr>
+<tr><td>Yoshimo</td><td>MiLeah</td></tr>
+</table>
+
+<p>
+Special thanks to Turambar for rewriting the code.<br />
+Special thanks to Miloch for providing tutorials and assistance with coding.<br />
+Special thanks to Lava Del'Vortel and K'aeloree for originally packing the mod.<br />
+Special thanks to Spellhold Studios for their support, feedback and hosting.<br />
+Special thanks to Westley Weimer, godfather of WeiDU and serious BG2 modding.<br />
+Special thanks to all those who continue to maintain WeiDU/BiggDU to this day.<br />
+<!-- Special thanks to Ascension64 for creating and maintaining the ToBEx utility.<br /> -->
+Special thanks to the BG2 modding community, for making these NPCs available!</p>
+
+<p>This portrait pack is not developed, supported, or endorsed by BioWare or
+Interplay/Black Isle.</p>
+
+<p><span style="font-weight: bold;">REDISTRIBUTION NOTE:</span> This portrait pack was created to be freely enjoyed 
+by all Baldur's Gate 2 players. However, this pack may not be sold, published,
+compiled or redistributed in any form without the consent of its author. If you want 
+to use any of these portraits in a new mod or repack the existing portraits with your own image tweaks, 
+<span style="font-weight: bold;">please ask for permission first. <span style="color: red">
+MOD AUTHORS:</span></span> If you want to include this version of your own mod's portrait in your next upgrade, <span style="font-weight: bold;">you have implicit permission 
+to use my artwork.</span> Check the _extras folder if you need a 210x330 sized image 
+of your character for ToB and can't find one.</p>
+
+
+
+
+
+<a name="5"></a>
+<h2 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">V. History</h2>
+
+<p>
+2.0: 27 March 2012: Additional BioWare and Mod portraits, updated code, bugs fixed, .cre file changes, portrait backups, cross-platform compatibility, BWP/BGT compatibility, save game updater
+1.0: 07 January 2012: Initial Release 
+</p>
+
+
+
+
+
+<a name="6"></a>
+<h2 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">VI. Links</h2>
+
+
+<h3 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">Portrait Artists</h3>
+
+<ul>
+<li><a href="http://www.freewebs.com/amaurea62/">Amaurea's Portrait Edits</a></li>
+<li><a href="http://enkida.deviantart.com/">Enkida @ DeviantArt</a></li>
+<li><a href="http://www.gibberlings3.net/jpspp/index.php">JPS' Portrait Pack</a></li>
+<li><a href="http://www.petalsandthorns.com/thorns/viewtopic.php?t=5327">MiLeah's Alternate Male Portraits</a></li>
+<li><a href="http://www.shsforums.net/topic/34869-clerics-get-their-deity-colours/">Miloch's Adjusted Portraits</a></li>
+</ul>
+
+<h3 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">Baldur's Gate 2 Mod Repositories</h3>
+<ul>
+<li><a href="http://www.blackwyrmlair.net/">The Black Wyrm's Lair</a></li>
+<li><a href="http://www.chosenofmystra.net/">The Chosen of Mystra</a></li>
+<li><a href="http://www.gibberlings3.net/">The Gibberlings Three</a></li>
+<li><a href="http://kerzenburg.baldurs-gate.eu/bwpmods.php">Kerzenburg BWP Link List</a></li>
+<li><a href="http://www.pocketplane.net/mambo/index.php">Pocket Plane Group</a></li>
+<li><a href="http://www.spellholdstudios.net/">Spellhold Studios</a></li>
+</ul>
+
+
+<h3 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">Specific Mods</h3>
+<ul>
+<li><a href="http://www.gibberlings3.net/angelo/">Angelo NPC</a> @ The Gibberlings Three</li>
+<li><a href="http://www.shsforums.net/files/file/546-the-big-picture-v180b/">Ascension</a> stand-alone BP mod component by Westley Weimer @ Spellhold Studios</li>
+<li><a href="http://www.shsforums.net/files/file/26-beyond-the-law-v135/">Beyond the Law</a> @ Spellhold Studios</li>
+<li><a href="http://www.shsforums.net/files/file/546-the-big-picture-v180b/">The Big Picture</a> @ Spellhold Studios</li>
+<li><a href="http://www.gibberlings3.net/bg2tweaks/index.php">BG2 Tweaks</a> @ The Gibberlings Three</li>
+<li><a href="http://www.gibberlings3.net/bg1npc/index.php">BG1 NPC Project</a> @ The Gibberlings Three</li>
+<li><a href="http://www.shsforums.net/files/file/848-chloe-v15/">Chloe NPC</a> @ Spellhold Studios</li>
+<li><a href="http://www.shsforums.net/files/file/910-innershade-v51/">Colours of Infinity: Innershade</a> @ Spellhold Studios</li>
+<li><a href="http://www.shsforums.net/files/file/820-tales-of-the-deep-gardens-v92/">Colours of Infinity: Tales of the Deep Gardens</a> @ Spellhold Studios</li>
+<li><a href="http://www.shsforums.net/files/file/982-the-white-queen-v20/">Colours of Infinity: The White Queen</a> @ Spellhold Studios</li>
+<li><a href="http://www.shsforums.net/files/file/35-edwin-romance-soa/">Edwin Romance</a> / <a href="http://www.shsforums.net/files/file/36-edwin-romance-tob/">ToB Expansion</a> / <a href="http://www.shsforums.net/files/file/37-edwin-romance-flirts-beta/">Flirts</a> @ Spellhold Studios</li>
+<li><a href="http://www.shsforums.net/files/file/938-eilistraees-song-v31/">Eilistraee's Song</a> @ Spellhold Studios</li>
+<li><a href="http://www.shsforums.net/files/file/27-fade-pc/">Fade NPC</a> @ Spellhold Studios</li>
+<li><a href="http://www.shsforums.net/files/file/533-fading-promises/">Fading Promises</a> @ Spellhold Studios</li>
+<li><a href="http://www.gibberlings3.net/gavin/">Gavin NPC</a> / <a href="http://www.gibberlings3.net/gavin_bg2/">for BG2</a> @ The Gibberlings Three</li>
+<li><a href="http://forums.chosenofmystra.net/index.php?PHPSESSID=6uf35rolc4aiphuqaotavqq027&topic=959.0">Homeward Bound</a> @ The Chosen of Mystra</li>
+<li><a href="http://www.shsforums.net/files/category/18-hubelpot/">Hubelpot NPC</a> @ Spellhold Studios</li>
+<li><a href="http://chosenofmystra.net/forums/viewtopic.php?t=1376">Kari NPC</a> @ The Chosen of Mystra</li>
+<li><a href="http://www.pocketplane.net/mambo/index.php?option=com_content&task=blogcategory&id=81&Itemid=66">Kelsey NPC / GRoA</a> @ Pocket Plane Group</li>
+<li><a href="http://www.pocketplane.net/mambo/index.php?option=com_content&task=blogcategory&id=140&Itemid=107">Keto NPC</a> @ Pocket Plane Group</li>
+<li><a href="http://www.gibberlings3.net/kivan/index.php">Kivan and Deheriana Companions for BG2</a> @ The Gibberlings Three</li>
+<li><a href="http://forums.chosenofmystra.net/index.php?action=downloads;sa=view;id=60">Moddie the Vixen NPC</a> @ The Chosen of Mystra</li>
+<li><a href="http://www.shsforums.net/files/file/734-nathaniel/">Nathaniel NPC</a> @ Spellhold Studios</li>
+<li><a href="http://www.section-one.net/">Dark Horizons</a> / <a href="http://forums.chosenofmystra.net/index.php?action=downloads;sa=view;down=7">Nikita NPC</a> @ The Chosen of Mystra</li>
+<li><a href="http://www.pocketplane.net/mambo/index.php?option=content&task=blogcategory&id=104&Itemid=81">NPC Flirt Packs</a> @ Pocket Plane Group</li>
+<li><a href="http://www.gibberlings3.net/sarah/">Sarah NPC</a> @ The Gibberlings Three</li>
+<li><a href="http://www.weidu.org/main.html#install">Solaufein NPC</a> / <a href="http://www.rpgdungeon.net/content/view/33/49/">Flirts</a> @ Westley Weimer's Mods / RPG Dungeon</li>
+<li><a href="http://forums.chosenofmystra.net/index.php?topic=7.0">Subraces</a> @ The Chosen of Mystra</li>
+<li><a href="http://www.shsforums.net/files/file/33-tashia/">Tashia NPC</a> @ Spellhold Studios</li>
+<!-- <li><a href="http://www.shsforums.net/files/file/871-bg2tob-throne-of-bhaal-extender-beta-0022/">Throne of Bhaal Extender (ToBEx)</a> @ Spellhold Studios</li>-->
+<li><a href="http://dragonshoard.blackwyrmlair.net/download.php">Tortured Souls</a> @ The Black Wyrm's Lair</li>
+<li><a href="http://forums.chosenofmystra.net/index.php?action=downloads;sa=view;id=18">Tsujatha NPC</a> @ The Chosen of Mystra</li>
+<li><a href="http://www.pocketplane.net/mambo/index.php?option=com_content&task=blogcategory&id=125&Itemid=111">Turnabout</a> @ Pocket Plane Group</li>
+<li><a href="http://mods.chosenofmystra.net/theundying/index.html">The Undying</a> @ The Chosen of Mystra</li>
+<li><a href="http://www.pocketplane.net/mambo/index.php?option=com_content&task=blogcategory&id=101&Itemid=80">Unfinished Business</a> @ Pocket Plane Group</li>
+<li><a href="http://www.weidu.org/valen.html">Valen NPC</a> @ Westley Weimer's Mods</li>
+<li><a href="http://mods.chosenofmystra.net/vampiretales/">Vampire Tales</a> @ The Chosen of Mystra</li>
+<li><a href="http://mods.jo-ge.net/bg/shaper.htm">Wild Mage Additions</a> @ JOG's Baldur's Gate Corner</li>
+<li><a href="http://www.pocketplane.net/mambo/index.php?option=com_content&task=blogcategory&id=164&Itemid=113">Xan BG2 NPC</a>  @ Pocket Plane Group</li>
+<li><a href="http://www.shsforums.net/files/category/89-xulaye/">Xulaye NPC</a> @ Spellhold Studios</li>
+<li><a href="http://forums.chosenofmystra.net/index.php?topic=2624.0">Yoshimo Romance</a> @ The Chosen of Mystra</li>
+</ul>
+</body>
+</html>
