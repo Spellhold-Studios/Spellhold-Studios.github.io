@@ -11,17 +11,17 @@ Version 0.34
 two typos in "sobh_action_macro_creatures.tph" fixed and +5 weapons of drizzt saga weakened to +3.
 
 Version 0.33
-- Support für DSotSC 2.00 überprüft: erfolgreich.
-- Support für NTotSC 1.60/1.61: Test war nicht erfolgreich. Die Komponente wurde auf die neue Version angepasst. Der Balancer wird mit einer älteren Version von NTotSC NICHT mehr funktionieren!
+- Support fÃ¼r DSotSC 2.00 Ã¼berprÃ¼ft: erfolgreich.
+- Support fÃ¼r NTotSC 1.60/1.61: Test war nicht erfolgreich. Die Komponente wurde auf die neue Version angepasst. Der Balancer wird mit einer Ã¤lteren Version von NTotSC NICHT mehr funktionieren!
 
 Version 0.32
-- BugFix für SoBH Komponente: Kreatur hat Lederrüstung +4 hinterlassen. Das ist behoben.
+- BugFix fÃ¼r SoBH Komponente: Kreatur hat LederrÃ¼stung +4 hinterlassen. Das ist behoben.
 
 
 Version 0.31
 
 - Optionen umbenannt.
 
-- Patch Base für Randon custom items auf 30% reduziert.
+- Patch Base fÃ¼r Randon custom items auf 30% reduziert.
 
 - Neue Komponente: DrizztSaga!
