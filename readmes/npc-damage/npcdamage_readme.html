@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <style type="text/css">
+    /*<![CDATA[*/
+    <!-- 
+      body {
+        margin: 0;
+        padding: 0;
+        cursor: default;
+        text-align: center;
+        color: #000;
+        background: #e3e3db url('http://spellholdstudios.net/images/sh_bg_main.jpg');
+      }
+      
+      #wrap {
+        text-align: left;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 88%;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        font-size: 12px;
+        color: #333;
+      }
+      
+      #header {
+        text-align: center;
+        background: #e5e5e5;
+        border: 1px solid #781808;
+        border-top: 5px solid #781808;
+        border-bottom: 5px solid #781808;
+        padding: 5px 0 13px 0;
+      }
+      
+      #header .about {
+        margin: 7px 0 0 0;
+        padding: 0;
+        font-style: italic;
+        color: #555;
+      }
+      
+      #header .menu {
+        font-weight: bold;
+        margin: 0;
+        color: #999;
+      }
+      
+      #header .menu a:link,
+      #header .menu a:visited {
+        color: #333;
+      }
+      
+      #maindiv {
+        margin: 0 auto;
+        margin-top: -20px;
+        width: 80%;
+      }
+      
+      #maindiv .content {
+        counter-increment: kman;
+        counter-reset: h2;
+        background-color: #e8e8e6;
+        padding: 0 0 25px 0;
+        margin: 50px auto;
+        border-width: 1px 1px 4px 10px;
+        border-style: solid;
+        border-color: #781808;
+        position: relative;
+        display: block;
+      }
+      
+      #maindiv .content::before {
+        content: counter(kman, lower-roman);
+        font-size: 100%;
+        font-weight: bold;
+        text-align: center;
+        color: #eee;
+        background-color: #781808;
+        width: 35px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+      }
+      
+      h2 {
+        display: block;
+        font-family: Verdana, Trebuchet MS, Arial, serif;
+        text-align: left;
+        text-indent: 30px;
+        padding: 0px;
+        margin: 20px 0 0 0;
+        border-bottom: dotted 2px #d0d0d0;
+        border-top: dotted 2px #d0d0d0;
+        background: #deded9;
+        font-size: 160%;
+      }
+      
+      h2::first-letter {
+        color: #781808;
+        background-color: transparent;
+      }
+      
+      #maindiv p {
+        font-size: 100%;
+        font-style: normal;
+        line-height: 150%;
+        padding: 0px;
+        margin: 10px auto;
+        width: 90%;
+        display: block;
+      }
+      
+      #maindiv address a:link,
+      #maindiv address a:visited {
+        font-weight: bold;
+        text-decoration: underline;
+        background-color: transparent;
+        color: #eaeaea !important;
+        padding-right: 5px;
+        padding-left: 6px;
+      }
+      
+      #maindiv address a:focus,
+      #maindiv address a:hover {
+        text-decoration: none;
+        color: #F1F1F1;
+        border: 0;
+      }
+      
+      #maindiv address a:active {
+        color: #fff;
+        text-decoration: line-through;
+        border: none;
+      }
+      
+      #maindiv address {
+        font-size: 95%;
+        font-style: normal;
+        font-weight: bold;
+        text-decoration: none;
+        color: #BBB;
+        background-color: #781808;
+        padding: 3px 0px 0px;
+        margin: 0px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        display: block;
+        text-align: right;
+      }
+      
+      #maindiv .important {
+        font-size: 95%;
+        font-family: Verdana;
+        text-align: left;
+        background-color: #F1F1F1;
+        border-top: solid 1px #aaa;
+        border-bottom: solid 1px #aaa;
+        border-left: solid 6px #aaa;
+        border-right: solid 6px #aaa;
+        padding: 10px;
+        margin: 20px auto;
+        width: 80%;
+        line-height: 160%;
+      }
+
+      #maindiv .important::before {
+        display: none;
+      }
+      
+      #maindiv .important p {
+        font-size: 100%;
+        text-indent: 0px;
+        margin: 5px 0 10px 0;
+        width: 100% !important;
+      }
+      
+      #maindiv ul {
+        margin: -10px 0 0 30px;
+        *margin-left: 65px;
+      }
+      
+      #maindiv ol {
+        margin: -10px 0 0 35px;
+        *margin-left: 70px;
+      }
+      
+      #maindiv .important ul {
+        margin: -10px 0 0 15px;
+      }
+      
+      #maindiv .important ol {
+        margin: -10px 0 0 20px;
+      }
+      
+      #maindiv ul li {
+        list-style-type: square;
+        line-height: 150%;
+      }
+      
+      #maindiv ol li {
+        line-height: 150%;
+      }
+      
+      .t1 {
+        font-weight: bold;
+        width: 26%;
+        text-align: right;
+        clear: right;
+        float: left;
+        *float: none;
+        *margin-left: 65px;
+        line-height: 22px;
+      }
+      
+      .t2 {
+        text-align: left;
+        width: 73%;
+        float: right;
+        *float: none;
+        line-height: 22px;
+      }
+      
+      hr {
+        margin: 10px 0 10px 0;
+        padding: 0;
+        height: 1px;
+        border: 0;
+        color: #aaa;
+        background-color: #aaa;
+      }
+      
+      hr.floatfix {
+        clear: both;
+        color: #e8e8e6;
+        background-color: #e8e8e6;
+        *margin: 0;
+        *padding: 0;
+      }
+      
+      h1 {
+        font-size: 225%;
+        color: #444;
+        padding: 5px 0 5px 0;
+        margin: 0;
+        width: 100%;
+      }
+      
+      h3,
+      h4,
+      h5 {
+        margin: 10px 40px 10px 40px;
+        padding: 0;
+      }
+      
+      h3 {
+        font-size: 125%;
+        font-style: italic;
+      }
+      
+      h4 {
+        font-size: 125%;
+      }
+      
+      h5 {
+        font-size: 100%;
+      }
+      
+      h6 {
+        width: 100%;
+        margin: 10px 0 15px 0;
+        background-color: #ECECEC;
+        text-align: left;
+        text-indent: 30px;
+        font-size: 100%;
+        font-style: italic;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border-bottom: solid 1px #bbb;
+        border-top: solid 1px #bbb;
+      }
+      
+      a:link,
+      a:visited {
+        color: #781808;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:active {
+        color: #222;
+        border-bottom: 1px solid black;
+      }
+
+    -->
+    /*]]>*/
+    </style>
+    <title>SPELLHOLD STUDIOS - NPC Damage</title>
+  </head>
+  <body>
+    <a name="top" id="top"></a>
+    <div id="wrap">
+      <div id="header">
+        <h1>NPC Damage</h1>
+        <strong>A Spellhold Studios mod for Baldur's Gate II: SoA/ToB</strong>
+        <hr />
+        <p class="about">
+          Authors: khayman and SConrad
+        </p>
+        <p class="about">
+          <a href="http://www.spellholdstudios.net/ie/npcdamage">Mod Website</a> &#8226;
+          <a href="http://www.shsforums.net/index.php?showforum=141">Mod Forum</a> &#8226;
+          Version: 1.1
+        </p>
+        <hr />
+        <p class="menu">
+          <a href="#intro">Introduction</a> &middot;
+          <a href="#installation">Installation</a> &middot;
+          <a href="#faq">FAQ</a> &middot;
+          <a href="#credits">Credits</a> &middot;
+          <a href="#version">Version History</a>
+        </p>
+      </div>
+      <div id="maindiv">
+
+        <!-- ================== I n t r o d u c t i o n ================== -->
+        <a name="intro" id="intro"></a>
+        <div class="content">
+          <h2>Introduction</h2>
+          <p>The NPC Damage mod is not for the faint of heart. As your party <strong>NPC</strong>s take <strong>Damage</strong>, their appearance will change accordingly to show the injuries they sustain.</p>
+          <p>This mod is inspired by Planescape: Torment, and was originally conceived and developed by Immortality, Grim Squeaker and SimDing0. As development slowed down to a full stop, the mod fell away from the community, until khayman and SConrad decided to take up the idea and finish the mod.</p>
+          <p>Visit the <a href="http://www.spellholdstudios.net/ie/npcdamage">website</a> or <a href="http://www.shsforums.net/index.php?showforum=141">forum</a> for all the latest updates to this mod.</p>
+          <address>
+            <span class="footer">NPC Damage &gt; Introduction</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== I n s t a l l a t i o n ================== -->
+        <a name="installation" id="installation"></a>
+        <div class="content">
+          <h2>Installation</h2>
+          <h5>PC</h5>
+          <p>NPC Damage is a WeiDU mod, packaged in a self-extracting installer. Simply run <em>"npcdamage_v1.1.exe"</em> and point the installer to your Baldur's Gate II directory, after which the WeiDU setup will run. If it does not, please run <em>"setup-npcdamage.exe"</em> in your game directory.</p>
+          <p>To uninstall, please run <em>"setup-npcdamage.exe"</em> again.</p>
+          <h5>OSX</h5>
+          <p>NPC Damage is a WeiDU mod. Simply extract all files from the <em>"npcdamage_v1.1_osx.rar"</em> to your Baldur's Gate II directory and run <em>"setup-npcdamage.command"</em>.</p>
+          <p>To uninstall, please run <em>"setup-npcdamage.command"</em> again.</p>
+          <h5>Compatibility and Installation Order</h5>
+          <p>For incompatibilities, please see the <a href="#faq">FAQ</a>. NPC Damage should work when installed before or after any other mod. You do not have to start a new game for the changes to take effect.</p>
+          <p>Although it is not required for NPC Damage to function properly, it is always a good idea install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2Fixpack</a>.</p>
+          <address>
+            <span class="footer">NPC Damage &gt; Installation</span> <a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== F A Q ================== -->
+        <a name="faq" id="faq"></a>
+        <div class="content">
+          <h2>Frequently Asked Questions</h2>
+          <p><strong>Q: Is NPC Damage compatible with mod XYZ?</strong><br />A: Probably, but there are a few exceptions. NPC Damage will <em>not</em> work as intendend with other mods that change the portraits of the joinable NPCs. NPC Damage will <em>not</em> work as intendend with custom NPC portraits.</p>
+          <p><strong>Q: How does NPC Damage work? When will the portraits change?</strong><br />A: There are four levels to the changes. If the NPC has more than 75% of his hitpoints, the normal (unaltered) portrait will show. Once below 75%, the portrait will change, and then further increase in severity (and gore!) when the NPC's hitpoints decrease to below 50%, and finally 25%. Healing will restore previous portraits, relative to how many hitpoints the NPC has.</p>
+          <p><strong>Q: Does NPC Damage alter the game in any way other than by changing the portraits?</strong><br />A: No. NPC Damage only affects the portraits of the NPCs in your party.</p>
+          <p><strong>Q: Is NPC Damage changing my PC's portrait, too?</strong><br />A: Unfortunately not. This is mostly because of the difficulty in determining the PC's portrait in the game. We are currently working on an idea that would allow the PC's portrait to change, too, but there are no guarantees that this method ever will see the light of day.</p>
+          <p><strong>Q: What about mod NPCs? Will NPC Damage affect them too?</strong><br />A: Currently, no. NPC Damage v1.0 is only for the Bioware-developed NPCs in a vanilla game. You can still play mod NPCs while having this mod installed, but be aware that while Minsc and Aerie will have their faces beaten up, your mod NPC will not.</p>
+          <p><strong>Q: Will you expand NPC Damage to include mod NPCs in the future?</strong><br />A: Maybe. As of v1.0, no decision has been made about mod NPCs. We <em>might</em> take up development of them sometime in the future, and/or allow for people to submit their own damaged NPCs, but nothing is certain.</p>
+          <p><strong>Q: Can I make suggestions for improvements?</strong><br />A: Of course! Stop by the <a href="http://www.shsforums.net/index.php?showforum=141">mod forum</a> at Spellhold Studios and share your thoughts with us. We love input and feedback, but don't expect us to automatically agree with you, though!</p>
+          <p><strong>Q: How would you rate the violence level in these portraits? Are they appropriate for children?</strong><br />A: Everybody has different levels of tolerance; what might be too violent or even offensive to some, can be perfectly acceptable to others. The best way to determine whether NPC Damage is for you or your children is to either download the mod and see for yourself, or see the examples we have posted in the <a href="http://www.shsforums.net/index.php?showforum=141">mod forum</a>.</p>
+          <p><strong>Q: I take exception with these faces!</strong><br />A: That's okay. We take exception with your face, too.</p>
+          <p><strong>Q: How come Minsc is severely beaten up but Boo looks completely unharmed?</strong><br />A: We are not hamster molesters. However, if you look closely, you can see a few drops of blood on Boo's teeth and chin--he must have gone for the eyes, as per Minsc's request.</p>
+          <address>
+            <span class="footer">NPC Damage &gt; FAQ</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== C r e d i t s ================== -->
+        <a name="credits" id="credits"></a>
+        <div class="content">
+          <h2>Credits</h2>
+          <h5>NPC Damage mod team:</h5>
+          <span class="t1">Artist:</span> <span class="t2">khayman</span><br />
+          <span class="t1">Coder:</span> <span class="t2">SConrad</span><br />
+          <span class="t1">Mod originators:</span> <span class="t2">Immortality, Grim Squeaker and SimDing0</span>
+          <hr class="floatfix" />
+          <h5>Programs/tools used in creation:</h5><br />
+          <ul>
+            <li><a href="http://www.weidu.org">WeiDU</a>, by Westley Weimer/Valerio Bigiani (the bigg)</li>
+            <li><a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a>, by Jon Olav Hauglid</li>
+            <li><a href="http://www.adobe.com/products/photoshop">Adobe Photoshop CS3</a>, by Adobe Systems</li>
+            <li><a href="http://www.rarlab.com/">WinRAR</a>, by Eugene Roshal/Alexander Roshal</li>
+            <li><a href="http://iesdp.gibberlings3.net">IESDP</a>, maintained by igi <em>(though strictly not a tool, still invaluable in any mod creation process)</em></li>
+          </ul>
+          <h5>Copyright Notice:</h5>
+          <div class="important">
+            <p>NPC Damage was developed by khayman and SConrad, based on material from the game Baldur's Gate II and its expansion.</p>
+            <p>All mod content is &copy; khayman and SConrad.</p>
+            <p>Baldur's Gate II: Shadows of Amn and Baldur's Gate II: Throne of Bhaal &copy; TSR, Inc. The BioWare Infinity Engine is &copy; BioWare Corp.</p>
+            <p>Please note that any and all redistribution and/or hosting of this mod is expressly unwanted without permission from the authors.</p>
+          </div>
+          <address>
+            <span class="footer">NPC Damage &gt; Credits</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== V e r s i o n   H i s t o r y ================== -->
+        <a name="version" id="version"></a>
+        <div class="content">
+          <h2>Version history</h2>
+          <h6>24 March 2008 - Version 1.1:</h6>
+          <ul>
+            <li>Spanish translation added, by Immortality/<a href="http://www.clandlan.net">ClanDLAN</a></li>
+          </ul>
+          <h6>23 March 2008 - Version 1.0:</h6>
+          <ul>
+            <li>Initial public release</li>
+          </ul>
+          <address>
+            <span class="footer">NPC Damage &gt; Version History</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
