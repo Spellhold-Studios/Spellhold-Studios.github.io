@@ -1,0 +1,786 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<script type="text/javascript">
+<!--
+function mail(text)
+		{
+		bits=text.split("###");
+		document.write("<a href=\"mailto:"+bits[0]+"@"+bits[2]+"\">"+bits[4]+"</a>");
+		}
+-->
+</script>
+
+<style type="text/css">
+/*<![CDATA[*/
+<!-- 
+	body {
+		cursor: default;
+		text-align: center;
+		color: #000;
+		background-color: #A1A1A1;
+		margin-top: 20px;
+		margin-bottom: -20px;
+		xwidth: 98%;
+	}
+
+
+
+
+
+table {
+	width: 50%;
+	padding: 20px;
+	}
+td, th, tw {
+	font-size: 11px;
+	text-align: center;
+	vertical-align: bottom;
+	padding: 4px;
+	border: 1px outset #aaa;
+	}
+th {
+	background-color: #666666;
+	color: #fff;
+	font-weight: bold;
+	}
+tw {
+	background-color: #dddddd;
+	}
+hr {
+	display: block; 
+	clear: both; 
+	margin: 0; 
+	visibility: hidden;
+	}
+.leftalign, table.leftalign tr th tw, table.leftalign tr td tw {text-align: left;}
+.section {
+	position: relative;
+	border: 1px dotted #bbb;
+	background-color: #fff;
+	margin: -30px 0px 30px 0px;
+	padding: 20px 20px 10px 20px;
+	}
+
+
+
+
+
+
+
+	
+	#headerdiv-top {
+		text-align: center;
+		font-family: Verdana, Trebuchet MS, Arial, serif;
+		font-size: 200%;
+		font-weight: bold;
+		line-height: 73%;
+		color #020F1D;
+		background-color: #fff;
+		padding: 15px 0px 15px 0px;
+		margin: 0px auto;
+		border-left: solid 1px #532529;
+		border-right: solid 1px #532529;
+		border-bottom: solid 1px #532529;
+		border-top: solid 3px #532529;
+		width: 90%;
+		position: relative;
+		display: block;
+	}
+	
+	#headerdiv-middle {
+		text-align: center;
+		font: italic 75% Verdana, Trebuchet MS, Arial, serif;
+		color: #bbb;
+		font-weight: normal;
+		background-color: #F1F1F1;
+		width: 90%;
+		border-left: solid 1px #532529;
+		border-right: solid 1px #532529;
+		margin: 0px auto;
+		padding: 10px 0px 10px 0px;
+		position: relative;
+		display: block;
+	}
+	
+	.headerdiv-line {
+		color: #532529;
+	}
+	
+	#headerdiv-middle a:link, #headerdiv-middle a:visited {
+		text-decoration: underline;
+		background-color: transparent;
+		color: #000;
+	}
+	
+	#headerdiv-middle a:focus, #headerdiv-middle a:hover {
+		text-decoration: underline;
+		color: #532539;
+	}
+	
+	#headerdiv-middle a:active {
+		color: #000;
+		text-decoration: line-through;
+		border: none;
+	}
+
+	#headerdiv-bottom {
+		text-align: center;
+		font: 83% Verdana, Trebuchet MS, Arial, serif;
+		color: #aaa;
+		padding: 8px 0px 8px 0px;
+		margin: 0px auto;
+		border-left: solid 1px #532529;
+		border-right: solid 1px #532529;
+		border-bottom: solid 3px #532529;
+		border-top: solid 1px #bbb;
+		width: 90%;
+		background-color: #F1F1F1;
+		position: relative;
+		display: block;
+	}
+
+	#maindiv {
+		text-align: center;
+		font-family: Verdana, Trebuchet MS, Arial, serif;
+	}
+	
+	#maindiv div {
+		background-color: #F1F1F1;
+		color: #020F1D;
+		padding: 11px 0px 25px 0px;
+		margin: 50px auto;
+		border-width: 1px 1px 4px 10px;
+		border-style: solid;
+		border-color: #532529;
+		width: 80%;
+		position: relative;
+		display: block;
+	}
+	
+	#maindiv div::before {
+		content: counter(kman, lower-roman);
+		counter-increment: kman;
+		font-size: 100%;
+		font-weight: bold;
+		color: #fff;
+		background-color: #532529;
+		width: 42px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: block;
+	}
+	
+	#maindiv p {
+		font-size: 83%;
+		font-style: normal;
+		text-align: justify;
+		line-height: 160%;
+		padding: 0px;
+		margin: 10px auto;
+		width: 90%;
+		display: block;
+	}
+	
+	#headerdiv-bottom a:link, #headerdiv-bottom a:visited {
+		font-weight: bold;
+		text-decoration: none;
+		background-color: transparent;
+		color: #000;
+	}
+	
+	#headerdiv-bottom a:focus, #headerdiv-bottom a:hover {
+		text-decoration: none;
+		color: #532539;
+	}
+	
+	#headerdiv-bottom a:active {
+		color: #000;
+		text-decoration: line-through;
+		border: none;
+	}
+	
+	#maindiv address a:link, #maindiv address a:visited {
+		font-weight: bold;
+		text-decoration: underline;
+		background-color: transparent;
+		color: #fff;
+	}
+	
+	#maindiv address a:focus, #maindiv address a:hover {
+		text-decoration: underline;
+		color: #532539;
+	}
+	
+	#maindiv address a:active {
+		color: #fff;
+		text-decoration: line-through;
+		border: none;
+	}
+	
+	#maindiv address {
+		font-size: 70%;
+		font-style: normal;
+		text-decoration: none;
+		color: #959FAA;
+		background-color: #532529;
+		padding: 3px 0px 0px;
+		margin: 0px;
+		width: 100%;
+		position: absolute;
+		bottom: -1px;
+		left: 0px;
+		display: block;
+		text-align: right;
+	}
+
+	.address-footer-1 {
+		letter-spacing: 0.2em;
+	}
+	
+	h4 {
+		font-family: Verdana, Trebuchet MS, Arial, serif;
+		font-size: 150%;
+		text-align: left;
+		text-indent: 30px;
+		padding: 0px 0px 0px 0px;
+		border-bottom: dotted 2px #ddd;
+	}
+
+	h5 {
+		font-family: Verdana, Trebuchet MS, Arial, serif;
+		font-size: 120%;
+		text-align: left;
+		text-indent: 30px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	h4::first-letter {
+		color: #532529;
+		background-color: transparent;
+	}
+	
+	body h1, body #maindiv h3, h1+h2, body #maindiv h4 {
+	font-weight: bold;
+	display: block;
+	}
+	
+	#maindiv .divimp {
+		font-size: 80%;
+		font-family: Verdana;
+		text-align: left;
+		background-color: #E1E1E1;
+		border-top: solid 1px #bbb;
+		border-bottom: solid 1px #bbb;
+		border-left: solid 6px #bbb;
+		border-right: solid 6px #bbb;
+		padding: 10px;
+		margin: 20px auto;
+		line-height: 150%;
+	}
+	
+	#maindiv .divimp::before {
+		display: none;
+	}
+	
+	#maindiv .divimp p {
+		font-size: 100%;
+		text-indent: 0px;
+	} 
+	
+	.list-numbered {
+		list-style-type: decimal;
+		margin-top: 0px;
+	}
+	
+	#headerdiv-top-fw {
+		font-size: 40%;
+		color: #532529;
+		margin: 0px;
+		padding-top: 9px;
+		display: block;
+	}
+	
+	.faq-q {
+		font-weight: bold;
+		font-style: italic;
+		text-align: justify;
+	}
+
+	.faq-a {
+		text-align: justify;
+	}
+
+	#maindiv .version {
+		display: block;
+		width: 100%;
+		background-color: #F1F1F1;
+		text-align: left;
+		text-indent: 30px;
+		font-style: italic;
+		padding-top: 1px;
+		padding-bottom: 1px;
+		border-bottom: solid 1px #bbb;
+		border-top: solid 1px #bbb;
+	}
+
+	.version-list {
+		line-height: 150%;
+		font-size: 80%;
+		text-align: left;
+		list-style-type: square;
+		margin-right: 50px;
+	}
+-->
+/*]]>*/
+</style><title>Psionics Unleashed Readme</title>
+
+
+
+			<!--<script language="javascript" src="SPELLHOLD%20STUDIOS%20-%20readme_files/js.js"></script>--></head>
+
+
+	<body>
+		<a name="top" id="top"></a>
+		<div id="headerdiv-top">
+			Psionics Unleashed<br>
+			<span id="headerdiv-top-fw">A Spellhold Studios mod</span> <!--A Spellhold Studios mod-->
+		</div>
+		<div id="headerdiv-middle">
+			<span class="headerdiv-line">Author: Kwiat_W</span> | <span class="headerdiv-line"><a href="http://forums.spellholdstudios.net" target="_blank">Forum</a></span> | <span class="headerdiv-line">Version: beta 0.30</span>
+		</div>
+		<div id="headerdiv-bottom">
+			<a href="#intro">Introduction</a> | <a href="#installation">Installation</a> | <a href="#components">Components</a> | <a href="#psionics">Psionics</a> | <a href="#notes">Important Notes</a> | <a href="#version">Version history</a> | <a href="#credits">Credits</a> | <a href="#contact">Contact info</a>
+		</div><a name="intro" id="intro"></a>
+		<div id="maindiv">
+
+			<!-- ================== I n t r o d u c t i o n ================== -->
+			<div>
+				<h4>
+					Introduction
+				</h4>
+				<p>
+				Psionics Unleashed is a BGII mod that aims to add a fully functional psionic system and psionic character classes based on  3.5 ed. Dungeons & Dragons. Because of the nature of the Infinity Engine and because Baldur's Gate games are based on the 2nd ed. of AD&D, this reproduction couldn't be 100% faithful and some compromises had to be made along the way.
+<br>
+<br>The mod works with Baldurs Gate II: ToB and its fallowing conversions: (Easy)TUTU, Baldur's Gate Trilogy, Classic Adventures.
+				</p>
+				<address>
+					<span class="address-footer-1">Psionics Unleashed &gt; Introduction</span>
+						<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== I n s t a l l a t i o n ================== -->
+			<a name="installation" id="Installation"></a>
+			<div>
+				<h4>
+					Installation
+				</h4>
+				<p>
+Install the Complete Psionic mod as late as possible, after any mods that add or modify spells or items and in particular after any mods that modify mage and sorcerer spell tables.
+<br>
+<br>Extract the RAR archive content into your BG2, BGT or Tutu main directory. For BG2, this is normally "C:\Program Files\Black Isle\BGII - SoA\". Run "setup-w_psionics_unleashed.exe".
+<br>
+<br>To reinstall or uninstall the mod, run setup-w_psionics_unleashed.exe again.
+</p>
+            
+
+		<address>
+					<span class="address-footer-1">Psionics Unleashed &gt; Installation</span>
+						<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== C o m p o n e n t s ================== -->
+			<a name="components" id="components"></a>
+			<div>
+				<h4>
+					Components
+				</h4>
+				<h5>
+					Psion
+            </h5>
+    <p>
+The main component of this mod adds the Psion "class" to the game. Required for other components.
+<br>
+<br>In D&D, the Psion is a character class. However, due to technical limitations of the Infinity Engine, in the game it will be available from the warrior kit selection menu.
+            </p>
+				<p>
+				<div class="divimp">
+PSION: Psionics is the art of tapping the mind's potential and the psion is its master. Unlike a priest or wizard, the psion relies on no outside energies to give him power. His power comes from within: he alone gives it shape. He depends on the intense and continual study of his own mind to unlock its full potential. As long as his mind and body are rested (that is, as long as he has not depleted his power points) his powers are available to him.
+<br>
+<br>Advantages:
+<br>- Uses a special power point-based "spellcasting" system.
+<br>- Gains bonus power points for a high inteligance score.
+<br>- Can wear light armor (armor does not interfere with manifesting powers).
+<br>
+<br>Disadvantages:
+<br>- Cannot wear helmets.
+<br>- Can only use the following weapons: spears, quarterstaff, crossbows, clubs and daggers.
+<br>- Is recognized as a mage.
+				</div>
+				</p>
+				<h5>
+					Individual AI management for party members
+            </h5>
+    <p>
+<br>This mod requires that you turn the party AI on for a few seconds each time:
+<br>- any mage in the party gains a new level in the mage class,
+<br>- you add a new mage to your party,
+<br>- any of your mages becomes dual-classed.
+<br>
+<br>Not doing this in the first two cases may lead to incorrect number of available spells per day for your mage, but only until you turn on the AI. Not doing this in second and third cases may result in your mages being able to use items they shouldn't be able to use, or the opposite: your mages may be unable to use items they normally should (but again only until you have turned on the AI).
+<br>
+<br>If you play with party AI always (or for most of the time) turned on you shouldn't have any problems, but if you play with it turned off this component may help you. It will remove the "AI on/off" button from game UI, but instead you will be able to turn AI on/off individually for each character by selecting it and pressing the "A" key. This doesn't really turn the AI off completely, it just blocks parts of the AI scripts that are not required by this mod to run.
+<br>
+<br>This component will affect all (and only those) scripts installed in your "scripts" folder.
+        </p>
+
+				<address>
+					<span class="address-footer-1">Psionics Unleashed &gt; Components</span>
+					<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== P s i o n i c s ================== -->
+			<a name="psionics" id="psionics"></a>
+			<div>
+				<h4>
+					Psionics
+				</h4>
+				<p>
+				<h5>
+					Table of contents:
+				</h5>	
+
+				<div class="divimp">
+					<ul class="list-numbered">
+						<li><a href="#psionics2">What is it?</a></li>
+						<li><a href="#terms">Some Key Terms</a></li>
+						<li><a href="#abilities">Abilities and Manifesters</a></li>
+						<li><a href="#cooldowns">Cooldowns</a></li>
+						<li><a href="#newcharacter">New character creation</a></li>
+						<li><a href="#addingpowers">Acquiring new powers</a></li>
+					</ul>
+				</div>
+				</p>
+
+				<a name="psionics2" id="What is it?"></a>
+				<h5>
+					What is it?
+				</h5>
+				<p>
+				<div class="divimp">
+Psionics are powers derived from the mind. A psionic character relies on a trained mind to create effects as marvelous and inexplicable as any spell. So, how are psionics different from magic?
+<br>
+<br>The major difference between a spellcasting and psionics is the source of power. Unlike spells, which derive thier power from Faerun's Weave (or the Shadow Weave), Psionic ability taps only the inner reservoirs of the manifester. In a sense, each psionic creature is its own Weave, using the magic of its own lifeforce and mind to create psionic effects. Mystra and Shar have no ability to deny psionic creatures access to powers, and they do not control the promulgation of psionic lore and ability throughout the populace of Faerun.
+<br>
+<br>While the psionic does not require the Weave to function, psionic powers are "magical" in nature. Spells such as Detect Magic can also detect psionic abilities at work, and spells such as Dispel Magic can negate, suppress or completely cancel psionic manifestations. Resistance to psionic powers is called power resistance and is interchangeable with magic resistance. Power resistance also resists spells and magic resistance also resists powers.
+
+				</div>
+				</p>
+
+				<a name="terms" id="Some Key Terms"></a>
+				<h5>
+					Some Key Terms
+				</h5>
+				<p>
+				<div class="divimp">
+Here are a few terms used to describe psionics and their effects.
+<br>
+<br><span style="font-weight: bold;">MANIFESTING</span>
+<br>The psionic equivalent of casting a spell. You manifest a power; you cast a spell. You manifest a power by spending psionic power points.
+<br>
+<br><span style="font-weight: bold;">MANIFESTER LEVEL</span>
+<br>The variables of a power's effect often depend on its manifester level, which is equal to the psionic class level. The psionic can augment a power for additional effect, though the manifester level limits this.
+<br>
+<br><span style="font-weight: bold;">POWER OR PSIONIC POWER</span>
+<br>The psionic equivalent of a spell. A power is a mental trick that produces a specific effect. To produce its effects one time, the psion must manifest a power by spending power points. To manifest the power again, you must spend more power points.
+<br>
+<br><span style="font-weight: bold;">POWER POINTS</span>
+<br>The personal reserve of mental energy you have available each day. Manifesting a power you know requires you to expend one or more of your power points, as noted in the "power" description. You can manifest a particular power as many times each day as you want, but each manifestation uses up part of your daily allotment of power points. If you have fewer power points available than the power requires, you cannot manifest the power. If you have more power points available than the power requires, you may be able to spend additional power points to augment the power (if the power allows this option). Your class and level determine your basic allotment of power points each day. Your ability scores may give you additional power points each day. To regain used daily power points, a psionic character must have a clear mind. To clear his mind, he must first sleep for 8 hours.
+<br>
+<br><span style="font-weight: bold;">AUGMENTATION</span>
+<br>A psion can often "augment" his powers or manifest them at a stronger power level by expending more power points. This is similar to spell scaling (e.g. Fireball: 1d6 per caster level) except that unlike magic, it is not free. Psionic manifesters must spend power points to accomplish this feat, and they are subject to a special limit. You may not spend more power points than your manifester level on a single manifestation. That is, a fourth level psion can only spend four power points on any given psionic manifestation. He could spend fewer, if he wishes, but not more than four.
+
+</div>
+</p>
+ 				<a name="#abilities" id="Abilities and Manifesters"></a>
+				<h5>
+					Abilities and Manifesters
+				</h5>
+				<p>
+				<div class="divimp">
+The ability that your powers depend on (your key ability score as a manifester) is related to your psionic class: intelligence (psion) or wisdom (psychic warrior). The modifier for this ability is referred to as your key ability modifier. Just as a high wisdom score grants bonus spells to a cleric, a character who manifests powers gains bonus power points according to his key ability score. Refer to the table: Ability Modifiers and Bonus Power Points.
+				</div>
+				
+Table: Ability Modifiers and Bonus Power Points
+<table align="center">
+<!-- Basic armours -->
+<tr>
+<tr><th rowspan="2">Ability Score</th>
+<th colspan="20">Bonus Power Points (by Class Level)</th></tr>
+
+
+ <th>1st</th>
+ <th>2nd</th>
+ <th>3rd</th>
+ <th>4th</th>
+ <th>5th</th>
+ <th>6th</th>
+ <th>7th</th>
+ <th>8th</th>
+ <th>9th</th>
+ <th>10th</th>
+ <th>11th</th>
+ <th>12th</th>
+ <th>13th</th>
+ <th>14th</th>
+ <th>15th</th>
+ <th>16th</th>
+ <th>17th</th>
+ <th>18th</th>
+ <th>19th</th>
+ <th>20th</th>
+
+</tr>
+<tr><th>10-11</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr style="background-color: #dddddd"><th>12-13</th><td>0</td><td>1</td><td>1</td><td>2</td><td>2</td><td>3</td><td>3</td><td>4</td><td>4</td><td>5</td><td>5</td><td>6</td><td>6</td><td>7</td><td>7</td><td>8</td><td>8</td><td>9</td><td>9</td><td>10</td></tr>
+<tr><th>14-15</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+<tr style="background-color: #dddddd"><th>16-17</th><td>1</td><td>3</td><td>4</td><td>6</td><td>7</td><td>9</td><td>10</td><td>12</td><td>13</td><td>15</td><td>16</td><td>18</td><td>19</td><td>21</td><td>22</td><td>24</td><td>25</td><td>27</td><td>28</td><td>30</td></tr>
+<tr><th>18-19</th><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>12</td><td>14</td><td>16</td><td>18</td><td>20</td><td>22</td><td>24</td><td>26</td><td>28</td><td>30</td><td>32</td><td>34</td><td>36</td><td>38</td><td>40</td></tr>
+<tr style="background-color: #dddddd"><th>20-21</th><td>2</td><td>5</td><td>7</td><td>10</td><td>12</td><td>15</td><td>17</td><td>20</td><td>22</td><td>25</td><td>27</td><td>30</td><td>32</td><td>35</td><td>37</td><td>40</td><td>42</td><td>45</td><td>47</td><td>50</td></tr>
+<tr><th>22-23</th><td>3</td><td>6</td><td>9</td><td>12</td><td>15</td><td>18</td><td>21</td><td>24</td><td>27</td><td>30</td><td>33</td><td>36</td><td>39</td><td>42</td><td>45</td><td>48</td><td>51</td><td>54</td><td>57</td><td>60</td></tr>
+<tr style="background-color: #dddddd"><th>24-25</th><td>3</td><td>7</td><td>10</td><td>14</td><td>17</td><td>21</td><td>24</td><td>28</td><td>31</td><td>35</td><td>38</td><td>42</td><td>45</td><td>49</td><td>52</td><td>56</td><td>59</td><td>63</td><td>66</td><td>70</td></tr>
+
+</table>
+</p>
+Table: The Psion - power points and powers
+<table align="center">
+<!-- Basic armours -->
+<tr>
+<tr><th colspan="4">THE PSION</th></tr>
+
+ <th valign="bottom">LEVEL</th>
+ <th>POWER POINTS/ DAY</th>
+ <th>POWERS KNOWN</th>
+ <th>MAXIMUM POWER LEVEL KNOWN</th>
+
+
+</tr>
+<tr><th>1</th><td>2</td><td>3</td><td>1</td></tr>
+<tr style="background-color: #dddddd"><th>2</th><td>6</td><td>5</td><td>1</td></tr>
+<tr><th>3</th><td>11</td><td>7</td><td>2</td></tr>
+<tr style="background-color: #dddddd"><th>4</th><td>17</td><td>9</td><td>2</td></tr>
+<tr><th>5</th><td>25</td><td>11</td><td>3</td></tr>
+<tr style="background-color: #dddddd"><th>6</th><td>35</td><td>13</td><td>3</td></tr>
+<tr><th>7</th><td>46</td><td>15</td><td>4</td></tr>
+<tr style="background-color: #dddddd"><th>8</th><td>58</td><td>17</td><td>4</td></tr>
+<tr><th>9</th><td>72</td><td>19</td><td>5</td></tr>
+<tr style="background-color: #dddddd"><th>10</th><td>88</td><td>21</td><td>5</td></tr>
+<tr><th>11</th><td>106</td><td>22</td><td>6</td></tr>
+<tr style="background-color: #dddddd"><th>12</th><td>126</td><td>24</td><td>6</td></tr>
+<tr><th>13</th><td>147</td><td>25</td><td>7</td></tr>
+<tr style="background-color: #dddddd"><th>14</th><td>170</td><td>27</td><td>7</td></tr>
+<tr><th>15</th><td>195</td><td>28</td><td>8</td></tr>
+<tr style="background-color: #dddddd"><th>16</th><td>221</td><td>30</td><td>8</td></tr>
+<tr><th>17</th><td>250</td><td>31</td><td>9</td></tr>
+<tr style="background-color: #dddddd"><th>18</th><td>280</td><td>33</td><td>9</td></tr>
+<tr><th>19</th><td>311</td><td>34</td><td>9</td></tr>
+<tr style="background-color: #dddddd"><th>20</th><td>343</td><td>36</td><td>9</td></tr>
+</table>
+				</p>
+
+ 				<a name="cooldowns" id="Cooldowns"></a>
+				<h5>
+					Cooldowns
+				</h5>
+				<p>
+				<div class="divimp">
+The game implementation of psionic power augmentation created a possibility for players to manifest one power after another, ignoring the limitation of using one ability (spell, psionic power or innate ability) per round. To eliminate this unintended advantage of psionics over spellcasting, a "cooldown" of one round applies to all psionic powers. The cooldown is a period of time before a psion can use a power after a prior power. How is this different than the "one ability per round" rule? Normally you can order your character to cast a spell immediately after he has casted a previous one, but he will execute this command after the required one round has passed. The difference with psionic powers is that you can't click on psionic powers before one round has passed and so you can't give the order - the cooldown affects the player more than his characters.
+</div>
+</p>
+
+ 				<a name="newcharacter" id="New character creation"></a>
+				<h5>
+					New character creation
+				</h5>
+				<p>
+				<div class="divimp">
+The new psion kit is available to characters of any race under the warrior kit selection menu. After you start a new game, you will be asked to select a discipline in which to specialize. This will add a set of powers specific to your chosen discipline to the list of available psionic powers. You will notice that your character is at level '0' and you will have to level up to the appropriate level for your chosen game type - Baldur's Gate 1 (with Tutu or BGT), Shadows of Amn, Throne of Bhaal or Classical Adventures. Next, you will gain a new special ability: "learn new powers." Use this to select psionic powers for your character. New powers will be available each time your character gains a new level. You can check power descriptions at any time in the mage spell book menu. Note, however, that psions don't have to memorize powers as wizards or priests have to memorize their spells. The psion can use new learned powers automatically after resting.
+</div>
+</p>
+
+ 				<a name="addingpowers" id="Acquiring new powers"></a>
+				<h5>
+					Acquiring new powers
+				</h5>
+				<p>
+				<div class="divimp">
+Psionic characters can learn new powers when they attain a new level by using the "learn new power" special ability. Selecting powers is done via a conversation. Initially, you will be presented with a list of the different levels of powers you can learn. Once you select a level, you will be given a list of all the powers you can take within that level. When you select a power, you will be given a description of that power. The description includes the duration, effects, saving throws, power resistance and augmentation options. At the end of the description, you can choose whether to accept that power or go back and select another one. Until you accept a power, you can change between different powers and power levels to look at them freely.
+<br>Note that unlike sorcerers, psions are not limited to selecting powers of separate levels. You can choose to fill your available powers from any level you have available. While higher-level powers may appear to be more effective, remember that you can augment lower-level powers. Newly acquired powers are available after resting.
+</div>
+</p>
+
+
+				<address>
+					<span class="address-footer-1">Psionics Unleashed &gt; psionics</span>
+					<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== Important Notes ================== -->
+			<a name="Notes" id="notes"></a>
+			<div>
+				<h4>
+					Important Notes
+				</h4>
+
+				<ul class="version-list">
+					<li>You may have more than one psion in your party but each has to have a different psionic discipline selected as his focus.</li>
+					<li>The psion "class" uses the totemic druid's usability flags; the totemic druid uses the beastfriend's usability flag instead.</li>
+               <li>The Talos priests use the same usability flag the Helms priests use.</li>
+					<li>If you move to a different area immediately after loading a save game (you would have to be very, very quick) your psion may lose some of his psionic powers but those powers will return after resting.</li>
+					<li>In the spellbook there are some invisible spells. If you hover the mouse over them, a tooltip will pop up saying "zz - don't delete this spell." Do not remove those spells from your spellbook.</li>
+               <li>Game saves created with this mod installed shouldn't be used after removing the mod (it doesn't matter if you had any psions in your party).</li>
+               <li>In D&D, psions have a power allowing them to identify magical items. Unfortunately in the Infinity Engine, it's not possible to duplicate the functionality of the Identify spell that mages have. Instead, psions have a "Call Identification scroll" power, which summons an Identify scroll which is unsellable and usable by psions.</li>
+               <li>The number of portrait icons (that represent effects active on your characters) is limited and the modding communitiy have already used them all. To reclaim some slots for my mod I have made the following changes:
+               <br>- Polymorph Self and Polymorph Other spells use the same icon (124 - Polymorphed)
+               <br>- Fire Shield spells use the same icon (68 - Fire Shield)
+               <br>- Icon 80 was labeled "Stoneskin"; now it is labeled "Protection from physical attacks"
+               <br>- Icon 84 was labeled "Offensive Stance"; now it is labeled "Offensive"
+               <br>- Icon 85 was labeled "Defensive Stance"; now it is labeled "Defensive"
+               <br>- Icon 21 was labeled "Strength"; now it will be labeled "Ability score bonus"
+               <br>- Icon 21 (Ability score bonus) is now used instead of icon 115 (Friends)
+               <br>- Icon 13 (Held) is now used instead of icon 131 (Mental combat)
+               <br>- Icon 144 (Entangled) is now used instead of icon 129 (Webbed)
+               <br>- Effects for Evasion and Greater Evasion now use the same icon (157 - Evasion)
+					</li>
+
+
+				</ul>
+				</p>
+
+				<address>
+					<span class="address-footer-1">Psionics Unleashed &gt; Important Notes</span>
+								<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== Version History ================== -->
+			<a name="version" id="version"></a>
+			<div>
+				<h4>
+					Version History
+				</h4>
+				<p class="version">
+					Version beta 0.3
+				</p>
+				<ul class="version-list">
+					<li>BG2EE is now supported,</li>
+					<li>new psionic powers: Stygian Conflagration, Mind Shield, Personal Dispelling Buffer,</li>
+					<li>Summon Planar Ally no longer crashes the game,</li>
+					<li>should be compatible with Geomantic Sorcerer kit,</li>
+               <li>psions casting time will now decrease by 1 at levels 7/11/15</li>
+					<li>at psion levels 5/9/13/17 a penalty of -1 will be imposed to victim's saving throws</li>
+					<li>other changes.</li>
+				</ul>
+
+				<p class="version">
+					Version beta 0.2
+				</p>
+				<ul class="version-list">
+					<li>BGEE is now supported,</li>
+					<li>improved compatibility with BGT (previously it worked only with older versions of BGT),</li>
+					<li>two new psionic powers: Inertial Armor and Concussion Blast,</li>
+					<li>improved graphical effects,</li>
+					<li>the bug with blank item descriptions has been fixed,</li>
+					<li>other changes.</li>
+				</ul>
+
+				<p class="version">
+					Version beta 0.1
+				</p>
+				<ul class="version-list">
+					<li>First public release.</li>
+				</ul>
+				<address>
+					<span class="address-footer-1">Psionics Unleashed &gt; Version History</span>
+								<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== Credits ================== -->
+			<a name="credits" id="credits"></a>
+			<div>
+				<h4>
+					Credits
+				</h4>
+
+				<p class="faq-q">
+					Mod author:
+				</p>
+				<ul class="version-list">
+					<li>Kwiat_W
+				</ul>
+
+            <p class="faq-q">
+					Proofreading:
+				</p>
+				<ul class="version-list">
+					<li>Miloch
+				</ul>
+
+            <p class="faq-q">
+					Testers:
+				</p>
+				<ul class="version-list">
+					<li>Eric P., Jarno Mikkola, Lava Del'Vortel, Picollo, Salomonkane
+				</ul>
+
+				<p class="faq-q">
+					Tools Used in the creation of this mod:
+				</p>
+            <ul class="version-list">
+            <li><a target="_blank" href="http://www.weidu.org/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> by Westley Weimer and The Bigg</li>
+            <li><a href="http://www.idi.ntnu.no/%7Ejoh/ni/" target="_blank">Near Infinity</a> by Jon Olav Hauglid</li>
+            <li><a target="_blank" href="http://forums.gibberlings3.net/index.php?s=727f49f029e1b99d95758f1217a434fe&amp;showforum=137"><acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym></a> by Avenger</li>
+            <li><a target="_blank" href="http://iesdp.gibberlings3.net/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintained by Igi</li>
+            <li><a target="_blank" href="http://teambg.eu/index.php?page=tools&amp;cat=32">BAM Workshop</a> by Glenn Flansburg</li>
+            <li><a target="_blank" href="http://teambg.eu/index.php?page=tools&amp;cat=32">BAM Workshop 2</a> by Andrew Bridges</li>
+            <li><a target="_blank" href="http://www.rj-texted.se/">RJ TextEd</a> by Rickard Johansson</li>
+            <li><a target="_blank" href="http://infexp.sourceforge.net/">Infinity Explorer</a> by Dmitry Jemerov and Bigmoshi</li>
+            <li><a target="_blank" href="http://www.gimp.org/">GIMP</a> - GNU Image Manipulation Program</li>
+            <li><a target="_blank" href="http://www.wondertouch.com/pillusion3.asp">ParticleIllusion 3.0</a> by Wondertouch</li>
+            </ul>
+
+				<address>
+					<span class="address-footer-1">Psionics Unleashed &gt; Credits</span>
+					<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== C O N T A C T   I N F O ================== -->
+			<a name="contact" id="contact"></a>
+			<div>
+				<h4>
+					Contact Info:
+				</h4>
+				<p>E-mail:</p>
+					<script type="text/javascript">
+						<!--
+								document.write("<p>");
+								mail("kwiatw.e### fuck@off.spammers ###gmail.com### you.won.t.get@this.one ###Kwiat_W");
+								document.write("</p>");
+						-->
+					</script>
+
+				<address>
+					<span class="address-footer-1">Psionics Unleashed &gt; Contact Info</span>
+					<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+		</div>
+	<!--<script language="javascript">postamble();</script>-->
+</body></html>
