@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>xMinion AI Scripts ReadMe</title>
+</head>
+<body>
+    <h1>
+        xMinion AI Scripts ReadMe</h1>
+    <ul>
+        <h5>
+            Version 1.2, 2012-04-06</h5>
+    </ul>
+    <h2>
+        Table of Contents</h2>
+    <ul>
+        <li><a href="#Introduction">Introduction</a>
+        <li><a href="#Installation">Installation</a>
+            <ul>
+                <li><a href="#Uninstallation">Uninstallation</a>
+            </ul>
+            <li><a href="#Preface">Preface</a>
+                <ul>
+                    <li><a href="#Spells">Spells</a>
+                </ul>
+                <li><a href="#TheCreatures">The creatures</a>
+                    <ul>
+                        <li><a href="#Planetar">Planetar</a>
+                        <li><a href="#Deva">Deva</a>
+                        <li><a href="#Chan">Chan, Elemental Prince of Air</a>
+                        <li><a href="#ZaamanRul">Zaaman Rul, Elemental Prince of Fire</a>
+                        <li><a href="#Efreeti">Efreeti</a>
+                        <li><a href="#Nishruu">Nishruu</a>
+                        <li><a href="#Nymph">Nymph</a>
+                        <li><a href="#Kitthix">Kitthix</a>
+                        <li><a href="#Cerebus">Cerebus</a>
+                    </ul>
+                    <li><a href="#Notes">Notes</a>
+                        <ul>
+                            <li><a href="#AboutTheAuthor">About the author</a>
+                            <li><a href="#Compatibility">Compatibility</a>
+                            <li><a href="#Files">List of files</a>
+                            <li><a href="#SourceCode">Source code</a>
+                            <li><a href="#OtherScripts">Other scripts</a>
+                            <li><a href="#FavoriteTactics">Favorite tactics</a>
+                            <li><a href="#Credits">Credits</a>
+                        </ul>
+    </ul>
+    <hr>
+    <h2>
+        <a name="Introduction">Introduction </a>
+    </h2>
+    <ul>
+        <p>
+            These scripts upgrade the AI of several summoned creatures to make better use of
+            their abilities.</p>
+    </ul>
+    <hr>
+    <h2>
+        <a name="Installation">Installation</a>
+    </h2>
+    <ul>
+        <p>
+            The files in the <tt>override</tt> folder are the summoned creature scripts. Copy
+            these to your <tt>Baldurs Gate 2\override</tt> folder.</p>
+        <h3>
+            <a name="Uninstallation">Uninstallation</a>
+        </h3>
+        <ul>
+            <p>
+                Just delete the files.</p>
+        </ul>
+    </ul>
+    <hr>
+    <h2>
+        <a name="Preface">Preface</a>
+    </h2>
+    <ul>
+        <p>
+            Several important summoned creatures have had their AI considerably improved. These
+            creatures will now attempt to use all their abilities where appropriate, with some
+            thought put into target selection regarding resistances and immunities, and will
+            alternate between spellcasting and attacking for maximum efficiency. The enhancements
+            apply only to creatures controlled by the party; these scripts do not make enemies
+            smarter.</p>
+        <p>
+            All of the enhanced creatures will greet their master when summoned by saying: <small>
+                <b>I serve only &lt;PRO_LADYLORD&gt; &lt;CHARNAME&gt;!</b></small> (filling
+            in the variables, of course), with the exception of the elemental princes, who retain
+            their own lines.</p>
+        <h3>
+            <a name="Spells">Spells</a>
+        </h3>
+        <ul>
+            <p>
+                The scripts are extremely careful with spells that have been deemed "unsafe", such
+                as Fireball, Globe of Blades or Dispel Magic. Unsafe spells will only automatically
+                be cast when there is no risk of collateral damage. Manually order your creatures
+                to cast these spells if you wish to use them.</p>
+            <p>
+                Several creatures have the same set of spells. This is the Ogre Mage list, and some
+                of the other creatures likely ended up with this list due to sloppy copy/pasting
+                by the game's developers. These spells are nevertheless put to good use. The list
+                includes:</p>
+            <ul>
+                <li>
+                Agannazar's Scorcher: Somewhat unsafe, to be cast only when no party members are
+                in sight.
+                <li>
+                Melf's Acid Arrow and Magic Missile: Fast and practical.
+                <li>
+                Stinking Cloud and Lightning Bolt: Deemed too unsafe for scripted use.
+                <li>
+                Ghost Armor: A quick buff.
+            </ul>
+        </ul>
+    </ul>
+    <h2>
+        <a name="TheCreatures">The creatures</a>
+    </h2>
+    <ul>
+        <h3>
+            <a name="Planetar">Planetar and Fallen Planetar (from Summon Planetar and Summon Dark
+                Planetar)</a>
+        </h3>
+        <ul>
+            <p>
+                The planetars are excellent fighters and spellcasters. They have a long list of
+                spells, but because they are so fearsome in melee (average 84 damage against AC
+                0) they will forego many of these spells in favor of simply cutting their opponents
+                to ribbons. They will cast the following spells:</p>
+            <ul>
+                <li>
+                Remove Fear: To be cast at the earliest possible opportunity, preemptively when
+                facing liches (who just love casting Time Stop into Symbol, Fear) or dragons, curatively
+                on panicked party members and proactively when summoned outside of combat (since
+                it lasts a whole hour). Celestial beings or not, they are not immune to fear.
+                <li>
+                Insect Plague: To be cast on spellcasters.
+                <li>
+                Magic Missile: To be cast on stoneskinned enemies.
+                <li>
+                Symbol, Death and Symbol, Fear: Powerful but very slow, so the risk of the spell
+                being disrupted is huge. Cast only on particularly vulnerable enemies.
+                <li>
+                Holy Word: A bit of a corner case, hardly worth trying, and somewhat unsafe.
+                <li>
+                Flame Arrow: The planetar is a level 25 spellcaster, so this deals considerable
+                damage.
+                <li>
+                Cure Poison: Cast outside of combat on poisoned party members or self as required.
+                <li>
+                Heal: Cast on wounded party members outside of combat (it is too slow to cast while
+                the battle still rages.)
+                <li>
+                True Seeing and Improved Invisibility: Cast outside of combat, as preparation.
+            </ul>
+            <p>
+                Dispel Magic, Earthquake, Globe of Blades and Firestorm were deemed too risky for
+                scripted use. Chaos and Flame Strike were ignored because they pale in comparison
+                to the planetar's hack and slash damage output. Cure Disease, Raise Dead, Remove
+                Curse and Restoration cannot be scripted. Unholy Word is useless since enemies are
+                almost never Good aligned. Detect Invisibility is pointless since planetars can
+                see invisible creatures anyway and have True Sight to dispel illusions.</p>
+        </ul>
+        <h3>
+            <a name="Deva">Deva and Fallen Deva (from Summon Deva and Summon Fallen Deva)</a>
+        </h3>
+        <ul>
+            <p>
+                The devas are good fighters and spellcasters, though not as awesome as the planetars.
+                Their script has the following features:</p>
+            <ul>
+                <li>
+                Remove Fear: To be cast at the earliest possible opportunity, preemptively when
+                facing liches or dragons, curatively on panicked party members and proactively when
+                summoned outside of combat.
+                <li>
+                Cure Poison: Cast on poisoned party members or self as required.
+                <li>
+                Cure Critical Wounds: Cast on wounded party members outside of combat (it is too
+                slow and inconsequential to cast while the battle still rages.)
+            </ul>
+            <p>
+                Globe of Blades was deemed too risky. Cure Disease and Remove Curse cannot be scripted
+                (and hardly matter anyway.) A bug in their spell list prevents them from casting
+                their Chaos spell (which would have been decent) and their third Globe of Blades
+                spell.</p>
+        </ul>
+        <h3>
+            <a name="Chan">Chan, Elemental Prince of Air (from Greater Elemental Summoning)</a>
+        </h3>
+        <ul>
+            <p>
+                Chan now uses his Whirlwind, which appears to be a sort of Ring of the Ram thing.</p>
+        </ul>
+        <h3>
+            <a name="ZaamanRul">Zaaman Rul, Elemental Prince of Fire (from Greater Elemental Summoning)</a>
+        </h3>
+        <ul>
+            <p>
+                Zaaman Rul now uses his superfast Flame Strike.</p>
+        </ul>
+        <h3>
+            <a name="Efreeti">Efreeti (from the Efreeti Bottle)</a>
+        </h3>
+        <ul>
+            <p>
+                The efreeti is a decent fighter and has several useful spells, even though it is
+                only a low-level spellcaster. It has the Ogre Mage list described above, and on
+                top of that a Flame Strike and a Flame Arrow. Ghost Armor is not scripted since
+                it would not improve the efreeti's AC anyway.</p>
+        </ul>
+        <h3>
+            <a name="Nishruu">Nishruu (from Summon Nishruu)</a>
+        </h3>
+        <ul>
+            <p>
+                The Nishruu has the Ogre Mage spell list, which it uses to good effect even though
+                its primary purpose is soaking up enemy spells. It now casts Ghost Armor right after
+                being summoned, a quick spell that greatly improves the nishruu's AC.</p>
+            <p>
+                The hakeashar (from Summon Hakeashar) also uses this script. However, since the
+                hakeashar is only a minimal upgrade from the nishruu and there are stupidly powerful
+                spells available at its level, it is a waste of a spell slot.</p>
+        </ul>
+        <h3>
+            <a name="Nymph">Nymph (from Call Woodland Beings)</a>
+        </h3>
+        <ul>
+            <p>
+                This lady is rather frail in combat (despite her startling 7 attacks per round),
+                but has an impressive array of spells:</p>
+            <ul>
+                <li>Mass Cure: Cast if there are at least two wounded party members, counting the nymph
+                    herself, or as a parting gift at the last second before she vanishes. She'll announce
+                    this by saying: <small><b>I must be going now.</b></small>
+                <li>
+                Call Lightning: Cast when fighting outdoors.
+                <li>
+                Mental Domination, Hold Monster, Hold Person and Confusion: Cast on anything it
+                could affect.
+                <li>
+                Miscast Magic: Cast on spellcasters. Not a very impressive spell, though.
+                <li>
+                Cause Serious Wounds: Cast when the nymph has nothing else left, kamikaze style.
+            </ul>
+            <p>
+                The nymph will try to stay out of trouble as long as she still has relevant spells
+                to cast, but will chip in with the occasional punch if she's next to something that
+                isn't immune to her unenchanted fists.</p>
+            <p>
+                Note that the nymph instantly casts Barkskin on herself when she sees an enemy.
+                This is not a new feature, and it does not interfere with her other spellcasting.</p>
+        </ul>
+        <h3>
+            <a name="Kitthix">Kitthix (from the Black Spider Figurine)</a>
+        </h3>
+        <ul>
+            <p>
+                Kitthix will now fire its Web Tangle at vulnerable enemies, and will teleport around
+                slightly more intelligently.</p>
+        </ul>
+        <h3>
+            <a name="Cerebus">Cerebus (from the Moon Dog Figurine)</a>
+        </h3>
+        <ul>
+            <p>
+                Cerebus' original script was quite flawed, redundantly casting Mirror Images three
+                times in a row before attacking. This old dog has been taught several new tricks:</p>
+            <ul>
+                <li>
+                Moon Dog Howl: Used to cause fear.
+                <li>
+                Moon Dog Sight: Used to reveal invisible enemies, and to dispel Mirror Images and
+                Improved Invisibility. It can only dispel illusions of level 5 or lower, so it is
+                useless against Mislead.
+                <li>
+                Mirror Image: Used whenever no images remain. Cerebus can take quite the beating
+                now.
+                <li>
+                Improved Invisibility: Used to improve its AC. It cannot cast this on others anyway.
+                <li>
+                Healing Lick: Used to cure poison and heal damage.
+            </ul>
+        </ul>
+    </ul>
+    <hr>
+    <h2>
+        <a name="Notes">Notes </a>
+    </h2>
+    <ul>
+        <h3>
+            <a name="AboutTheAuthor">About the author</a>
+        </h3>
+        <ul>
+            <p>
+                I was rather involved in the Infinity Engine scripting scene a decade ago, writing
+                Beholder AI for laughs and eventually working on the semi-official Ascension mod
+                and the (never finished) Return to Windspear mod, after which I made the mistake
+                of moving over to the (then still promising) Neverwinter Nights series.</p>
+        </ul>
+        <h3>
+            <a name="Compatibility">Compatibility</a>
+        </h3>
+        <ul>
+            <p>
+                I installed the following content:</p>
+            <ul>
+                <li>
+                Baldur's Gate 2<li>
+                Throne of Bhaal<li>
+                The lastest (non-beta) patch<li>The <a href="http://www.gibberlings3.net/widescreen/">
+                    Widescreen Mod</a><li>The <a href="http://www.gibberlings3.net/bg2fixpack/">Baldur's
+                        Gate 2 fixpack</a>
+                v9<li>A couple of tweaks (mostly cosmetic) from the <a href="http://www.gibberlings3.net/bg2tweaks">
+                    Baldur's Gate 2 tweak pack</a>
+                v9</ul>
+            <p>
+                None of the included files overwrite any existing files in that setup. If you already
+                have one or more of these files because you installed another mod, I'd suggest not
+                overwriting any existing files. Some mods (particularly Spell Revisions and aTweaks,
+                I am told) are likely to conflict with the summoned creature AI.</p>
+        </ul>
+        <h3>
+            <a name="Files">List of files</a>
+        </h3>
+        <ul>
+            <p>
+                The <tt>override</tt> folder contains the summoned creature AI scripts:</p>
+            <ul>
+                <li><tt>DevaEvil.bcs</tt> and <tt>DevaGood.bcs</tt>: Deva and Fallen Deva.
+                <li><tt>ElemChan.bcs</tt> and <tt>ElemZaam.bcs</tt>: Chan and Zaaman Rul, elemental
+                princes of air and fire. Sunnis (prince of earth) required no additional scripting.
+                <li><tt>GenSht01.bcs</tt>: The Efreeti from the Efreeti Bottle and the Djinni from
+                the Ring of Djinni Summoning (if he didn't die), though not their brethren from
+                their respective Summon spells (both a waste of a spell slot anyway.) This script
+                is also used by several other creatures, but none of them knows any special tricks.
+                <li><tt>Nishru01.bcs</tt>: Nishruu and Hakeashar.
+                <li><tt>Nymph.bcs</tt>: The Nymph from the Call Woodland Beings spell.
+                <li><tt>PlanGood.bcs</tt>: Planetar and Fallen Planetar.
+                <li><tt>SpidFgSu.bcs</tt>: Kitthix from the Black Spider Figurine.
+                <li><tt>MoonDog.bcs</tt>: Cerebus from the Moon Dog Figurine.
+            </ul>
+        </ul>
+        <h3>
+            <a name="SourceCode">Source code</a>
+        </h3>
+        <ul>
+            <p>
+                The files in the <tt>script compiler\source</tt> folder contain all the source code,
+                in case you're interested. It has been extensively commented.</p>
+        </ul>
+        <h3>
+            <a name="OtherScripts">Other scripts</a>
+        </h3>
+        <ul>
+            <p>
+                I might well be the last person to have written a script, but I wasn't the first.
+                You may or may not like these other scripts better:</p>
+            <ul>
+                <li><a href="http://www.gibberlings3.net/cirerrek/gminion.php">gMinion</a>
+                    <p>
+                        Unfortunately, the gMinion download link is broken... but I believe that my minions
+                        are slightly smarter anyway (the ones I wrote scripts for, at least.)</p>
+            </ul>
+        </ul>
+        <h3>
+            <a name="FavoriteTactics">Favorite tactics</a>
+        </h3>
+        <ul>
+            <h4>
+                <a name="Summons">Summons</a>
+            </h4>
+            <ul>
+                <p>
+                    When it is obvious that there is a fight ahead, simply summon some sturdy minions,
+                    send in your army and sit back. I finished many big fights without actually showing
+                    up myself. You can cast Wizard Eye or Farsight if you wish to view the spectacle,
+                    but often that isn't even needed unless you include clones.
+                </p>
+                <p>
+                    A Nishruu or the Skeleton Warrior you get from Animate Dead once you're level 15
+                    can clear out a room on its own if it doesn't run into Death Spell. Both of these
+                    are practically immune to magic and unenchanted weapons.</p>
+                <p>
+                    I consider these summon spells worth memorizing, in order of awesomeness:</p>
+                <ul>
+                    <li>
+                    Summon Planetar or Fallen Planetar (Wizard)
+                    <li>
+                    Greater Elemental Summoning (Druid)
+                    <li>
+                    Summon Deva (Cleric)
+                    <li>
+                    Mordekainen's Sword (Wizard)
+                    <li>
+                    Animate Dead (level 15+ Cleric for the Skeleton Warrior)
+                    <li>
+                    Summon Aerial Servant (Cleric)
+                    <li>
+                    Summon Fire Elemental (Druid)
+                    <li>
+                    Summon Nishruu (Wizard)
+                    <li>
+                    Call Woodland Beings (Druid)
+                    <li>
+                    Animate Dead (level 14- Cleric for Skeleton fodder)
+                    <li>
+                    Spider Summoning (level 12+ Wizard for Swords Spiders)
+                </ul>
+            </ul>
+        </ul>
+        <h3>
+            <a name="Changelog">Changelog</a>
+        </h3>
+        <ul>
+            <h4>
+                Version 1.1, 2012-03-08</h4>
+            <ul>
+                <li>
+                Creatures now alternate better between casting and attacking.
+            </ul>
+            <h4>
+                Version 1.2, 2012-04-06</h4>
+            <ul>
+                <li>
+                Fix: Chan will now check his target's crushing damage resistance instead of fire
+                damage resistance for his Whirlwind.
+                <li>
+                New: Added Cerebus, from the Moon Dog Figurine. This old dog has been taught many
+                new tricks.
+                <li>
+                Improved: Nymph now casts most of her other spells before Mass Cure.
+                <li>
+                Improved: Planetars and Zaaman Rul no longer get hung up on attacking, so they will
+                cast more spells in combat like they're supposed to.
+            </ul>
+        </ul>
+        <h3>
+            <a name="Credits">Credits</a>
+        </h3>
+        <ul>
+            <h4>
+                <a name="PlayTheGame">For helping me play the game</a>
+            </h4>
+            <ul>
+                <li>
+                BioWare and Black Isle Studios for developing a game that is still awesome to play
+                after a decade.
+                <li>Dan Simmons for his detailed <a href="http://www.gamefaqs.com/pc/258273-baldurs-gate-ii-shadows-of-amn/faqs/34147">
+                    Baldur's Gate II: Shadows of Amn &amp; Throne of Bhaal FAQ/Walkthrough</a>,
+                which served as an excellent checklist.
+                <li><a href="http://www.gibberlings3.net/">The Gibberlings 3</a> for:
+                    <ul>
+                        <li>The <a href="http://www.gibberlings3.net/bg2fixpack/">Baldur's Gate II Fixpack</a>,
+                        full of essential (and nonessential) fixes.
+                        <li>The <a href="http://www.gibberlings3.net/widescreen/">Widescreen Mod</a>, allowing
+                        me to play the game at a beautiful 1650x1080 resolution.
+                    </ul>
+                    <li><a href="http://www.pocketplane.net">Pocket Plane Group</a> for <a href="http://www.pocketplane.net/tutu">
+                        BG1Tutu</a>, allowing me to play Baldur's Gate 1 in the Baldur's Gate 2
+                engine (which also enables the Widescreen Mod.)
+                <li>Myself for the <a href="http://www.sorcerers.net/Games/BG2/SpellsReference/Main.htm">
+                    Baldur's Gate II Spells Reference</a>, which, though slightly outdated, still
+                served me well in deciding which spells to memorize.
+                <li>The <a href="http://www.mud-master.com/shadowkeeper/">Shadow Keeper</a>
+                save game editor, for allowing me to correct mistakes.
+                <li>The regulars at <a href="http://www.sorcerers.net/forums/forumdisplay.php?f=19">
+                    Sorcerer's Place Forums</a>
+                for in-depth advice on Thieves, Monks and NPCs.
+            </ul>
+            <h4>
+                <a name="WriteTheScripts">For helping me write the script</a>
+            </h4>
+            <ul>
+                <li><a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a>
+                for compiling scripts, unparalleled insight into the game files, and allowing me
+                to fix bugs.
+                <li>Gebhard Blucher for his <a href="http://www.fortunecity.com/boozers/winelodge/79/bgstuff/bgstuff.html">
+                    gbscripts</a>, which I took a peek at whenever my scripting skilz felt a little
+                rusty.
+                <li><a href="http://www.gibberlings3.net/">The Gibberlings 3</a> for the <a href="http://iesdp.gibberlings3.net/main.htm">
+                    IESDP</a>, a good scripting reference.
+                <li>The <a href="http://www.contexteditor.org/">ConTEXT</a>
+                text editor.
+                <li>Myself for the <a href="http://www.sorcerers.net/Games/BG2/SpellsReference/Stuff/BG2.chl">
+                    Baldur's Gate 2 script highlighter</a>
+                for ConTEXT.
+            </ul>
+            <h4>
+                <a name="HostTheStuff">For hosting my stuff</a>
+            </h4>
+            <ul>
+                <li><a href="http://www.sorcerers.net/">Sorcerer's Place</a>:<ul>
+                    <li><a href="http://www.sorcerers.net/Games/BG2/SpellsReference/Stuff/BG2.chl">Baldur's
+                        Gate 2 script highlighter</a>
+                    for ConTEXT.
+                    <li><a href="http://www.sorcerers.net/Games/BG2/SpellsReference/Main.htm">Baldur's Gate
+                        II Spells Reference</a></ul>
+                    <li><a href="http://www.shsforums.net/">Spellhold Studios</a>:
+                        <ul>
+                            <li><a href="http://www.shsforums.net/forum/626-xyxs-stuff/">Xyx's Stuff</a></ul>
+            </ul>
+        </ul>
+    </ul>
+    <hr>
+    <center>
+        <small>&copy;2012: These scripts are the intellectual property of Xyx (Jochem van 't
+            Hull) and may not be distributed in any form other than as-is without explicit permission
+            from the author.</small></center>
+    <hr>
+</body>
+</html>
