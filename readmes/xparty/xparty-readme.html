@@ -1,0 +1,1217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>xParty AI Script ReadMe</title>
+</head>
+<body>
+    <h1>
+        xParty AI Script ReadMe</h1>
+    <ul>
+        <h5>
+            Version 1.4, 2012-04-06</h5>
+    </ul>
+    <h2>
+        Table of Contents</h2>
+    <ul>
+        <li><a href="#Introduction">Introduction</a>
+        <li><a href="#Installation">Installation</a>
+            <ul>
+                <li><a href="#Uninstallation">Uninstallation</a>
+            </ul>
+            <li><a href="#Features">Detailed list of features</a>
+                <ul>
+                    <li><a href="#HotKeys">HotKeys</a>
+                        <ul>
+                            <li><a href="#Heal"><b>[F]</b>ix</a>
+                            (heal)
+                            <li><a href="#FightingStyle"><b>[S]</b>tyle</a>
+                            (change fighting style)
+                            <li><a href="#Bedtime"><b>[B]</b>edtime</a>
+                            (cast long duration spells before resting)
+                            <li><a href="#TurnUndead"><b>[E]</b>xorcise</a>
+                            (turn undead mode)
+                            <li><a href="#Stealth"><b>[V]</b>anish</a>
+                            (stealth mode)
+                            <li><a href="#Traps"><b>[K]</b>illzone</a>
+                            (set traps)
+                            <li><a href="#AiToggle"><b>[N]</b>o AI</a>
+                            (toggle AI)
+                            <li><a href="#DrinkHealingPotions"><b>[D]</b>rink</a>
+                            (change the type of healing potion allowed)
+                        </ul>
+                        <li><a href="#CombatAI">Combat AI</a>
+                    <li><a href="#Trapfinding">Automatic trapfinding</a>
+                    <li><a href="#AutoCast">Auto-cast</a>
+                    <li><a href="#CurePoison">Cure poison</a>
+                </ul>
+                <li><a href="#Notes">Notes</a>
+                    <ul>
+                        <li><a href="#AboutTheAuthor">About the author</a>
+                        <li><a href="#Compatibility">Compatibility</a>
+                        <li><a href="#KnownIssues">Known issues</a>
+                        <li><a href="#SourceCode">Source code</a>
+                        <li><a href="#OtherScripts">Other scripts</a>
+                        <li><a href="#FavoriteTactics">Favorite tactics</a>
+                        <li><a href="#Changelog">Changelog</a>
+                            <ul>
+                                <li><a href="#Version12">Version 1.2</a>
+                                <li><a href="#Version13">Version 1.3</a>
+                                <li><a href="#Version14">Version 1.4</a>
+                            </ul>
+                            <li><a href="#Credits">Credits</a>
+                    </ul>
+    </ul>
+    <hr>
+    <h2>
+        <a name="Introduction">Introduction </a>
+    </h2>
+    <ul>
+        <p>
+            This highly sophisticated yet conservative AI script automates tedious aspects of
+            the game and leaves the cool stuff to the player. The script offers many configurable
+            settings and provides lots of feedback. All class combinations and all of the NPCs
+            are fully supported, so the script can be used by the entire party.</p>
+    </ul>
+    <hr>
+    <h2>
+        <a name="Installation">Installation</a>
+    </h2>
+    <ul>
+        <ul>
+            <p>
+                The <tt>xParty.bs</tt> file in the <tt>scripts</tt> folder is the party script.
+                Copy it to your <tt>Baldurs Gate 2\Scripts</tt> folder.</p>
+            <p>
+                Once the file is in place, you can change your characters' scripts through their
+                Character Record -> Customize -> Script. Simply choose <tt>XPARTY</tt> for all of
+                them. It's a "one size fits all" script.</p>
+        </ul>
+        <h3>
+            <a name="Uninstallation">Uninstallation</a>
+        </h3>
+        <ul>
+            <p>
+                Just delete the file.</p>
+        </ul>
+    </ul>
+    <hr>
+    <h2>
+        <a name="Features">Detailed list of features</a>
+    </h2>
+    <ul>
+        <h3>
+            <a name="HotKeys">HotKeys</a>
+        </h3>
+        <ul>
+            <p>
+                This is a list of the HotKeys used by the script:</p>
+            <ul>
+                <li><a href="#Heal"><b>[F]</b>ix</a>
+                (heal)
+                <li><a href="#FightingStyle"><b>[S]</b>tyle</a>
+                (change fighting style)
+                <li><a href="#Bedtime"><b>[B]</b>edtime</a>
+                (cast long duration spells before resting)
+                <li><a href="#TurnUndead"><b>[E]</b>xorcise</a>
+                (turn undead mode)
+                <li><a href="#Stealth"><b>[V]</b>anish</a>
+                (stealth mode)
+                <li><a href="#Traps"><b>[K]</b>illzone</a>
+                (set traps)
+                <li><a href="#AiToggle"><b>[N]</b>o AI</a>
+                (toggle AI)
+                <li><a href="#DrinkHealingPotions"><b>[D]</b>rink</a>
+                (change the type of healing potion allowed)
+            </ul>
+            <p>
+                None of these keys is used by the default Baldur's Gate 2 installation.</p>
+        </ul>
+        <ul>
+            <h4>
+                <a name="Heal"><b>[F]</b>ix (heal)</a>
+            </h4>
+            <ul>
+                <p>
+                    Press <b>[F]</b> to have the selected character(s) <b>[F]</b>ix damage. For the
+                    next 120 seconds, healing spells will be cast on whoever needs it most until either
+                    the spells run out or everyone is whole again. It is easiest to simply select the
+                    entire party and press <b>[F]</b>.</p>
+                <p>
+                    Your party will speak the following lines:</p>
+                <ul>
+                    <li><small><b>We need nothing at this time.</b></small>
+                    (main character only): The party needs no healing.
+                    <li><small><b>Healed</b></small>
+                    (main character only): The party has been fully healed.
+                    <li><small><b>Spell Cancelled: Can not target spells on invisible or sanctuaried creatures.</b></small>:
+                    Spells (healing or otherwise) cannot be cast on this character because he or she
+                    is (at least partially) invisible. Invisible healers can still heal themselves.
+                    <li><small><b>Silenced</b></small>: This character is silenced. Just wait until
+                    it wears off.
+                    <li><small><b>Spell Failure</b></small>: This character is suffering from spell
+                    failure. Just wait until it wears off.
+                    <li><small><b>Healing</b></small>: This character started healing people.
+                </ul>
+                <p>
+                    The script tries to heal the most damaged people first. Heal will be cast on the
+                    really bad cases (people missing at least 50 hit points and/or at least 2/3 of their
+                    hit points.) Mass Cure will be cast if at least two people are damaged. Cure Medium/Serious/Critical
+                    Wounds will be cast if it seems warranted or if no lesser cure spell is available.
+                    Cure Light Wounds (including the Bhaalpower) is considered expendable and will be
+                    cast on anyone not at maximum hit points.</p>
+                <p>
+                    The script supports Monk's, Paladin's, and Mazzy's Lay On Hands, and will also cast
+                    Wondrous Recall to recall healing spells. The script will also attempt to use the
+                    Gloves of Healing as well. Make sure these gloves are not in a Bag of Holding.</p>
+                <p>
+                    Shapeshifters (such as Cernd) will shapeshift to their Natural Form if they can
+                    shapeshift back when done. If they would not be able to shapeshift back, they will
+                    say they're <small><b>Shapechanged</b></small>, and it'll be up to you. They'll
+                    start doing their thing as soon as you manually order them to shapeshift back.</p>
+                <p>
+                    The party can also be configured to drink healing potions when ordered to heal.
+                    See the <a href="#DrinkHealingPotions">Drink healing potions</a> section for details.</p>
+            </ul>
+            <h4>
+                <a name="FightingStyle"><b>[S]</b>tyle (change fighting style)</a>
+            </h4>
+            <ul>
+                <p>
+                    Party cohesiveness is important in battles. A barbarian charging blindly at a lone
+                    foe can draw the attention of many more enemies that were hidden in the fog of war.
+                    A frail wizard charging mindlessly into melee is equally problematic. The script
+                    allows you to configure each individual character to avoid drawing undue aggression.</p>
+                <p>
+                    Press <b>[S]</b> to have the selected character(s) change fighting <b>[S]</b>tyle.
+                    The character(s) will select the next style and tell you about it:</p>
+                <ul>
+                    <h5>
+                        Soldier</h5>
+                    <ul>
+                        <p>
+                            The default style. This character will engage nearby opponents in melee and will
+                            switch to a ranged weapon to shoot at distant foes. The character will prefer to
+                            shoot enemies at a distance of 10 feet (which is 1/3 sight radius), but will join
+                            the fray regardless of range if another party member is already engaged in melee.
+                            This is a good all-round setting.</p>
+                        <p>
+                            If no ranged weapon is available, the character will recklessly charge the enemy
+                            at any range. If you do not wish that to happen, either give them a ranged weapon
+                            or set their style to Guard.</p>
+                    </ul>
+                    <h5>
+                        Archer</h5>
+                    <ul>
+                        <p>
+                            This character will only use a ranged weapon. If an opponent tries to engage them
+                            in melee, they'll temporarily switch to a melee weapon to avoid the gruesome penalties
+                            for using a ranged weapon in melee and then backpedal a short distance before trying
+                            again. This specialized setting is meant for dedicated archers and fragile mages.
+                            Make sure they have a ranged weapon available at all times.</p>
+                        <p>
+                            Note that each time the character moves out of melee range, the opponent's initiative
+                            is reset and if you're lucky the opponent will not be able to make an attack in
+                            time.</p>
+                        <p>
+                            Characters unable to keep their distance (either because they're being chased or
+                            because they're up against a wall) will periodically alert you to their predicament
+                            by shouting <small><b>Help!!</b></small></p>
+                    </ul>
+                    <h5>
+                        Guard</h5>
+                    <ul>
+                        <p>
+                            This character will only engage nearby opponents in melee. If the nearest opponent
+                            is more than 10 feet away, the character will simply do nothing unless another party
+                            member is already engaged in melee. This is a specialized setting for dual wielders
+                            (who can't switch to a ranged weapon) to keep them from breaking ranks. The character
+                            will say <small><b>No! Stay back!</b></small> when holding the line this way. If
+                            you wish them to engage, you'll have to manually order them to attack or move them
+                            within 10 feet of the enemy.</p>
+                    </ul>
+                    <h5>
+                        Bard</h5>
+                    <ul>
+                        <p>
+                            This character will sing, and will not attack. This style is only available to Bards.</p>
+                    </ul>
+                    <h5>
+                        Staff of the Magi</h5>
+                    <ul>
+                        <p>
+                            People with the Staff of the Magi now have access to a special fighting style; <small>
+                                <b>Staff of the Magi</b></small>. They'll try to stay invisible. The staff has
+                            to be their most damaging melee weapon for this to work. This style will not work
+                            if the character also has the Staff of Rynn or Staff of the Ram available, for instance,
+                            since those are considered "more damaging."</p>
+                    </ul>
+                </ul>
+                <p>
+                    Anyone armed with Melf's Minute Meteors or Energy Blades will be unable to switch
+                    to a melee weapon. As such, they will try to keep their distance regardless of their
+                    style.</p>
+            </ul>
+            <h4>
+                <a name="Bedtime"><b>[B]</b>edtime (cast long duration spells before resting)</a>
+            </h4>
+            <ul>
+                <p>
+                    Several spells last longer than the 8 hours it takes to rest. Ideally, the party
+                    rises with all spells memorized <i>and</i> the maximum amount of stoneskins. Press
+                    <b>[B]</b> to prepare the party for <b>[B]</b>edtime. They will cast the following
+                    spells on themselves:</p>
+                <ul>
+                    <li>
+                    Melf's Minute Meteors (they last until used)
+                    <li>
+                    Stoneskin (from memory or the Gargoyle Boots) or Iron Skins (lasts 12 hours)
+                    <li>
+                    Armor (lasts 9 hours)
+                </ul>
+                <p>
+                    Each of these spells will be cast once, regardless of how many meteors or skins
+                    are still left, to make sure you start the next day with the full amount. Characters
+                    will cast Wondrous Recall to get back Iron Skins if necessary.</p>
+                <p>
+                    Shapeshifters (such as Cernd) will shapeshift to their Natural Form if they can
+                    shapeshift back when done. If they would not be able to shapeshift back, they will
+                    say they're <small><b>Shapechanged</b></small>, and it'll be up to you. They'll
+                    start doing their thing as soon as you manually order them to shapeshift back.</p>
+                <p>
+                    If any of your characters has Minor Sequencer, Spell Sequencer or Spell Trigger
+                    memorized but does not have one active in their abilities menu, you will get a little
+                    reminder; the character will say <small><b>Minor Sequencer</b></small>, <small><b>Spell
+                        Sequencer</b></small> or <small><b>Spell Trigger</b></small> as appropriate.</p>
+            </ul>
+            <h4>
+                <a name="TurnUndead"><b>[E]</b>xorcise (turn undead mode)</a>
+            </h4>
+            <ul>
+                <p>
+                    Press <b>[E]</b> to have the selected character(s) <b>[E]</b>xorcise undead. Whenever
+                    undead come near, they will stop attacking and focus on turning undead. Press <b>[E]</b>
+                    again to stop, though you can usually just leave this on since the character(s)
+                    will go about their business when no undead are around. The only time you actually
+                    need to turn this off is when you are facing undead that you cannot turn and your
+                    Cleric has to resort to old-fashioned violence.</p>
+                <p>
+                    Your character(s) will report their status by saying <small><b>Turning Undead</b></small>
+                    or <small><b>Stopped Turning Undead</b></small> as appropriate.</p>
+                <p>
+                    Note that turning undead only has a 12 foot range. Characters will not attempt to
+                    turn undead unless they get within 15 feet.</p>
+            </ul>
+            <h4>
+                <a name="Stealth"><b>[V]</b>anish</a> (stealth mode)
+            </h4>
+            <ul>
+                <p>
+                    Press <b>[V]</b> to have the selected character(s) <b>[V]</b>anish. They will not
+                    engage enemies while hidden, though they will act normally once revealed. Use this
+                    mode to scout ahead or to manually position characters for backstabbing. Press <b>[V]</b>
+                    again to turn off stealth mode.</p>
+                <p>
+                    When backstabbing, once the character has revealed him- or herself, simply run out
+                    of sight (either around the nearest corner or out of the enemy's sight radius) and
+                    the character will immediately hide again. This allows you to dart in and out of
+                    the shadows and backstab multiple times per combat.</p>
+                <p>
+                    Because spells cannot be cast on invisible people, hidden characters will leave
+                    the shadows when ordered to heal unless they do not need any healing. Leaving the
+                    shadows tends to take a while, though, so the script has hidden characters speak
+                    to themselves to reveal themselves instantly. Improved invisible characters will
+                    not reveal themselves, since they could still not be targeted anyway.</p>
+                <p>
+                    Note that characters trying to stay hidden cannot also look for traps, but with
+                    a bit of fiddling you can temporarily get the best of both worlds. If you press
+                    <b>[V]</b> to deactivate stealth mode, they'll immediately start to look for traps
+                    but it'll take a while for them to leave the shadows. Press <b>[V]</b> again to
+                    reactivate stealth mode before they become visible. Be careful, though; the amount
+                    of time you have ranges from mere seconds to several rounds.</p>
+            </ul>
+            <h4>
+                <a name="Traps"><b>[K]</b>illzone</a> (set traps)
+            </h4>
+            <ul>
+                <p>
+                    Press <b>[K]</b> to have the selected character(s) place a bunch of traps at their
+                    feet. About half a dozen traps will be placed in total, so you can order multiple
+                    characters at once. Characters will try to place at least one "tactical" trap (Special
+                    Snare, Time Trap, Exploding Trap) and as many "damage" traps (Snare, Spike Trap)
+                    as they can, though they will use whatever they have.</p>
+            </ul>
+            <h4>
+                <a name="AiToggle"><b>[N]</b>o AI</a> (toggle AI)
+            </h4>
+            <ul>
+                <p>
+                    Press <b>[N]</b> to turn the AI off or back on for the selected character(s) only.
+                    While AI is toggled off, the script will take no actions. The script will still
+                    respond to HotKey configuration.</p>
+            </ul>
+            <h4>
+                <a name="DrinkHealingPotions"><b>[D]</b>rink</a> (change the type of healing potion
+                allowed)
+            </h4>
+            <ul>
+                <p>
+                    Does your party have more healing potions than they know what to do with? Press
+                    <b>[D]</b> while the main character is selected to set the type of healing potions
+                    that the party is allowed to use when you order them to heal. Your main character
+                    will state each level as you cycle through them:</p>
+                <ul>
+                    <li><small><b>Nothing</b></small>
+                    (the default)
+                    <li><small><b>Potion of Healing</b></small>
+                    <li><small><b>Potion of Extra Healing</b></small>
+                    <li><small><b>Potion of Superior Healing</b></small>
+                </ul>
+                <p>
+                    Characters will drink anyting up to the specified type, so if you set it to Potions
+                    of Extra Healing they'll also drink Potions of Healing. They'll start with the biggest
+                    potions allowed. They will only drink a potion if they need at least half of the
+                    healing the potion provides, so you don't have to worry about potions being wasted
+                    on a character that just needed 1 hit point healed. The potions do not have to be
+                    in the quickslots, and they will be taken out of a Potion Case or Bag of Holding
+                    if necessary. Note that there is no need to keep potions in quickslots anyway, since
+                    you can right-click them and drink them from the backpack.</p>
+                <p>
+                    Characters will pass potions to others that need them. Make sure your characters
+                    have empty inventory slots available. Characters will not pass potions if they still
+                    have Cure Light Wounds memorized, so if you wish your party to only use potions
+                    when the healing spells run out, have your healer carry the potions.</p>
+            </ul>
+        </ul>
+        <h3>
+            <a name="CombatAI">Combat AI</a>
+        </h3>
+        <ul>
+            <p>
+                The script will defend itself in combat, and will automatically engage enemies in
+                the manner appropriate to their combat style. The party will try to focus their
+                attacks. Many variables affect their decisions, but they prefer finishing off wounded
+                enemies and ignore disabled enemies (panicked, held, etcetera) until all the "live"
+                enemies are dead.</p>
+            <p>
+                D&amp;D is not kind to ranged attackers, and Baldur's Gate is no exception. Creatures
+                using a ranged weapon in melee suffer a whopping -8 to hit. Conversely, enemies
+                attacking them in melee gain +4 to hit and +4 to damage. For this reason, the script
+                rather anxiously switches to a melee weapon whenever an enemy comes near. It will
+                also switch to a melee weapon before engaging in the modal actions of Hide In Shadows,
+                Battle Song, and Turn Undead, since switching later would abort those actions.</p>
+            <p>
+                The party will try to stay together. Characters will not stand idle while while
+                party members are beaten up just around the corner. For example, if Keldorn attacks
+                an Ogre, and Minsc can see Keldorn but not the Ogre, Minsc will move to Keldorn.
+                If you wish to have one character do all the work (such as when fighting Beholders
+                with the Shield of Balduran), make sure to keep the others out of sight.</p>
+            <p>
+                In general, the script will try to stay out of your way. If you order a character
+                to do something, the script will not interrupt except under these extremely specific
+                and urgent circumstances:</p>
+            <ul>
+                <li>
+                Archers are allowed to attack when they come to the aid of a party member and spot
+                their first enemy, to prevent the Archer from closing all the way in.
+                <li>
+                Ranged attackers are allowed to switch weapons when engaged in melee to avoid the
+                hideous penalties for using a ranged weapon in melee.
+                <li>
+                Stoneskin is allowed to be re-cast straight away when the skins are depleted.
+            </ul>
+        </ul>
+        <h3>
+            <a name="Trapfinding">Automatic trapfinding</a>
+        </h3>
+        <ul>
+            <p>
+                Thieves and Monks will automatically look for traps whenever they're not busy doing
+                other things (such as hiding or fighting).</p>
+        </ul>
+        <h3>
+            <a name="AutoCast">Auto-cast</a>
+        </h3>
+        <ul>
+            <p>
+                The script takes a minimalistic approach to spell and item use, and will only expend
+                resources when it is almost certainly correct to do so.</p>
+            <p>
+                The script is aware that it cannot cast more than one spell every 6 seconds, and
+                will not needlessly queue up spells. Instead, it will intelligently alternate between
+                spellcasting and attacking. It will also not try to cast anything if silenced, or
+                if there is a chance of spell failure or a wild surge.</p>
+            <p>
+                The script knows all about the Cowled Wizards. It will not cast spells in patrolled
+                areas unless you have paid the bribe or crushed all of their patrols. The script
+                knows exactly which areas are not patrolled, and will resume its normal duties as
+                soon as you move off the streets.</p>
+            <p>
+                Charm and hold spells are situational and could be scripted to a sufficient degree
+                of accuracy to let the script handle them. The exact circumstances in which the
+                script will use these spells differ as appropriate. The script takes many variables
+                into account, including the number and distance of opponents, their immunities,
+                magic resistance and saving throws, and their hit points and Experience values.
+                The script will use the following spells and items on suitable targets:</p>
+            <ul>
+                <h4>
+                    Hold Person</h4>
+                <ul>
+                    <p>
+                        This spell has a small area, and the script will try to catch multiple enemies.</p>
+                </ul>
+                <h4>
+                    Charm Animal (Ranger innate ability)</h4>
+                <ul>
+                    <p>
+                        Rangers get this ability for free, but its application is extremely limited.</p>
+                </ul>
+                <h4>
+                    Charm Person or Animal</h4>
+                <ul>
+                    <p>
+                        Druid spell selection is rather lacking in the level 2 slot, with only this and
+                        Slow Poison being (barely) worth memorizing.</p>
+                </ul>
+                <h4>
+                    Charm Person (Ring of Human Influence)</h4>
+                <ul>
+                    <p>
+                        This ring can be quite effective under the right circumstances, but I often forget
+                        I have it.</p>
+                    <p>
+                        The ring must be equipped.</p>
+                </ul>
+            </ul>
+            <p>
+                The following spells are so important that they will automatically be cast even
+                during combat:</p>
+            <ul>
+                <h4>
+                    Stoneskin</h4>
+                <ul>
+                    <p>
+                        Cast any time no stoneskins remain.</p>
+                </ul>
+                <h4>
+                    Melf's Minute Meteors</h4>
+                <ul>
+                    <p>
+                        Cast any time no meteors remain and the character is not engaged in melee.</p>
+                </ul>
+            </ul>
+            <p>
+                The following spells, items and abilities will automatically be used outside of
+                combat:</p>
+            <ul>
+                <h4>
+                    Iron Skins</h4>
+                <ul>
+                    <p>
+                        Cast any time no iron skins remain. Unlike Stoneskin, this spell is too slow for
+                        combat.</p>
+                </ul>
+                <h4>
+                    Gargoyle Boots</h4>
+                <ul>
+                    <p>
+                        Used after resting, any time no stoneskins remain and the boots still have a charge
+                        left in them. Unlike the Stoneskin spell, the boots only give two skins and take
+                        half a round to activate.</p>
+                    <p>
+                        The character does not actually have to be <i>wearing</i> the boots; they merely
+                        need to be in the character's backpack.</p>
+                </ul>
+                <h4>
+                    Girdle of Fortitude</h4>
+                <ul>
+                    <p>
+                        Used after resting.</p>
+                    <p>
+                        The character does not actually have to be <i>wearing</i> the girdle; it merely
+                        needs to be in the character's backpack.</p>
+                </ul>
+                <h4>
+                    Armor</h4>
+                <ul>
+                    <p>
+                        Cast whenever 9 hours have passed. The script can't tell when Armor is active, so
+                        it has to look at the clock.</p>
+                </ul>
+                <h4>
+                    Wondrous Recall</h4>
+                <ul>
+                    <p>
+                        Cast any time the character has neither Iron Skins nor Insect Plague remaining.
+                        If your Druid plans to memorize neither of these spells, you may wish to rethink
+                        your strategy.</p>
+                </ul>
+                <h4>
+                    Create Bruiser Mates (Jan only)</h4>
+                <ul>
+                    <p>
+                        Used after resting, provided Jan is still carrying around his Flasher Launcher.</p>
+                </ul>
+            </ul>
+        </ul>
+        <h3>
+            <a name="CurePoison">Cure poison</a>
+        </h3>
+        <ul>
+            <p>
+                The party will automatically try to cure poison whenever they're not busy fighting,
+                without being ordered to. They will use the following spells and items to do so:</p>
+            <ul>
+                <li>
+                Neutralize Poison
+                <li>
+                Slow Poison (including the Bhaalpower)
+                <li>
+                Periapt of Proof Against Poison
+                <li>
+                Gloves of Healing
+                <li>
+                Antidote
+                <li>
+                Elixir of Health
+            </ul>
+            <p>
+                The items do not have to be equipped, and potions will be taken from a Bag of Holding
+                or Potion Case if needed. The party will also pass around Antidotes and Elixirs
+                of Health. Characters prefer to use spells for curing others but antidotes for curing
+                themselves (to avoid having their spell disrupted by the poison), though they will
+                use what they can.</p>
+        </ul>
+    </ul>
+    <hr>
+    <h2>
+        <a name="Notes">Notes </a>
+    </h2>
+    <ul>
+        <h3>
+            <a name="AboutTheAuthor">About the author</a>
+        </h3>
+        <ul>
+            <p>
+                I was rather involved in the Infinity Engine scripting scene a decade ago, writing
+                Beholder AI for laughs and eventually working on the semi-official Ascension mod
+                and the (never finished) Return to Windspear mod, after which I made the mistake
+                of moving over to the (then still promising) Neverwinter Nights series.</p>
+            <p>
+                I initially wrote this script for my personal convenience. I decided to replay the
+                series after ten years and I got tired of all the clicking I had to do to heal my
+                party. One thing led to another. The script is tuned to my playstyle, which is evidenced
+                in the heavy support for Stoneskin and Melf's Minute Meteors. I am a huge fan of
+                dual- and multiclassed spellcasters. This is the first party I used:</p>
+            <ul>
+                <li>
+                Xixx (Kensai 13/Mage), (Sir) Anomen, Jaheira, Aerie, Jan, and Imoen replaced with
+                Sarevok (dualled to Mage).
+            </ul>
+            <p>
+                After that I decided to play a Thief to test the script under different circumstances,
+                and so I added a lot of support for that as well. This was the second party:</p>
+            <ul>
+                <li>
+                Six (Kensai 13/Thief), Korgan, Viconia, Edwin, Yoshimo replaced with Imoen, and
+                Sarevok (not dualled.)
+            </ul>
+            <p>
+                After that I decided there were still a few character classes and NPCs that I hadn't
+                tried, resulting in heavy support for Cernd's shapeshifting. This was the third
+                party:</p>
+            <ul>
+                <li>
+                Xi-Xi (Monk), Minsc, Keldorn, Mazzy, Cernd, and Haer'Dalis.
+            </ul>
+        </ul>
+        <h3>
+            <a name="Compatibility">Compatibility</a>
+        </h3>
+        <ul>
+            <p>
+                I installed the following content:</p>
+            <ul>
+                <li>
+                Baldur's Gate 2<li>
+                Throne of Bhaal<li>
+                The lastest (non-beta) patch<li>The <a href="http://www.gibberlings3.net/widescreen/">
+                    Widescreen Mod</a><li>The <a href="http://www.gibberlings3.net/bg2fixpack/">Baldur's
+                        Gate 2 fixpack</a>
+                v9<li>A couple of tweaks (mostly cosmetic) from the <a href="http://www.gibberlings3.net/bg2tweaks">
+                    Baldur's Gate 2 tweak pack</a>
+                v9</ul>
+            <p>
+                The script can't overwrite any existing files and should generally play nice with
+                mods. Let me know if you suspect otherwise.</p>
+        </ul>
+        <h3>
+            <a name="KnownIssues">Known issues</a>
+        </h3>
+        <ul>
+            <p>
+                Extreme care has been taken to fix all issues that could be fixed. The remaining
+                issues remain because of limitations in the scripting engine. They are generally
+                the product of a choice between two evils.</p>
+            <p>
+                The following issues are known:</p>
+            <ul>
+                <h4>
+                    Overhealing</h4>
+                <ul>
+                    <p>
+                        Some care has been taken to reduce overhealing, but if you order multiple characters
+                        to heal it is quite possible that several people will begin casting a healing spell
+                        on a person that just needed one. Usually, only Cure Light Wounds gets wasted like
+                        this. I consider this a minor inconvenience compared to the excessive mouse-clicking
+                        that healing would otherwise require. It was either this or not allowing multiple
+                        healers to go to work at the same time.</p>
+                    <p>
+                        It is also possible that if a character gets poisoned, several solutions are applied
+                        at the same time.</p>
+                </ul>
+                <h4>
+                    Healing precision</h4>
+                <ul>
+                    <p>
+                        Scripts cannot tell just how many hit points a character needs healed, but an approximation
+                        can be made. This approximation may be off by a few points, especially on characters
+                        with really low or really high hit point maximums.</p>
+                </ul>
+                <h4>
+                    Characters milling around at end of combat</h4>
+                <ul>
+                    <p>
+                        Characters will go look for enemies when there's fighting going on just around the
+                        corner. There is a slight delay before the script can see that the fight is actually
+                        over, so the party will move around for a couple of seconds looking for more enemies
+                        whenever a fight ends.</p>
+                </ul>
+                <h4>
+                    The only slightly injured party</h4>
+                <ul>
+                    <p>
+                        There is a corner case where the party is only slightly injured and the only healing
+                        available is reserved for serious cases. The Heal spell and healing potions will
+                        not be wasted on a character that only needs 1 hit point healed. The script will
+                        not report to be out of spells but there won't be any healing done either. It's
+                        left up to you, though you will not receive any notification.</p>
+                </ul>
+                <h4>
+                    The berserk mage (not the Berserker/Mage)</h4>
+                <ul>
+                    <p>
+                        The script can't tell whether the character has a ranged weapon, so it relies on
+                        you for setting the correct combat style. If the character runs out of ammo (such
+                        as a mage running out of darts), they'll rush into melee armed with their fists.
+                        If they were set to the Archer style they'll then back off, but since they still
+                        don't understand that they no longer have a ranged weapon they'll keep alternating
+                        between backing off and rushing in. This problem is common to scripts. Check your
+                        ammo.
+                    </p>
+                </ul>
+                <h4>
+                    Backpack overflow error</h4>
+                <ul>
+                    <p>
+                        If their backpack is full, characters that get potions passed their way (either
+                        because they're poisoned or because they've been ordered to drink healing potions)
+                        will drop the item in their top left backpack slot. If they get more than one type
+                        of potion passed their way, they may even drop another item. Make sure there's room
+                        in the backpacks if you order your party to pass potions around.</p>
+                </ul>
+                <h4>
+                    Surplus potion passing</h4>
+                <ul>
+                    <p>
+                        Characters may end up with more potions than they need if they get passed potions
+                        from several others at once. Potions can also be passed in stacks of up to 5. They
+                        get passed one at a time from containers, but the game will pass the entire stack
+                        from backpack slots or quickslots.</p>
+                </ul>
+                <h4>
+                    The party has gained an item</h4>
+                <ul>
+                    <p>
+                        The script can't tell whether an item is inside a container (such as a Bag of Holding
+                        or Potion Case). Items inside a container cannot be used, but that wouldn't stop
+                        the script from trying. The workaround the script uses is to have the character
+                        give the item to him- or herself before using it. This ensures the item is no longer
+                        inside a container, so the script can't get hung up.</p>
+                </ul>
+                <h4>
+                    &lt;GABBER&gt;- has nothing to say to you.</h4>
+                <ul>
+                    <p>
+                        Invisible characters that are asked to reveal themselves have to do so by talking
+                        to themselves. This is the most expedient way of breaking invisibility. Waiting
+                        for a hidden Thief to leave the shadows can take up to 20 seconds otherwise. This
+                        attempt at conversation never results in actual dialog, but it does add a line saying
+                        <small><b>&lt;GABBER&gt;- has nothing to say to you.</b></small> to the text area
+                        (where GABBER is, of course, the name of the character.)</p>
+                </ul>
+                <h4>
+                    The improved invisible non-self-healer</h4>
+                <ul>
+                    <p>
+                        Improved invisible creatures cannot be the target of spells or abilities from others,
+                        but they can still target themselves. The targeting that the script uses when ordered
+                        to heal does not take this into account. Doing so would increase its already considerable
+                        complexity even further, and I'm not willing to go that far for such a corner case.
+                        Improved invisibility cannot be broken at will, so improved invisible healers will
+                        simply not cast any spells or use any targeted items on themselves.</p>
+                    <p>
+                        All is not lost, though. "Unimproved invisible" healers will reveal themselves and
+                        then heal themselves normally. Improved invisible people will still drink potions,
+                        and others will still pass potions to them.</p>
+                </ul>
+                <h4>
+                    Using unusable items</h4>
+                <ul>
+                    <p>
+                        The script has trouble telling who can use what item, and no attempt has been made
+                        to sort through the mess that is Baldur's Gate's "Usable by" versus "Unusable by"
+                        item limitations. Don't give Gargoyle Boots to your Wizard Slayer! Unless he's a
+                        Wizard Slayer/Thief with Use Any Item, of course.</p>
+                    <p>
+                        Note that the Gloves of Healing have undocumented limitations; they cannot be used
+                        by single-classed Clerics, Druids or Mages (including Sorcerers), but are usable
+                        by all multiclass variants (including even Cleric/Mage.) You'll notice that they
+                        have a reddish tint if their current owner can't use them.</p>
+                    <p>
+                        For most other cases, it should be obvious when this happens.</p>
+                </ul>
+                <h4>
+                    Virtual healing potions</h4>
+                <ul>
+                    <p>
+                        The script will use healing potions in quickslots if ordered to do so. A strange
+                        engine glitch may cause these potions to still appear in the quickslot even after
+                        they are used up. These virtual potions cannot be used and do not cause any problems;
+                        it just looks weird.</p>
+                </ul>
+                <h4>
+                    Armed monks</h4>
+                <ul>
+                    <p>
+                        If you give a Monk a melee weapon, the script will equip it even if the Monk would
+                        be better off using his or her fists. The game mistakenly thinks the weapon would
+                        do more damage.</p>
+                </ul>
+                <h4>
+                    Blurred Blades</h4>
+                <ul>
+                    <p>
+                        The script cannot tell the difference between a Blade in Defensive Spin and a Blade
+                        that cast Blur. The script will assume that a blurred Blade is in Defensive Spin,
+                        and will select weapons and targets accordingly.</p>
+                </ul>
+                <h4>
+                    Bouncing healers</h4>
+                <ul>
+                    <p>
+                        Healers will attempt to heal characters protected by (Minor) Spell Deflection/Turning/Trap,
+                        with predictable results. These protections cannot be accurately detected by the
+                        script. Move any problem characters out of sight when ordering the script to heal.</p>
+                </ul>
+            </ul>
+        </ul>
+        <h3>
+            <a name="SourceCode">Source code</a>
+        </h3>
+        <ul>
+            <p>
+                The <tt>xParty.baf</tt> file in the <tt>script compiler\source</tt> folder contains
+                all the source code, in case you're interested. It has been extensively commented.
+                I also documented many features of the scripting engine at the bottom of the file.</p>
+        </ul>
+        <h3>
+            <a name="OtherScripts">Other scripts</a>
+        </h3>
+        <ul>
+            <p>
+                I might well be the last person to have written a script, but I wasn't the first.
+                You may or may not like these other scripts better:</p>
+            <ul>
+                <li><a href="http://www.gibberlings3.net/cirerrek/eseries.php">eSeries</a>
+                <li><a href="http://www.fortunecity.com/boozers/winelodge/79/bgstuff/bgstuff.html">gbscripts</a>
+            </ul>
+            <p>
+                Both of those script series are excellent work, but they try to do far too much
+                for my liking. I also believe my script is smarter in what it does do.</p>
+        </ul>
+        <h3>
+            <a name="FavoriteTactics">Favorite tactics</a>
+        </h3>
+        <ul>
+            <h4>
+                <a name="CastAndAttack">Cast and attack</a>
+            </h4>
+            <ul>
+                <p>
+                    Smart alternating between casting spells and attacking can allow you to do up to
+                    twice as much in a single round. This is explained fully in my <a href="http://www.sorcerers.net/Games/BG2/SpellsReference/GeneralSpellInfo.htm#CastAndAttack">
+                        Baldur's Gate II Spells Reference</a>.</p>
+            </ul>
+            <h4>
+                <a name="Stoneskin">Stoneskin</a>
+            </h4>
+            <ul>
+                <p>
+                    At the risk of sounding like a deodorant commercial... Stoneskin provides incredible
+                    protection for 12 hours, don't leave home without it! Mirror Image occasionally
+                    serves as a poor man's Stoneskin.</p>
+            </ul>
+            <h4>
+                <a name="MelfsMinuteMeteors">Melf's Minute Meteors</a>
+            </h4>
+            <ul>
+                <p>
+                    Liches, dragons, demon lords... everything falls to the mighty meteors. The only
+                    thing these babies will not punch through is Protection from Magical Weapons. Stoneskin
+                    only slows them down (the fire damage still gets through and they eat five skins
+                    per round regardless), and Spell Turning only reflects a negligible part of their
+                    damage (while at the same time being depleted rapidly.) Their high rate of fire
+                    makes them excellent for filling the gaps between spellcasting.</p>
+            </ul>
+            <h4>
+                <a name="Clones">Clones</a>
+            </h4>
+            <ul>
+                <p>
+                    I love me some clone spell abuse. Project Image and to a lesser extent Simulacrum
+                    can double up on your spellbook and your "one use per day" items, and give you a
+                    virtually infinite supply of "one use ever" items. Clones also ignore the limits
+                    on summoned creatures.</p>
+                <p>
+                    I save all the Time Stop and Wish scrolls I find for cloning, never writing them
+                    into my spellbook. I also keep the Mind Flayer Control Circlets and some Scrolls
+                    of Protection from Undead. Aerie's clones can cast Greater Restoration, healing
+                    the entire party without fatiguing Aerie herself. Jan's clones can set Spike Traps,
+                    though they do not ignore the trap limit. They can also summon multiple planetars
+                    and devas. A clone with the Rod of Resurrection can heal the entire party, and a
+                    clone with the Wand of Monster Summoning can generate <i>ridiculous</i> amounts
+                    of fodder.</p>
+            </ul>
+            <h4>
+                <a name="Summons">Back off</a>
+            </h4>
+            <ul>
+                <p>
+                    I have the game set to Auto-Pause: Enemy Sighted, and if I run into enemies I usually
+                    back off immediately. This can give you a lot of time to prepare. Chances are they
+                    haven't even noticed the party, especially if the person to spot them is wearing
+                    Boots of Speed. Get the party into position, buff up, or send in the summons.</p>
+                <p>
+                    This tactic is especially effective against mages; they can't cast spells on what
+                    they can't see, and they're often too busy casting defensive spells to go after
+                    you. Dodging back through an area transition will also waste whatever spells they
+                    try to throw at you. Often they&#39;ll even cast Gate and then attack their own
+                    Pit Fiend.</p>
+            </ul>
+            <h4>
+                <a name="Summons">Summons</a>
+            </h4>
+            <ul>
+                <p>
+                    When it is obvious that there is a fight ahead, simply summon some sturdy minions,
+                    send in your army and sit back. I finished many big fights without actually showing
+                    up myself. You can cast Wizard Eye or Farsight if you wish to view the spectacle,
+                    but often that isn't even needed unless you include clones.
+                </p>
+                <p>
+                    A Nishruu or the Skeleton Warrior you get from Animate Dead once you're level 15
+                    can clear out a room on its own if it doesn't run into Death Spell. Both of these
+                    are practically immune to magic and unenchanted weapons.</p>
+                <p>
+                    I consider these summon spells worth memorizing, in order of awesomeness:</p>
+                <ul>
+                    <li>
+                    Summon Planetar or Fallen Planetar (Wizard)
+                    <li>
+                    Greater Elemental Summoning (Druid)
+                    <li>
+                    Summon Deva (Cleric)
+                    <li>
+                    Mordekainen's Sword (Wizard)
+                    <li>
+                    Animate Dead (level 15+ Cleric for the Skeleton Warrior)
+                    <li>
+                    Summon Aerial Servant (Cleric)
+                    <li>
+                    Summon Fire Elemental (Druid)
+                    <li>
+                    Summon Nishruu (Wizard)
+                    <li>
+                    Call Woodland Beings (Druid)
+                    <li>
+                    Animate Dead (level 14- Cleric for Skeleton fodder)
+                    <li>
+                    Spider Summoning (level 12+ Wizard for Swords Spiders)
+                </ul>
+            </ul>
+        </ul>
+        <h3>
+            <a name="Changelog">Changelog</a>
+        </h3>
+        <ul>
+            <h4>
+                <a name="Version11">Version 1.1</a>, 2012-03-03</h4>
+            <ul>
+                <p>
+                    This version was not released to the public.</p>
+            </ul>
+            <h4>
+                <a name="Version12">Version 1.2</a>, 2012-03-16</h4>
+            <ul>
+                <li>
+                Fix: Clerics no longer waste Wondrous Recall trying to get back Druid spells when
+                prepping for bedtime (missed this one last time...)
+                <li>
+                Fix: Characters no longer occasionally attack the wrong enemies.
+                <li>
+                Fix: No longer try to cast Hold Person on improved invisible targets.
+                <li>
+                Fix: Characters wouldn't shut up about their Spell Sequencer or Spell Trigger. Oops.
+                <li>
+                Fix: Characters should now target nearest enemy instead of sixth nearest enemy if
+                nobody is damaged.
+                <li>New: Configurable potion drinking setting: Press <b>[D]</b>
+                to cycle beween Nothing, Healing, Extra, Superior.
+                <li>New: You now get a little reminder if you press <b>[B]</b>
+                and still have a Minor Sequencer, Spell Sequencer or Spell Trigger to cast.
+                <li>
+                New: Archers will say "Help!!" if they can't get away from enemies.
+                <li>
+                New: Now supports Gloves of Healing and Periapt of Proof Against Poison.
+                <li>
+                Stealth mode is now also available to people holding the Staff of the Magi.
+                <li>
+                Improved: Will now not overheal as much with potions. Use at least 50% of the potion.
+                <li>
+                Improved: Now automatically drink and pass Antidote and Elixir of Health when poisoned
+                (not just when ordered.)
+                <li>
+                Improved: No longer need to "sleep" with a "daily use" item first.
+                <li>
+                Improved: Improved poison curing.
+                <li>
+                Improved: Improved healing targeting when there are improved invisible party members.
+                <li>
+                Improved: Sneakers no longer come to watch the fight if they're out of sight.
+                <li>
+                Improved: Sneakers stop trying to hide in front of invisible enemies (which allows
+                them to resume trapfinding and with that Detect Illusions.)
+                <li>
+                Improved: Characters rushing to help others fighting around the corner are now less
+                likely to interrupt player orders.
+                <li>
+                Improved: Invisible characters will now immediately reveal themselves to receive
+                healing.
+                <li>
+                Improved: Toggling off stealth mode now has the character reveal themselves right
+                away.
+                <li>
+                Improved: Fighting style setting should now cycle properly even if it was set to
+                a value that is no longer valid by an older version of the script.
+                <li>Changed: <tt>Xyx.bs</tt> is now <tt>xParty.bs</tt>.
+                <li>
+                Removed: No longer autocast Mirror Image.
+                <li>
+                Removed: Summoned creature AI. It is now available as a separate component.
+            </ul>
+            <h4>
+                <a name="Version13">Version 1.3</a>, 2012-03-30</h4>
+            <ul>
+                <li>
+                Fix: Monks and Mazzy no longer try to Lay On Hands on other people.
+                <li>
+                Fix: (Multi-)player-created non-main characters leaving the shadows now no longer
+                speak their "Why do you waste my time with idle banter?" line. How's that for a
+                corner case? New: Characters now give a little reminder whenever a Minor/Spell Sequencer/Trigger
+                can be cast.
+                <li>New: Added <b>[N]</b>o AI HotKey, an individual AI toggle that stops the script
+                for the selected character only. Still allows for HotKey configuration.
+                <li>
+                New: Rangers now automatically use Charm Animal.
+                <li>
+                New: Druids now automatically cast Charm Person or Mammal.
+                <li>
+                New: People with the Staff of the Magi now have access to a special fighting style;
+                Staff of the Magi. They'll try to stay invisible.
+                <li>
+                New: Shapeshifters in Werewolf or Greater Werewolf form will now shapeshift to their
+                natural form when ordered to heal, and shapeshift back when done.
+                <li>
+                Improved: No longer cast Melf's Minute Meteors while in "Staff of the Magi style".
+                <li>
+                Improved: A main character in stealth mode will no longer hide twice in a row when
+                saying "Healed". Just once, now, after.
+                <li>
+                Improved: Characters no longer speak a line when passing a potion.
+                <li>
+                Improved: No longer take Gloves of Healing out of Bag of Holding before use. Make
+                sure they're not in there.
+                <li>
+                Improved: Guards and Soldiers now cast Melf's Minute Meteors if there's no enemy
+                in range 10.
+                <li>
+                Improved: Inquisitors can no longer be ordered to turn undead.
+                <li>
+                Improved: Hold Person targeting is now more accurate.
+                <li>Improved: Shapechanged characters warn about their condition when preparing for
+                    <b>[B]</b>edtime.
+                <li>
+                Improved: No longer cast any spells if there is a chance of a wild surge.
+                <li>
+                Improved: When healing, now cast Heal before Mass Cure.
+                <li>
+                Improved: Poisoned characters will now try to drink antidotes before casting spells
+                to cure their condition.
+                <li>Improved: Characters may now speak a line when given certain orders:
+                    <ul>
+                        <li><b>[F]</b>ix (main character only)
+                        <li><b>[B]</b>edtime (main character only)
+                        <li><b>[E]</b>xorcise (different when toggled on or off)
+                    </ul>
+                    <li>
+                Improved: Soldiers and Guards now charge into melee regardless of range if another
+                party member is already engaged in melee.
+                <li>
+                Improved: People unable to move about now select weapons and targets appropriately.
+                <li>
+                Improved: Healers now double-check their targets after moving to them to avoid overhealing.
+                <li>Improved: Script should interrupt the player even less now, only under these conditions:
+                    <ul>
+                        <li>
+                        Archers may interrupt when they come to the aid of a party member and spot their
+                        first enemy, to prevent the Archer from closing all the way in.
+                        <li>
+                        Ranged attackers will switch weapons when engaged in melee to avoid the hideous
+                        penalties for using a ranged weapon in melee.
+                        <li>
+                        Stoneskin will be re-cast straight away when the skins are depleted.
+                    </ul>
+                    <li>Improved: Containers no longer snap shut on sneaky people trying to loot straight
+                        after combat.</li>
+                <li>Improved: The script will no longer interrupt the player except in very specific
+                    and urgent circumstances. See <a href="#CombatAI">Combat AI</a>
+                for details.
+                <li>Changed: <b>[N]</b>uke is now <b>[K]</b>illzone.
+                <li>
+                Changed: Stealth mode is no longer available to people that can't Hide In Shadows
+                but have the Staff of the Magi. Use the Staff of the Magi style for that.
+            </ul>
+            <p>
+                <h4>
+                    <a name="Version14">Version 1.4</a>, 2012-04-06</h4>
+                <ul>
+                    <li>
+                    Fix: The party no longer has to be outnumbered for the script to cast charm or hold
+                    spells.
+                    <li>
+                    Fix: Potions are once again passed and used until the entire party is healed.
+                    <li>
+                    New: The script now automatically uses the Ring of Human Influence on suitable targets.
+                    <li>
+                    Improved: Druids no longer bother casting Charm Person or Mammal while silenced,
+                    poisoned or risking spell failure or wild surge.
+                    <li>
+                    Improved: Rangers now wait for animals to get a little closer before they try to
+                    charm them.
+                    <li>
+                    Improved: If the party is attacked while healing, they will now stop healing until
+                    the fight is over.
+                    <li>
+                    Improved: Archers will not call for help until they actually fail to keep their
+                    distance.
+                    <li>
+                    Improved: Cernd will no longer shapeshift to heal or prep if he can't shift back.
+                    Instead he'll say "Shapechanged". Just order him to shift manually, and he'll go
+                    do what he's supposed to.
+                    <li>
+                    Improved: Script no longer takes a second to respond after disengaging stealth mode,
+                    turn undead mode, or the AI cutoff.
+                    <li>
+                    Improved: Slightly improved the feedback given by shapechanged characters when ordered
+                    to heal or prep.
+                    <li>
+                    Improved: Slightly tweaked charm spell thresholds.
+                    <li>
+                    Changed: No longer autocast Spirit Armor.
+                </ul>
+        </ul>
+        <h3>
+            <a name="Credits">Credits</a>
+        </h3>
+        <ul>
+            <h4>
+                <a name="PlayTheGame">For helping me play the game</a>
+            </h4>
+            <ul>
+                <li>
+                BioWare and Black Isle Studios for developing a game that is still awesome to play
+                after a decade.
+                <li>Dan Simmons for his detailed <a href="http://www.gamefaqs.com/pc/258273-baldurs-gate-ii-shadows-of-amn/faqs/34147">
+                    Baldur's Gate II: Shadows of Amn &amp; Throne of Bhaal FAQ/Walkthrough</a>,
+                which served as an excellent checklist.
+                <li><a href="http://www.gibberlings3.net/">The Gibberlings 3</a> for:
+                    <ul>
+                        <li>The <a href="http://www.gibberlings3.net/bg2fixpack/">Baldur's Gate II Fixpack</a>,
+                        full of essential (and nonessential) fixes.
+                        <li>The <a href="http://www.gibberlings3.net/widescreen/">Widescreen Mod</a>, allowing
+                        me to play the game at a beautiful 1650x1080 resolution.
+                    </ul>
+                    <li><a href="http://www.pocketplane.net">Pocket Plane Group</a> for <a href="http://www.pocketplane.net/tutu">
+                        BG1Tutu</a>, allowing me to play Baldur's Gate 1 in the Baldur's Gate 2
+                engine (which also enables the Widescreen Mod.)
+                <li>Myself for the <a href="http://www.sorcerers.net/Games/BG2/SpellsReference/Main.htm">
+                    Baldur's Gate II Spells Reference</a>, which, though slightly outdated, still
+                served me well in deciding which spells to memorize.
+                <li>The <a href="http://www.mud-master.com/shadowkeeper/">Shadow Keeper</a>
+                save game editor, for allowing me to correct mistakes.
+                <li>The regulars at <a href="http://www.sorcerers.net/forums/forumdisplay.php?f=19">
+                    Sorcerer's Place Forums</a>
+                for in-depth advice on Thieves, Monks and NPCs.
+            </ul>
+            <h4>
+                <a name="WriteTheScripts">For helping me write the script</a>
+            </h4>
+            <ul>
+                <li><a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a>
+                for compiling scripts, unparalleled insight into the game files, and allowing me
+                to fix bugs.
+                <li>Gebhard Blucher for his <a href="http://www.fortunecity.com/boozers/winelodge/79/bgstuff/bgstuff.html">
+                    gbscripts</a>, which I took a peek at whenever my scripting skilz felt a little
+                rusty.
+                <li><a href="http://www.gibberlings3.net/">The Gibberlings 3</a> for the <a href="http://iesdp.gibberlings3.net/main.htm">
+                    IESDP</a>, a good scripting reference.
+                <li>The <a href="http://www.contexteditor.org/">ConTEXT</a>
+                text editor.
+                <li>Myself for the <a href="http://www.sorcerers.net/Games/BG2/SpellsReference/Stuff/BG2.chl">
+                    Baldur's Gate 2 script highlighter</a>
+                for ConTEXT.
+            </ul>
+            <h4>
+                <a name="HostTheStuff">For hosting my stuff</a>
+            </h4>
+            <ul>
+                <li><a href="http://www.sorcerers.net/">Sorcerer's Place</a>:<ul>
+                    <li><a href="http://www.sorcerers.net/Games/BG2/SpellsReference/Stuff/BG2.chl">Baldur's
+                        Gate 2 script highlighter</a>
+                    for ConTEXT.
+                    <li><a href="http://www.sorcerers.net/Games/BG2/SpellsReference/Main.htm">Baldur's Gate
+                        II Spells Reference</a></ul>
+                    <li><a href="http://www.shsforums.net/">Spellhold Studios</a>:
+                        <ul>
+                            <li><a href="http://www.shsforums.net/forum/626-xyxs-stuff/">Xyx's Stuff</a></ul>
+            </ul>
+        </ul>
+    </ul>
+    <hr>
+    <center>
+        <small>&copy;2012: This script is the intellectual property of Xyx (Jochem van 't Hull)
+            and may not be distributed in any form other than as-is without explicit permission
+            from the author.</small></center>
+    <hr>
+</body>
+</html>
