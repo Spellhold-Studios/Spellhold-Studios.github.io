@@ -6,6 +6,8 @@
     <style>
       html {
         scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+        box-sizing: border-box;
       }
       body {
         margin: 0;
@@ -20,25 +22,26 @@
         text-align: left;
         margin: 0 auto;
         margin-top: 20px;
-        width: 88%;
         font-family: Verdana, Tahoma, Arial, sans-serif;
         font-size: 12px;
         color: #333;
+        max-width: 1366px;
       }
       #header {
         text-align: center;
         background: #e3e3db url("data:image/jpeg;base64,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%3D%3D");
-        border: 1px solid #781808;
-        border-top: 5px solid #781808;
-        border-bottom: 5px solid #781808;
+        margin: 0 auto;
       }
       #header .heading-wrap {
         background: rgba(236, 236, 250, 0.5);
+        border: 1px solid #aaa;
+        border-bottom: 1px solid #bdbdbd;
+        box-shadow: 1px 1px 1px rgba(25, 24, 23, 0.1);
       }
       #header .main-heading {
-        padding-top: 7px;
+        padding-top: 10px;
         margin-bottom: 25px;
-        text-shadow: 2px 2px 2px rgba(25, 24, 23, 0.1);
+        text-shadow: 1px 1px 1px rgba(25, 24, 23, 0.1);
       }
       #header .main-subheading {
         font-weight: bold;
@@ -47,31 +50,43 @@
         margin: 0;
       }
       #header .about {
-        margin: 25px 0 16px 0;
-        padding: 0;
+        margin-top: 25px;
+        margin-bottom: 0;
+        padding-bottom: 16px;
         font-weight: bold;
         color: #781808;
         font-size: 190%;
-        text-shadow: 2px 2px 2px rgba(23, 22, 21, 0.1);
+        text-shadow: 1px 1px 1px rgba(25, 24, 23, 0.1);
       }
-      #header .menu {
+      .menu-wrap {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        margin: 0 auto;
+        transition:top .3s
+      }
+      .menu {
         font-weight: bold;
-        margin: 0;
         line-height: 2.5;
-        color: #999;
-        padding: 6px 12px;
+        color: #bdbdbd;
+        text-align: center;
+        padding: 6px 10px;
         background-color: #eeeef1;
-        border-top: 1px solid #aaa;
+        border: 1px solid #aaa;
+        border-top: none;
+        box-shadow: 1px 1px 1px rgba(25, 24, 23, 0.1);
       }
-      #header .menu a {
-        margin: 0 10px;
+      .menu a,
+      .menu-separator {
+        margin: 0 9px;
         white-space: nowrap;
       }
-      #header .menu a:link,
-      #header .menu a:visited {
+      .menu a:link,
+      .menu a:visited {
         color: #333;
       }
-      #header .menu a:hover {
+      .menu a:hover {
         color: #781808;
         text-decoration: none;
         border: none;
@@ -79,18 +94,18 @@
       }
       #maindiv {
         margin: 0 auto;
-        margin-top: -16px;
-        width: 80%;
+        max-width: 1080px;
       }
       #maindiv .content {
         counter-increment: kman;
         counter-reset: h2;
         background-color: rgba(238, 238, 241, 0.9);
-        padding: 0 0 25px 0;
+        padding: 20px 0 25px 0;
         margin: 60px auto;
-        border-width: 1px 1px 4px 10px;
-        border-style: solid;
-        border-color: #781808;
+        border: 1px solid #aaa;
+        border-left: 10px solid #781808;
+        border-bottom: 4px solid #781808;
+        box-shadow: 1px 1px 1px rgba(25, 24, 23, 0.1);
         position: relative;
         display: block;
       }
@@ -113,7 +128,7 @@
         font-family: Verdana, Tahoma, Arial, sans-serif;
         text-align: left;
         padding: 0 30px;
-        margin: 20px 0 0 0;
+        margin: 0;
         border-bottom: solid 1px #d0d0d0;
         border-top: solid 1px #d0d0d0;
         background: #deded9;
@@ -250,7 +265,7 @@
         border: 1px solid #d2d2d2;
         border-radius: 4px;
         background-color: #e5e6e7;
-        box-shadow: 1px 1px rgba(25, 24, 23, 0.2);
+        box-shadow: 1px 1px rgba(25, 24, 23, 0.1);
       }
       #maindiv ul li .mod-tag {
         padding: 5px 8px 5px;
@@ -356,25 +371,32 @@
       .footer {
         margin-right: 16px;
       }
-      @media screen and (max-width: 1439px) {
+      @media screen and (max-width: 1366px) {
         #wrap {
-          width: 93%;
+          margin-top: 0;
         }
-        #maindiv {
-          width: 85%;
+        #header .heading-wrap,
+        .menu {
+          border-left: none;
+          border-right: none;
+        }
+      }
+      @media screen and (max-width: 1359px) {
+        .menu a,
+        .menu-separator {
+          margin: 0 7px;
         }
       }
       @media screen and (max-width: 1279px) {
-        #wrap {
-          width: 100%;
+        .menu-wrap {
+          position: static;
         }
-        #maindiv {
-          width: 100%;
-        }
-        #header,
         #maindiv .content {
           border-left: none;
           border-right: none;
+        }
+        #maindiv {
+          max-width: 100%;
         }
         h2 {
           padding: 0 10px;
@@ -393,6 +415,12 @@
         }
       }
       @media screen and (max-width: 639px) {
+        .link-tab {
+          display: block;
+        }
+        .menu-separator {
+          display: none;
+        }
         #maindiv ul li .mod-badges {
           margin: 10px 12px;
         }
@@ -430,27 +458,35 @@
             <p class="main-subheading">infinity engine modding community</p>
           </div>
           <p class="about">Index of Mods</p>
-          <div class="menu">
-            <a href="#npcs">NPCs</a>
-            <a href="#expansions">Expansions</a>
-            <a href="#quests">Quests</a>
-            <a href="#conversions">Conversions</a>
-            <a href="#megamods">Megamods</a>
-            <a href="#tweaks">Tweaks</a>
-            <a href="#visual-audio">Visual/Audio</a>
-            <a href="#iwd">IWD</a>
-            <a href="#pst">PST</a>
-            <a href="#tools">Tools</a>
-            <a href="#resurrections">Resurrections</a>
-            <a href="#misc">Miscellaneous</a>
-            <a href="#templates">Templates</a>
-          </div>
+        </div>
+      </div>
+      <div class="menu-wrap">
+        <div class="menu">
+          <span class="link-tab">
+          <a href="https://www.shsforums.net/">Forums</a>
+          <a href="https://github.com/Spellhold-Studios">GitHub</a>
+          <a href="https://discord.gg/pE2Njbdb2a">Discord</a>
+          </span>
+          <span class="menu-separator">|</span>
+          <a href="#npcs">NPCs</a>
+          <a href="#expansions">Expansions</a>
+          <a href="#quests">Quests</a>
+          <a href="#conversions">Conversions</a>
+          <a href="#megamods">Megamods</a>
+          <a href="#tweaks">Tweaks</a>
+          <a href="#visual-audio">Visual/Audio</a>
+          <a href="#iwd">IWD</a>
+          <a href="#pst">PST</a>
+          <a href="#tools">Tools</a>
+          <a href="#resurrections">Resurrections</a>
+          <a href="#misc">Miscellaneous</a>
+          <a href="#templates">Templates</a>
         </div>
       </div>
       <div id="maindiv">
         <!-- ================== Joinable NPC Mods ================== -->
-        <a id="npcs"></a>
         <div class="content">
+          <a id="npcs"></a>
           <h2>Joinable NPC Mods</h2>
           <p class="category-desc">All joinable NPC mods hosted by SHS.</p>
           <ul class="mod-list">
@@ -792,8 +828,8 @@
           </address>
         </div>
         <!-- ================== Content Expansion and Non-Joinable Character Mods ================== -->
-        <a id="expansions"></a>
         <div class="content">
+          <a id="expansions"></a>
           <h2>Content Expansion and Non-Joinable Character Mods</h2>
           <p class="category-desc">All expansions and mods that add new individual characters (non-joinable followers, merchants, etc.) hosted by SHS.</p>
           <ul class="mod-list">
@@ -1302,8 +1338,8 @@
           </address>
         </div>
         <!-- ================== Quest and Encounter Mods ================== -->
-        <a id="quests"></a>
         <div class="content">
+          <a id="quests"></a>
           <h2>Quest and Encounter Mods</h2>
           <p class="category-desc">All mods that add new quests or encounters hosted by SHS.</p>
           <ul class="mod-list">
@@ -1467,8 +1503,8 @@
           </address>
         </div>
         <!-- ================== Total and Partial Conversions ================== -->
-        <a id="conversions"></a>
         <div class="content">
+          <a id="conversions"></a>
           <h2>Total and Partial Conversions</h2>
           <p class="category-desc">All total and partial conversion projects hosted by SHS.</p>
           <ul class="mod-list">
@@ -1513,8 +1549,8 @@
           </address>
         </div>
         <!-- ================== Megamods ================== -->
-        <a id="megamods"></a>
         <div class="content">
+          <a id="megamods"></a>
           <h2>Megamods</h2>
           <p class="category-desc">All megamods and related projects hosted by SHS.</p>
           <ul class="mod-list">
@@ -1764,8 +1800,8 @@
           </address>
         </div>
         <!-- ================== Tweaks, Rule Changes, and Additions ================== -->
-        <a id="tweaks"></a>
         <div class="content">
+          <a id="tweaks"></a>
           <h2>Tweaks, Rule Changes, and Additions</h2>
           <p class="category-desc">All tweaks and mods that affect rules, classes, scripts, or other game mechanics hosted by SHS.</p>
           <ul class="mod-list">
@@ -2111,8 +2147,8 @@
           </address>
         </div>
         <!-- ================== Visual and Audio Mods ================== -->
-        <a id="visual-audio"></a>
         <div class="content">
+          <a id="visual-audio"></a>
           <h2>Visual and Audio Mods</h2>
           <p class="category-desc">All visual and audio mods (including portraits) hosted by SHS.</p>
           <ul class="mod-list">
@@ -2346,8 +2382,8 @@
           </address>
         </div>
         <!-- ================== Icewind Dale I & II Mods ================== -->
-        <a id="iwd"></a>
         <div class="content">
+          <a id="iwd"></a>
           <h2>Icewind Dale I &amp; II Mods</h2>
           <p class="category-desc">All IWD mods hosted by SHS.</p>
           <ul class="mod-list">
@@ -2393,8 +2429,8 @@
           </address>
         </div>
         <!-- ================== Planescape: Torment Mods ================== -->
-        <a id="pst"></a>
         <div class="content">
+          <a id="pst"></a>
           <h2>Planescape: Torment Mods</h2>
           <p class="category-desc">All PST mods hosted by SHS.</p>
           <ul class="mod-list">
@@ -2496,8 +2532,8 @@
           </address>
         </div>
         <!-- ================== Modding Tools ================== -->
-        <a id="tools"></a>
         <div class="content">
+          <a id="tools"></a>
           <h2>Modding Tools</h2>
           <p class="category-desc">All IE modding tools hosted by SHS.</p>
           <ul class="mod-list">
@@ -2711,8 +2747,8 @@
           </address>
         </div>
         <!-- ================== Mod Ressurections ================== -->
-        <a id="resurrections"></a>
         <div class="content">
+          <a id="resurrections"></a>
           <h2>Mod Resurrections</h2>
           <p class="category-desc">All mods resurrected or rebuilt by SHS modders.</p>
           <ul class="mod-list">
@@ -3009,8 +3045,8 @@
           </address>
         </div>
         <!-- ================== Miscellaneous ================== -->
-        <a id="misc"></a>
         <div class="content">
+          <a id="misc"></a>
           <h2>Miscellaneous</h2>
           <p class="category-desc">Other <a href="#misc-mods">mods</a>, <a href="#misc-tools">tools</a>, and <a href="#misc-res">resources</a>, currently without official support from SHS Staff.</p>
           <a id="misc-mods"></a>
@@ -3256,8 +3292,8 @@
           </address>
         </div>
         <!-- ================== Templates ================== -->
-        <a id="templates"></a>
         <div class="content">
+          <a id="templates"></a>
           <h2>Templates</h2>
           <p class="category-desc">Useful readme templates for SHS modders.</p>
           <ul class="template-list">
