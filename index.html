@@ -64,22 +64,25 @@
         top: 0;
         z-index: 1;
         margin: 0 auto;
-        transition:top .3s
       }
       .menu {
         font-weight: bold;
         line-height: 2.5;
         color: #bdbdbd;
         text-align: center;
-        padding: 6px 10px;
+        padding: 6px 12px;
         background-color: #eeeef1;
         border: 1px solid #aaa;
         border-top: none;
         box-shadow: 1px 1px 1px rgba(25, 24, 23, 0.1);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
       }
       .menu a,
       .menu-separator {
-        margin: 0 9px;
+        margin: 0 8px;
         white-space: nowrap;
         position:relative;
       }
@@ -96,7 +99,7 @@
       .menu a:active {
         top: 1px;
         left: 1px;
-        transition-duration: .3s;
+        transition-duration: .1s;
       }
       #maindiv {
         margin: 0 auto;
@@ -387,12 +390,6 @@
           border-right: none;
         }
       }
-      @media screen and (max-width: 1359px) {
-        .menu a,
-        .menu-separator {
-          margin: 0 7px;
-        }
-      }
       @media screen and (max-width: 1279px) {
         .menu-wrap {
           position: static;
@@ -420,10 +417,12 @@
           display: none;
         }
       }
-      @media screen and (max-width: 639px) {
-        .link-tab {
-          display: block;
+      @media screen and (max-width: 1249px) {
+        .menu {
+          justify-content: center;
         }
+      }
+      @media screen and (max-width: 639px) {
         .menu-separator {
           display: none;
         }
@@ -468,11 +467,9 @@
       </div>
       <div class="menu-wrap">
         <div class="menu">
-          <span class="link-tab">
-            <a href="https://www.shsforums.net/">Forums</a>
-            <a href="https://github.com/Spellhold-Studios">GitHub</a>
-            <a href="https://discord.gg/pE2Njbdb2a">Discord</a>
-          </span>
+          <a href="https://www.shsforums.net/">Forums</a>
+          <a href="https://github.com/Spellhold-Studios">GitHub</a>
+          <a href="https://discord.gg/pE2Njbdb2a">Discord</a>
           <span class="menu-separator">|</span>
           <a href="#npcs">NPCs</a>
           <a href="#expansions">Expansions</a>
