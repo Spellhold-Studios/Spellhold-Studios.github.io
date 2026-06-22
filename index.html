@@ -55,14 +55,6 @@
         font-size: 120%;
         margin: 0;
       }
-      #header .about {
-        margin: 0;
-        padding-bottom: 6px;
-        font-weight: bold;
-        color: #444;
-        font-size: 200%;
-        text-shadow: 1px 1px 1px rgba(25, 24, 23, 0.1);
-      }
       .menu-wrap {
         position: -webkit-sticky;
         position: sticky;
@@ -123,8 +115,8 @@
         max-width: 1080px;
       }
       #maindiv .content {
-        counter-increment: kman;
-        counter-reset: h2;
+        /* counter-increment: kman;
+        counter-reset: h3;  */
         background-color: rgba(238, 238, 241, 0.9);
         padding: 20px 0 25px 0;
         margin: 60px auto;
@@ -332,52 +324,37 @@
       }
       h1 {
         font-size: 265%;
+        font-weight: bold;
         color: #444;
-        padding: 8px 0 2px 0;
         margin: 0;
-        width: 100%;
+        padding: 8px 0 2px 0;
       }
       h2 {
-        display: block;
-        text-align: left;
-        padding: 1px 30px;
+        font-size: 200%;
+        font-weight: bold;
+        color: #444;
         margin: 0;
+        padding-bottom: 6px;
+        text-shadow: 1px 1px 1px rgba(25, 24, 23, 0.1);
+      }
+      h3 {
+        font-size: 160%;
+        font-weight: bold;
+        margin: 0;
+        padding: 1px 30px;
         border-bottom: solid 1px #d5d5d5;
         border-top: solid 1px #d5d5d5;
         background: #e2e2e2;
-        font-size: 160%;
       }
-      h2::first-letter {
+      h3::first-letter {
         color: #781808;
         background-color: transparent;
       }
-      h3,
-      h4,
-      h5 {
-        margin: 16px auto 10px;
-        padding: 0 50px;
-      }
-      h3 {
-        font-size: 125%;
-      }
       h4 {
         font-size: 125%;
-      }
-      h5 {
-        font-size: 100%;
-      }
-      h6 {
-        width: 100%;
-        margin: 10px 0 15px 0;
-        background-color: #ECECEC;
-        text-align: left;
-        text-indent: 30px;
-        font-size: 100%;
-        font-style: italic;
-        padding-top: 1px;
-        padding-bottom: 1px;
-        border-bottom: solid 1px #bbb;
-        border-top: solid 1px #bbb;
+        font-weight: bold;
+        margin: 16px auto 10px;
+        padding: 0 50px;
       }
       #maindiv a:link {
         color: #781808;
@@ -419,12 +396,10 @@
         #maindiv {
           max-width: 100%;
         }
-        h2 {
+        h3 {
           padding: 1px 10px;
         }
-        h3,
-        h4,
-        h5 {
+        h4 {
           padding: 0 25px;
         }
         #maindiv p,
@@ -486,7 +461,7 @@
                 <h1>Spellhold Studios</h1>
                 <p class="main-subheading">infinity engine modding community</p>
               </div>
-              <p class="about">Index of <span style="color: #781808">Mods</span></p>
+              <h2>Index of <span style="color: #781808">Mods</span></h2>
             </div>
           </div>
         </div>
@@ -528,7 +503,7 @@
         <!-- ================== Joinable NPC Mods ================== -->
         <div class="content">
           <a id="npcs"></a>
-          <h2>Joinable NPC Mods</h2>
+          <h3>Joinable NPC Mods</h3>
           <p class="category-desc">All joinable NPC mods hosted by SHS.</p>
           <ul class="mod-list">
             <li>
@@ -871,7 +846,7 @@
         <!-- ================== Content Expansion and Non-Joinable Character Mods ================== -->
         <div class="content">
           <a id="expansions"></a>
-          <h2>Content Expansion and Non-Joinable Character Mods</h2>
+          <h3>Content Expansion and Non-Joinable Character Mods</h3>
           <p class="category-desc">All expansions and mods that add new individual characters (non-joinable followers, merchants, etc.) hosted by SHS.</p>
           <ul class="mod-list">
             <li>
@@ -1381,7 +1356,7 @@
         <!-- ================== Quest and Encounter Mods ================== -->
         <div class="content">
           <a id="quests"></a>
-          <h2>Quest and Encounter Mods</h2>
+          <h3>Quest and Encounter Mods</h3>
           <p class="category-desc">All mods that add new quests or encounters hosted by SHS.</p>
           <ul class="mod-list">
             <li>
@@ -1546,7 +1521,7 @@
         <!-- ================== Total and Partial Conversions ================== -->
         <div class="content">
           <a id="conversions"></a>
-          <h2>Total and Partial Conversions</h2>
+          <h3>Total and Partial Conversions</h3>
           <p class="category-desc">All total and partial conversion projects hosted by SHS.</p>
           <ul class="mod-list">
             <li>
@@ -1592,7 +1567,7 @@
         <!-- ================== Megamods ================== -->
         <div class="content">
           <a id="megamods"></a>
-          <h2>Megamods</h2>
+          <h3>Megamods</h3>
           <p class="category-desc">All megamods and related projects hosted by SHS.</p>
           <ul class="mod-list">
             <li>
@@ -1843,7 +1818,7 @@
         <!-- ================== Tweaks, Rule Changes, and Additions ================== -->
         <div class="content">
           <a id="tweaks"></a>
-          <h2>Tweaks, Rule Changes, and Additions</h2>
+          <h3>Tweaks, Rule Changes, and Additions</h3>
           <p class="category-desc">All tweaks and mods that affect rules, classes, scripts, or other game mechanics hosted by SHS.</p>
           <ul class="mod-list">
             <li>
@@ -2190,7 +2165,7 @@
         <!-- ================== Visual and Audio Mods ================== -->
         <div class="content">
           <a id="visual-audio"></a>
-          <h2>Visual and Audio Mods</h2>
+          <h3>Visual and Audio Mods</h3>
           <p class="category-desc">All visual and audio mods (including portraits) hosted by SHS.</p>
           <ul class="mod-list">
             <li>
@@ -2425,7 +2400,7 @@
         <!-- ================== Icewind Dale I & II Mods ================== -->
         <div class="content">
           <a id="iwd"></a>
-          <h2>Icewind Dale I &amp; II Mods</h2>
+          <h3>Icewind Dale I &amp; II Mods</h3>
           <p class="category-desc">All IWD mods hosted by SHS.</p>
           <ul class="mod-list">
             <li>
@@ -2472,7 +2447,7 @@
         <!-- ================== Planescape: Torment Mods ================== -->
         <div class="content">
           <a id="pst"></a>
-          <h2>Planescape: Torment Mods</h2>
+          <h3>Planescape: Torment Mods</h3>
           <p class="category-desc">All PST mods hosted by SHS.</p>
           <ul class="mod-list">
             <li>
@@ -2575,7 +2550,7 @@
         <!-- ================== Modding Tools ================== -->
         <div class="content">
           <a id="tools"></a>
-          <h2>Modding Tools</h2>
+          <h3>Modding Tools</h3>
           <p class="category-desc">All IE modding tools hosted by SHS.</p>
           <ul class="mod-list">
             <li>
@@ -2790,7 +2765,7 @@
         <!-- ================== Mod Ressurections ================== -->
         <div class="content">
           <a id="resurrections"></a>
-          <h2>Mod Resurrections</h2>
+          <h3>Mod Resurrections</h3>
           <p class="category-desc">All mods resurrected or rebuilt by SHS modders.</p>
           <ul class="mod-list">
             <li>
@@ -3088,10 +3063,10 @@
         <!-- ================== Miscellaneous ================== -->
         <div class="content">
           <a id="misc"></a>
-          <h2>Miscellaneous</h2>
+          <h3>Miscellaneous</h3>
           <p class="category-desc">Other <a href="#misc-mods">mods</a>, <a href="#misc-tools">tools</a>, and <a href="#misc-res">resources</a>, currently without official support from SHS Staff.</p>
           <a id="misc-mods"></a>
-          <h3>Mods</h3>
+          <h4>Mods</h4>
           <ul class="template-list">
             <li><a href="https://github.com/Spellhold-Studios/Miscellaneous/raw/refs/heads/main/mods/3.5weaponstyle.rar">3.5e Weapon Style Rebalance</a> by Reddbane</li>
             <li><a href="https://github.com/Spellhold-Studios/Miscellaneous/raw/refs/heads/main/mods/3.5-Thac0.rar">3.5e/Pathfinder THAC0 Progression</a> by Reddbane</li>
@@ -3299,7 +3274,7 @@
             <li><a href="https://github.com/Spellhold-Studios/Miscellaneous/raw/refs/heads/main/mods/Zalnoya_and_the_Shadow_thieves_v1.7.rar">Zalnoya and the Shadow Thieves</a> by prune1</li>
           </ul>
           <a id="misc-tools"></a>
-          <h3>Tools</h3>
+          <h4>Tools</h4>
           <ul class="template-list">
             <li><a href="https://github.com/Spellhold-Studios/Miscellaneous/raw/refs/heads/main/tools/areatest-v2.rar">Area CRE Checker</a> by Miloch</li>
             <li><a href="https://github.com/Spellhold-Studios/Miscellaneous/raw/refs/heads/main/tools/BeregostCrashFixer19.zip">Beregost Crash Fixer</a> by Ascension64</li>
@@ -3317,7 +3292,7 @@
             <li><a href="https://github.com/Spellhold-Studios/Miscellaneous/raw/refs/heads/main/tools/W_IEicons.zip">W_IEicons</a> by Kwiat_W</li>
           </ul>
           <a id="misc-res"></a>
-          <h3>Resources</h3>
+          <h4>Resources</h4>
           <ul class="template-list">
             <li><a href="https://github.com/Spellhold-Studios/Miscellaneous/raw/refs/heads/main/resources/workingareas.zip">2 Pathed Maps (Partially Finished)</a> by Duality</li>
             <li><a href="https://github.com/Spellhold-Studios/Miscellaneous/raw/refs/heads/main/resources/CVGhosts.rar">Cuv Animation Slots: Ghosts</a> by Cuv</li>
@@ -3335,7 +3310,7 @@
         <!-- ================== Templates ================== -->
         <div class="content">
           <a id="templates"></a>
-          <h2>Templates</h2>
+          <h3>Templates</h3>
           <p class="category-desc">Useful readme templates for SHS modders.</p>
           <ul class="template-list">
             <li><a href="https://sampsca.github.io/SHS_Readme.html">SHS Readme #1</a> by khayman, updated by Sam.</li>
